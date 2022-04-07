@@ -1,0 +1,25 @@
+form {
+  text-align: left;
+  input, button, textarea {
+    padding: ratio-space(1px);
+    border-radius: 5px;
+    background-color: rgba($white, .2);
+    width: 100%;
+    font: inherit;
+    resize: none;
+    height: 100%;
+
+    &::placeholder {
+      color: $light-grey;
+    }
+  }
+
+  label {
+    //display: inline-block;
+    //margin: ratio-space(1px) 0;
+  }
+
+  input[type="submit"] {
+    @extend .btn, .btn.secondary;
+  }
+}

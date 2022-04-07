@@ -1,0 +1,51 @@
+@import url('https://emoji-css.afeld.me/emoji.css');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700,300');
+
+//@include font-face(Gilroy, Thin, 100, normal, eot ttf woff);
+//@include font-face(Gilroy, UltraLight, 200, normal, eot ttf woff);
+@include font-face(Gilroy, Light, 300, normal, eot ttf woff);
+@include font-face(Gilroy, Regular, 400, normal, eot ttf woff);
+@include font-face(Gilroy, Medium, 500, normal, eot ttf woff);
+@include font-face(Gilroy, SemiBold, 600, normal, eot ttf woff);
+@include font-face(Gilroy, Bold, 700, normal, eot ttf woff);
+//@include font-face(Gilroy, ExtraBold, 800, normal, eot ttf woff);
+@include font-face(Gilroy, Heavy, 900, normal, eot ttf woff);
+//@include font-face(Gilroy, ThinItalic, 100, italic, eot ttf woff);
+//@include font-face(Gilroy, UltraLightItalic, 200, italic, eot ttf woff);
+//@include font-face(Gilroy, LightItalic, 300, italic, eot ttf woff);
+//@include font-face(Gilroy, RegularItalic, 400, italic, eot ttf woff);
+//@include font-face(Gilroy, MediumItalic, 500, italic, eot ttf woff);
+//@include font-face(Gilroy, SemiBoldItalic, 600, italic, eot ttf woff);
+//@include font-face(Gilroy, BoldItalic, 700, italic, eot ttf woff);
+//@include font-face(Gilroy, ExtraBoldItalic, 800, italic, eot ttf woff);
+//@include font-face(Gilroy, BlackItalic, 900, italic, eot ttf woff);
+
+h1 {
+  font-size: 7.5rem;
+  font-weight: 600;
+
+  @media #{$media-down-md} {
+    font-size: 6rem;
+  }
+  @media #{$media-down-sm} {
+    font-size: 5rem;
+  }
+}
+
+h4 {
+  text-transform: capitalize;
+  line-height: 1.5em;
+  letter-spacing: .1em;
+  font-weight: 600;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-family: $font-secondary;
+  letter-spacing: ratio-space(.5px);
+  font-size: .7em;
+}
+
+strong {
+  color: $secondary-color;
+}

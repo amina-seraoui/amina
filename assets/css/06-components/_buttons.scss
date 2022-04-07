@@ -1,0 +1,50 @@
+.btn {
+    text-transform: uppercase;
+    padding: ratio-space(2px) ratio-space(4px);
+    border: solid 1px $light-grey;
+    max-width: 15em;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 135%;
+        width: 135%;
+        height: 100%;
+        z-index: -1;
+        transform: skew(25deg);
+        transition: .5s;
+    }
+
+    &:hover {
+        &::before {
+            right: -10%;
+        }
+    }
+
+    &.primary {
+        background-color: $primary-color;
+
+        &::before {
+            background-color: $secondary-color;
+        }
+    }
+
+    &.secondary {
+        background-color: $secondary-color;
+
+        &:before {
+            background-color: $primary-color;
+        }
+    }
+
+    &.rounded {
+        min-width: auto;
+        border-radius: 50%;
+        padding: ratio-space(2px);
+    }
+}

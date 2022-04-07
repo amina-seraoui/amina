@@ -1,0 +1,70 @@
+#socials {
+    position: fixed;
+    z-index: 1;
+    height: 90vh;
+    top: max(10vh, 64px);
+    width: min(20vw, 20vh);
+    user-select: none;
+
+    .subtitle {
+        position: absolute;
+        transform: rotate(-90deg);
+        bottom: 100px;
+        width: 100%;
+        transition: .5s;
+        color: $light-grey;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: $light-grey;
+            width: 50px;
+            bottom: calc(50% - 2px);
+            height: 2px;
+            left: 80px;
+            transition: .5s;
+        }
+    }
+
+    ul {
+        position: absolute;
+        @extend %flex;
+        flex-direction: column;
+        align-items: center;
+        gap: ratio-space(1px);
+        font-size: 1em;
+        width: 100%;
+        bottom: 200px;
+        transition: .5s;
+
+        li a {
+            display: inline-block;
+            @extend .btn, .primary, .rounded;
+            width: 50px;
+            height: 50px;
+            color: $light-grey;
+
+        }
+    }
+
+    &:hover {
+        .subtitle {
+            color: $white;
+            letter-spacing: ratio-space(1px);
+
+            &:before {
+                width: 100px;
+                left: 120px;
+            }
+        }
+
+        ul {
+            bottom: 300px;
+            gap: ratio-space(2px);
+
+            li a {
+                color: $white;
+            }
+        }
+    }
+}

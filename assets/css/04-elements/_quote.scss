@@ -1,0 +1,29 @@
+quote {
+  display: block;
+  width: 100%;
+  padding: ratio-space(2px);
+  margin: ratio-space(1px);
+  border-left: solid 4px $white;
+  color: rgba($white, .8);
+  text-align: left;
+}
+
+q {
+  font-style: italic;
+}
+
+.dialog {
+  margin: auto;
+  width: 50%;
+  span {
+    text-align: left;
+    display: block;
+    position: relative;
+    padding: ratio-space(1px) 0;
+    &:before {
+      content: '-';
+      position: absolute;
+      left: - ratio-space(3px);
+    }
+  }
+}

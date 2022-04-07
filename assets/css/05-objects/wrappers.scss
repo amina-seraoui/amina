@@ -1,0 +1,8 @@
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%container {
+  margin: 0 min(17vw, 17vh);
+}
