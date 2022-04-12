@@ -25,3 +25,15 @@
         src: $src;
     }
 }
+
+@mixin caret($color: $primary-color, $size: 10px) {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: calc(50% - #{$size});
+    bottom: -$size;
+    border-left: solid $size transparent;
+    border-right: solid $size transparent;
+    border-top: solid $size $color;
+}

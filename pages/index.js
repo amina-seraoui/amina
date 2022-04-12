@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import TypingText from '../components/TypingText'
 import About from '../components/About'
+import Skills from '../components/Skills'
 
 const calculateAge = (birth) => {
     // calcule la différence en timestamp
@@ -58,7 +59,47 @@ const Home = () => {
                     <a className="btn primary" href="#contact">Contact me</a>
                 </div>
             </Hero>
+            {/* deuxième section */}
             <About age={age}/>
+            {/* troisième section */}
+            <Skills>
+                {
+                    [
+                        {
+                            label: 'HTML5',
+                            value: 100
+                        },
+                        {
+                            label: 'Css3',
+                            value: 100
+                        },
+                        {
+                            label: 'Javascript',
+                            value: 85
+                        },
+                        {
+                            label: 'React',
+                            value: 75
+                        },
+                        {
+                            label: 'Figma',
+                            value: 60
+                        },
+                        {
+                            label: 'Photoshop',
+                            value: 50
+                        },
+                        {
+                            label: 'php',
+                            value: 95
+                        },
+                        {
+                            label: 'Symfony',
+                            value: 75
+                        }
+                    ]
+                }
+            </Skills>
         </main>
     </>
 }

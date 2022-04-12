@@ -6,7 +6,7 @@
   .card {
     width: 23%;
     min-width: 200px;
-    border: solid $medium-grey 1px;
+    border: solid 1px $medium-grey;
     margin: ratio-space(1px);
 
     .card-header {

@@ -10,3 +10,9 @@
 .em { // emojis
   max-width: 100px;
 }
+
+%flex-center {
+  @extend %flex;
+  align-items: center;
+  justify-content: center;
+}

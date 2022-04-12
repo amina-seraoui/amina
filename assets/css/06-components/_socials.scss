@@ -66,4 +66,8 @@
             }
         }
     }
+
+    @media #{$media-down-sm} {
+        display: none;
+    }
 }

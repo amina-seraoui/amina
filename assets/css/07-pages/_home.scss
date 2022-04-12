@@ -68,4 +68,12 @@
             }
         }
     }
+
+    #skills {
+        .content {
+            @extend %flex;
+            gap: ratio-space(2px);
+            justify-content: space-between;
+        }
+    }
 }
