@@ -3,14 +3,15 @@ import Socials from '../components/Socials'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import TypingText from '../components/TypingText'
+import About from '../components/About'
 
 const calculateAge = (birth) => {
     // calcule la différence en timestamp
-    const diff = new Date(Date.now() - new Date(birth).getTime()).getUTCFullYear()
-    return diff - 1970
+    return new Date(Date.now() - new Date(birth).getTime()).getUTCFullYear() - 1970
 }
 
 const Home = () => {
+    let age = calculateAge('11/22/1997')
     return <>
         <Head>
             <title>Amina Seraoui</title>
@@ -19,15 +20,16 @@ const Home = () => {
         </Head>
         <Socials />
         <main id="home">
-            <Hero image="/assets/img/header-moon.jpg">
+            {/* première section */}
+            <Hero image="header-moon.jpg">
                 <Header />
-                <div className="content">
+                <div className="container">
                     <h1>
                         <TypingText
                             texts={[
                                 'Hello !',
                                 'I\'m Amina Seraoui',
-                                'I\'m ' + calculateAge('11/22/1997') + ' years old',
+                                'I\'m ' + age + ' years old',
                                 'and I\'m a french developer',
                                 'Enjoy your visit !'
                             ]}
@@ -56,6 +58,7 @@ const Home = () => {
                     <a className="btn primary" href="#contact">Contact me</a>
                 </div>
             </Hero>
+            <About age={age}/>
         </main>
     </>
 }

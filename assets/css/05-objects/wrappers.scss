@@ -3,6 +3,10 @@
   flex-wrap: wrap;
 }
 
-%container {
-  margin: 0 min(17vw, 17vh);
+.container {
+  margin: 0 min(20vw, 20vh);
+}
+
+.em { // emojis
+  max-width: 100px;
 }

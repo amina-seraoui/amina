@@ -3,25 +3,24 @@
     z-index: 1;
     height: 90vh;
     top: max(10vh, 64px);
-    width: min(20vw, 20vh);
+    width: min(64px, 20vh);
     user-select: none;
 
     .subtitle {
         position: absolute;
         transform: rotate(-90deg);
-        bottom: 100px;
+        bottom: max(20vh, 128px);
         width: 100%;
         transition: .5s;
-        color: $light-grey;
 
         &:before {
             content: '';
             position: absolute;
             background: $light-grey;
-            width: 50px;
+            width: 40px;
             bottom: calc(50% - 2px);
             height: 2px;
-            left: 80px;
+            left: 100px;
             transition: .5s;
         }
     }
@@ -31,10 +30,10 @@
         @extend %flex;
         flex-direction: column;
         align-items: center;
-        gap: ratio-space(1px);
+        gap: ratio-space(.5px);
         font-size: 1em;
         width: 100%;
-        bottom: 200px;
+        bottom: calc(max(20vh, 128px) + 140px);
         transition: .5s;
 
         li a {
@@ -53,14 +52,14 @@
             letter-spacing: ratio-space(1px);
 
             &:before {
-                width: 100px;
-                left: 120px;
+                width: 60px;
+                left: 128px;
             }
         }
 
         ul {
-            bottom: 300px;
-            gap: ratio-space(2px);
+            bottom: calc(max(20vh, 128px) + 190px);
+            gap: ratio-space(1px);
 
             li a {
                 color: $white;

@@ -1,6 +1,6 @@
 #hero {
-    background: center / contain no-repeat url('/assets/img/header-moon.jpg'), $black;
-    .content {
+    background: center / contain no-repeat url('/assets/img/header-moon.jpg');
+    .container {
         @extend %flex;
         height: 100%;
         justify-content: center;
