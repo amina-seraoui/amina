@@ -1,3 +1,26 @@
 .strong {
     @extend strong;
 }
+
+.link {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: $primary-color;
+        transform: skew(22deg);
+        height: .5em;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        transition: .3s;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}

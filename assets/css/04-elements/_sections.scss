@@ -6,13 +6,38 @@ section:not(:first-child) {
         margin-bottom: ratio-space(4px);
     }
 
-    &:nth-child(1n) {
+    &:nth-child(3n+1) {
         background: $black;
     }
-    &:nth-child(2n) {
+    &:nth-child(3n+2) {
         background: $grey;
     }
     &:nth-child(3n) {
         background: $tertiary-color;
+    }
+}
+
+footer {
+    @extend section;
+    .content {
+        @extend %flex;
+        flex-direction: column;
+        gap: ratio-space(4px);
+        .jetbrains {
+            @extend %flex;
+            gap: ratio-space(2px);
+            justify-content: center;
+            align-items: center;
+
+            @media #{$media-down-lg} {
+                p {
+                    order: 2;
+                }
+            }
+
+            p {
+                //margin-right: ratio-space(1px);
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@ import About from '../components/Home/About'
 import Skills from '../components/Home/Skills'
 import Works from '../components/Home/Works'
 import Contact from '../components/Home/Contact'
+import Footer from '../components/Footer'
 
 const calculateAge = (birth) => {
     // calcule la différence en timestamp
@@ -107,6 +108,7 @@ const Home = () => {
             {/* cinquième section */}
             <Contact />
         </main>
+        <Footer />
     </>
 }
 
