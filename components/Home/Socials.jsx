@@ -1,6 +1,6 @@
 const Socials = () => {
     return <nav id="socials">
-        <h3 className="subtitle">Socials</h3>
+        <h4 className="subtitle">Socials</h4>
         <ul>
             <li title="Linkedin -- Amina Seraoui">
                 <a href="https://www.linkedin.com/in/amina-seraoui/"><i className="fab fa-linkedin"></i></a>

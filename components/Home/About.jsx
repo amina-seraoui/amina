@@ -1,5 +1,5 @@
-import Frame from './Frame'
-import CardInfo from './CardInfo'
+import Frame from '../Frame'
+import CardInfo from '../CardInfo'
 
 const About = ({ age }) => {
     return <section id="about">

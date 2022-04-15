@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Socials from '../components/Socials'
+import Socials from '../components/Home/Socials'
 import Header from '../components/Header'
-import Hero from '../components/Hero'
+import Hero from '../components/Home/Hero'
 import TypingText from '../components/TypingText'
-import About from '../components/About'
-import Skills from '../components/Skills'
+import About from '../components/Home/About'
+import Skills from '../components/Home/Skills'
+import Works from '../components/Home/Works'
 
 const calculateAge = (birth) => {
     // calcule la différence en timestamp
@@ -100,6 +101,8 @@ const Home = () => {
                     ]
                 }
             </Skills>
+            {/* quatrième section */}
+            <Works />
         </main>
     </>
 }

@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {InView} from 'react-intersection-observer'
-import SkillBar from './SkillBar'
+import SkillBar from '../SkillBar'
 
 const Skills = ({ children }) => {
     const [isVisible, setIsVisible] = useState(false)

@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react'
+import {useEffect, useState} from 'react'
 
 const SkillBar = ({ skill, visible }) => {
     const [value, setValue] = useState(0)
@@ -10,7 +10,7 @@ const SkillBar = ({ skill, visible }) => {
             } else {
                 clearTimeout(timeout)
             }
-        }, 25)
+        }, 15)
     }, [visible, value])
 
     return <div className="skill-bar">
