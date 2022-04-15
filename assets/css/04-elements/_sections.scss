@@ -1,6 +1,6 @@
 section:not(:first-child) {
     text-align: center;
-    padding: ratio-space(4px) 0;
+    padding: ratio-space(8px) 0;
 
     .title {
         margin-bottom: ratio-space(4px);
@@ -13,6 +13,6 @@ section:not(:first-child) {
         background: $grey;
     }
     &:nth-child(3n) {
-        background: $medium-grey;
+        background: $tertiary-color;
     }
 }

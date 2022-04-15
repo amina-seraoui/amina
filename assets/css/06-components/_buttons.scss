@@ -2,7 +2,6 @@
     text-transform: uppercase;
     padding: ratio-space(2px) ratio-space(4px);
     border: solid 1px $light-grey;
-    max-width: 15em;
     text-align: center;
     font-weight: 600;
     position: relative;
@@ -38,7 +37,7 @@
     &.secondary {
         background-color: $secondary-color;
 
-        &:before {
+        &::before {
             background-color: $primary-color;
         }
     }

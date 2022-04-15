@@ -26,9 +26,9 @@
     align-items: center;
 
     box-sizing: content-box;
-    background-color: $medium-grey;
+    background-color: $tertiary-color;
     box-shadow: rgba($white, .1) 5px 5px 5px;
-    border: solid 3px $secondary-color;
+    border: solid 3px $primary-color;
     border-radius: 5px;
 
     &::before {
@@ -41,7 +41,7 @@
       height: 0;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-top: 10px solid $secondary-color;
+      border-top: 10px solid $primary-color;
     }
 
     &::after {
@@ -54,7 +54,7 @@
       height: 0;
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
-      border-top: 8px solid $medium-grey;
+      border-top: 8px solid $tertiary-color;
     }
   }
 }

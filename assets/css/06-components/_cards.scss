@@ -6,11 +6,11 @@
   .card {
     width: 23%;
     min-width: 200px;
-    border: solid 1px $medium-grey;
+    border: solid 1px $tertiary-color;
     margin: ratio-space(1px);
 
     .card-header {
-      border-bottom: solid $medium-grey 1px;
+      border-bottom: solid $tertiary-color 1px;
 
       .card-image {
         height: 150px;

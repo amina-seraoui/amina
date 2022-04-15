@@ -4,7 +4,7 @@
         background: right 100% / auto 80% no-repeat, $black;
         position: relative;
 
-        &:before, &:after {
+        &::before, &::after {
             content: '';
             position: absolute;
             width: min(20vw, 20vh);
@@ -12,11 +12,11 @@
             top: max(10vh, 64px);
             z-index: -1;
         }
-        &:after {
+        &::after {
             right: 0;
             border-left: solid 1px $light-grey;
         }
-        &:before {
+        &::before {
             left: 0;
             border-right: solid 1px $light-grey;
         }
@@ -27,6 +27,10 @@
             gap: 20vh;
             height: calc(100vh - max(10vh, 64px));
             margin: 0 min(17vw, 17vh);
+
+            @media #{$media-down-sm} {
+                margin: 0 10%;
+            }
         }
     }
 
@@ -84,5 +88,49 @@
             gap: ratio-space(3px);
             justify-content: center;
         }
+    }
+
+    #contact {
+        .container {
+            > div {
+                .content {
+                    form {
+                        margin-bottom: ratio-space(2px);
+
+                        @media #{$media-up-xl} {
+                            padding: 0 15%;
+                        }
+
+                        .field:nth-child(1), .field:nth-child(2) {
+                            width: calc(50% - ratio-space(1px));
+                            @media #{$media-down-md} {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    margin-top: ratio-space(4px);
+                    .content {
+                        @extend %flex;
+                        gap: calc(ratio-space(2px) + 30px);
+                        align-items: center;
+
+                        .card-info, .frame {
+                            width: calc(50% - (ratio-space(1px) + 15px));
+                        }
+
+                        @media #{$media-down-lg} {
+                            flex-direction: column-reverse;
+                            .card-info, .frame {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -13,7 +13,7 @@
         width: 100%;
         transition: .5s;
 
-        &:before {
+        &::before {
             content: '';
             position: absolute;
             background: $light-grey;
@@ -25,24 +25,16 @@
         }
     }
 
-    ul {
+    .socials {
         position: absolute;
-        @extend %flex;
         flex-direction: column;
         align-items: center;
-        gap: ratio-space(.5px);
-        font-size: 1em;
         width: 100%;
         bottom: calc(max(20vh, 128px) + 140px);
         transition: .5s;
 
         li a {
-            display: inline-block;
-            @extend .btn, .primary, .rounded;
-            width: 50px;
-            height: 50px;
             color: $light-grey;
-
         }
     }
 
@@ -51,7 +43,7 @@
             color: $white;
             letter-spacing: ratio-space(1px);
 
-            &:before {
+            &::before {
                 width: 60px;
                 left: 128px;
             }
@@ -69,5 +61,17 @@
 
     @media #{$media-down-sm} {
         display: none;
+    }
+}
+
+.socials {
+    @extend %flex;
+    gap: ratio-space(.5px);
+
+    li a {
+        display: inline-block;
+        @extend .btn, .secondary, .rounded;
+        width: 50px;
+        height: 50px;
     }
 }

@@ -5,6 +5,10 @@
 
 .container {
   margin: 0 min(20vw, 20vh);
+
+  @media #{$media-down-sm} {
+    margin: 0 10%;
+  }
 }
 
 .em { // emojis
@@ -15,4 +19,5 @@
   @extend %flex;
   align-items: center;
   justify-content: center;
+  //gap: ratio-space(2px); // to add
 }

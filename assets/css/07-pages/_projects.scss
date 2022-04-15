@@ -16,7 +16,7 @@
       }
     }
 
-    &:before {
+    &::before {
       position: absolute;
       content: '';
       width: 100%;
@@ -84,9 +84,9 @@
 
         ol {
           margin-left: 1em;
-          li:before {
+          li::before {
             content: '-';
-            color: $secondary-color;
+            color: $primary-color;
             display: inline-block;
             width: 1em;
             margin-left: -1em;

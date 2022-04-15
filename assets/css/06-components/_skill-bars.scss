@@ -32,19 +32,19 @@
 
         @extend %flex-center;
 
-        background: $medium-grey;
-        border: solid 3px $secondary-color;
+        background: $tertiary-color;
+        border: solid 3px $primary-color;
         border-radius: 5px;
         box-sizing: content-box;
         margin-bottom: 10px;
 
         box-shadow: $light-grey 1px 1px 10px;
 
-        &:before {
-            @include caret($secondary-color, 10px);
+        &::before {
+            @include caret($primary-color, 10px);
         }
-        &:after {
-            @include caret($medium-grey, 6px);
+        &::after {
+            @include caret($tertiary-color, 6px);
         }
     }
 

@@ -20,7 +20,7 @@
 //@include font-face(Gilroy, ExtraBoldItalic, 800, italic, eot ttf woff);
 //@include font-face(Gilroy, BlackItalic, 900, italic, eot ttf woff);
 
-h1 {
+h1, h1 * {
   font-size: 7.5rem;
   font-weight: 600;
 
@@ -32,7 +32,7 @@ h1 {
   }
 }
 
-h2 {
+h2, h2 * {
   text-transform: uppercase;
   letter-spacing: ratio-space(1px);
   font-size: 3.5rem;
@@ -69,5 +69,11 @@ h5 {
 }
 
 strong {
-  color: $secondary-color;
+  color: $primary-color;
+}
+
+p.small {
+  font-size: $font-size - 2px;
+  font-style: italic;
+  color: $light-grey;
 }

@@ -26,7 +26,7 @@
     }
 }
 
-@mixin caret($color: $primary-color, $size: 10px) {
+@mixin caret($color: $secondary-color, $size: 10px) {
     content: '';
     position: absolute;
     width: 0;

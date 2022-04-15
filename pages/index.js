@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import Socials from '../components/Home/Socials'
+import SocialsBar from '../components/Home/SocialsBar'
 import Header from '../components/Header'
 import Hero from '../components/Home/Hero'
 import TypingText from '../components/TypingText'
 import About from '../components/Home/About'
 import Skills from '../components/Home/Skills'
 import Works from '../components/Home/Works'
+import Contact from '../components/Home/Contact'
 
 const calculateAge = (birth) => {
     // calcule la différence en timestamp
@@ -20,7 +21,7 @@ const Home = () => {
             <meta name="description" content="Portfolio d'Amina Seraoui"/>
             <link rel="shortcut icon" href="/assets/img/dark-logo.svg" type="image/x-icon"/>
         </Head>
-        <Socials />
+        <SocialsBar />
         <main id="home">
             {/* première section */}
             <Hero image="header-moon.jpg">
@@ -57,7 +58,7 @@ const Home = () => {
                             ]}
                         />
                     </h1>
-                    <a className="btn primary" href="#contact">Contact me</a>
+                    <a className="btn secondary" href="#contact">Contact me</a>
                 </div>
             </Hero>
             {/* deuxième section */}
@@ -103,6 +104,8 @@ const Home = () => {
             </Skills>
             {/* quatrième section */}
             <Works />
+            {/* cinquième section */}
+            <Contact />
         </main>
     </>
 }

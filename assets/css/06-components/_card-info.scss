@@ -3,12 +3,16 @@
     gap: ratio-space(2px);
     justify-content: space-between;
     text-align: left;
-    background: $medium-grey;
+    background: $tertiary-color;
     padding: ratio-space(2px);
     word-break: break-all;
     height: fit-content;
-    li {
+    > li {
         display: block;
         width: calc(50% - ratio-space(1px));
+
+        .label {
+            user-select: none;
+        }
     }
 }

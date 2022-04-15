@@ -3,8 +3,9 @@ $white: #FFF;
 $red: #CE000F;
 $grey: #111;
 $medium-grey: #202020;
+$light-grey: darken($white, 50);
 
-$primary-color: $black;
-$secondary-color: $red;
-$third-color: $medium-grey;
-$light-grey: darken($white, 60);
+$primary-color: $red;
+$secondary-color: $black;
+$tertiary-color: $medium-grey;
+//$quaternary-color: $light-grey;

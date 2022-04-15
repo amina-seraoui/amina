@@ -9,7 +9,7 @@ a, button, input[type='submit'] {
     cursor: pointer;
 }
 
-q:before {
+q::before {
     content: '« ';
 }
 
@@ -23,8 +23,9 @@ q:after {
     font: inherit;
     color: inherit;
     z-index: 0;
+    letter-spacing: 1px;
     &::selection {
-        background: $secondary-color;
+        background: $primary-color;
         color: $white;
     }
 }
