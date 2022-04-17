@@ -25,7 +25,7 @@ const Home = () => {
         <SocialsBar />
         <main id="home">
             {/* première section */}
-            <Hero image="header-moon.jpg">
+            <Hero image="header-moon.png">
                 <Header />
                 <div className="container">
                     <h1>
@@ -33,8 +33,7 @@ const Home = () => {
                             texts={[
                                 'Hello !',
                                 'I\'m Amina Seraoui',
-                                'I\'m ' + age + ' years old',
-                                'and I\'m a french developer',
+                                'a ' + age + ' years old french developer',
                                 'Enjoy your visit !'
                             ]}
                             replaces={[

@@ -1,6 +1,7 @@
 %flex {
   display: flex;
   flex-wrap: wrap;
+  gap: ratio-space(2px);
 }
 
 .container {
@@ -13,11 +14,11 @@
 
 .em { // emojis
   max-width: 100px;
+  height: 7.5rem;
 }
 
 %flex-center {
   @extend %flex;
   align-items: center;
   justify-content: center;
-  //gap: ratio-space(2px); // to add
 }

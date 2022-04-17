@@ -1,6 +1,6 @@
 .card-info {
     @extend %flex;
-    gap: ratio-space(2px);
+
     justify-content: space-between;
     text-align: left;
     background: $tertiary-color;

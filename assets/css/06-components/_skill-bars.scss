@@ -1,5 +1,5 @@
 .skill-bar {
-    width: calc(50% - ratio-space(1px));
+    width: 100%;
     progress {
         appearance: none;
         width: 100%;
@@ -46,9 +46,5 @@
         &::after {
             @include caret($tertiary-color, 6px);
         }
-    }
-
-    @media #{$media-down-md} {
-        width: 100%;
     }
 }

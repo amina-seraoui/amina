@@ -25,7 +25,7 @@ footer {
         gap: ratio-space(4px);
         .jetbrains {
             @extend %flex;
-            gap: ratio-space(2px);
+
             justify-content: center;
             align-items: center;
 

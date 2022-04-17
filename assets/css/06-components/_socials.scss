@@ -1,4 +1,4 @@
-#socials {
+#socials-bar {
     position: fixed;
     z-index: 1;
     height: 90vh;
@@ -6,60 +6,61 @@
     width: min(64px, 20vh);
     user-select: none;
 
-    .subtitle {
-        position: absolute;
-        transform: rotate(-90deg);
-        bottom: max(20vh, 128px);
-        width: 100%;
-        transition: .5s;
-
-        &::before {
-            content: '';
-            position: absolute;
-            background: $light-grey;
-            width: 40px;
-            bottom: calc(50% - 2px);
-            height: 2px;
-            left: 100px;
-            transition: .5s;
-        }
-    }
+    $socials-bottom: max(20vh, 128px);
+    $socials-height: (50px + ratio-space(.5px)) * 4 - ratio-space(.5px);
 
     .socials {
         position: absolute;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        bottom: calc(max(20vh, 128px) + 140px);
-        transition: .5s;
+        bottom: $socials-bottom;
+        transition: .3s;
 
         li a {
             color: $light-grey;
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: $light-grey;
+            width: 2px;
+            height: 40px;
+            top: - calc(ratio-space(2px) + 40px); // marge (16px) + hauteur
+            left: 50%;
+            transition: .3s;
+        }
+    }
+
+    .subtitle {
+        position: absolute;
+        transform: rotate(-90deg);
+        // marge inférieur + hauteur de police + hauteur des socials + hauteur du before avec le before + marge 16px
+        bottom: calc(#{$socials-bottom} + 2em + #{$socials-height} + #{ratio-space(4px)} + 40px);
+        width: 100%;
+        transition: .3s;
     }
 
     &:hover {
-        .subtitle {
-            color: $white;
-            letter-spacing: ratio-space(1px);
-
-            &::before {
-                width: 60px;
-                left: 128px;
-            }
-        }
-
-        ul {
-            bottom: calc(max(20vh, 128px) + 190px);
+        .socials {
             gap: ratio-space(1px);
+            bottom: calc(#{$socials-bottom} + #{ratio-space(1px)});
 
-            li a {
-                color: $white;
-            }
+                li a {
+                    color: $white;
+                }
+        }
+        .subtitle {
+            bottom: calc(#{$socials-bottom} + 2em + #{$socials-height} + #{ratio-space(4px)} + 40px + (#{ratio-space(.5px)} * 5));
         }
     }
 
     @media #{$media-down-sm} {
+        display: none;
+    }
+
+    @media only screen and (max-height: 700px) {
         display: none;
     }
 }

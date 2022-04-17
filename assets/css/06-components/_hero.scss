@@ -1,5 +1,5 @@
 #hero {
-    background: center / contain no-repeat url('/assets/img/header-moon.jpg');
+    background: center / contain no-repeat;
     .container {
         @extend %flex;
         height: 100%;

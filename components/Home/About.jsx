@@ -49,7 +49,7 @@ const About = ({ age }) => {
             </div>
             <div className="buttons">
                 <a href="#contact" className="btn primary">Contact me</a>
-                <a href="#projects" className="btn secondary">Check my portfolio</a>
+                <a href="#works" className="btn secondary">Check my portfolio</a>
             </div>
         </div>
     </section>

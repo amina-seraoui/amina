@@ -1,9 +1,9 @@
 import Socials from '../Socials'
 
 const SocialsBar = () => {
-    return <nav id="socials">
-        <h4 className="subtitle">Socials</h4>
+    return <nav id="socials-bar">
         <Socials/>
+        <h4 className="subtitle">Socials</h4>
     </nav>
 }
 

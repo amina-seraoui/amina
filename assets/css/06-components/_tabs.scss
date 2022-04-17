@@ -1,7 +1,7 @@
 ul.tabs {
     @extend %flex;
     justify-content: center;
-    gap: ratio-space(2px);
+
     margin-bottom: ratio-space(2px);
 
     li {
