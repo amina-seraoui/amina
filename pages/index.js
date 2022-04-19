@@ -8,6 +8,7 @@ import Skills from '../components/Home/Skills'
 import Works from '../components/Home/Works'
 import Contact from '../components/Home/Contact'
 import Footer from '../components/Footer'
+import AnimatedStars from '../components/AnimatedStars'
 
 const calculateAge = (birth) => {
     // calcule la différence en timestamp
@@ -16,6 +17,7 @@ const calculateAge = (birth) => {
 
 const Home = () => {
     let age = calculateAge('11/22/1997')
+
     return <>
         <Head>
             <title>Amina Seraoui</title>
@@ -26,40 +28,41 @@ const Home = () => {
         <main id="home">
             {/* première section */}
             <Hero image="header-moon.png">
+                <AnimatedStars />
                 <Header />
                 <div className="container">
-                    <h1>
-                        <TypingText
-                            texts={[
-                                'Hello !',
-                                'I\'m Amina Seraoui',
-                                'a ' + age + ' years old french developer',
-                                'Enjoy your visit !'
-                            ]}
-                            replaces={[
-                                {
-                                    type: 'regex',
-                                    action: 'replace',
-                                    what: /I'?m?/,
-                                    by: '<strong>{match}</strong>'
-                                },
-                                {
-                                    type: 'text',
-                                    action: 'replace',
-                                    what: 'french',
-                                    by: '<i class="em em-flag-cp"></i>'
-                                },
-                                {
-                                    type: 'text',
-                                    action: 'add',
-                                    what: 'Enjoy your visit !',
-                                    by: ' <i class="em em-rocket"></i>'
-                                }
-                            ]}
-                        />
-                    </h1>
-                    <a className="btn secondary" href="#contact">Contact me</a>
-                </div>
+                        <h1>
+                            <TypingText
+                                texts={[
+                                    'Hello !',
+                                    'I\'m Amina Seraoui',
+                                    'a ' + age + ' years old french developer',
+                                    'Enjoy your visit !'
+                                ]}
+                                replaces={[
+                                    {
+                                        type: 'regex',
+                                        action: 'replace',
+                                        what: /I'?m?/,
+                                        by: '<strong>{match}</strong>'
+                                    },
+                                    {
+                                        type: 'text',
+                                        action: 'replace',
+                                        what: 'french',
+                                        by: '<i class="em em-flag-cp"></i>'
+                                    },
+                                    {
+                                        type: 'text',
+                                        action: 'add',
+                                        what: 'Enjoy your visit !',
+                                        by: ' <i class="em em-rocket"></i>'
+                                    }
+                                ]}
+                            />
+                        </h1>
+                        <a className="btn secondary" href="#contact">Contact me</a>
+                    </div>
             </Hero>
             {/* deuxième section */}
             <About age={age}/>
