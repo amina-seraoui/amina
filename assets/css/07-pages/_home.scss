@@ -17,10 +17,18 @@
         &::after {
             right: 0;
             border-left: solid 1px $light-grey;
+            background: linear-gradient(to left, transparent 0, transparent 99.7%, $white 99.7%, $white 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 15%;
+            animation: line 5s infinite;
         }
         &::before {
             left: 0;
             border-right: solid 1px $light-grey;
+            background: linear-gradient(to right, transparent 0, transparent 99.7%, $white 99.7%, $white 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 15%;
+            animation: line 5s 2s infinite;
         }
 
         .container {
@@ -148,11 +156,20 @@
     }
 }
 
-@keyframes float {
+@keyframes line {
     from {
-        background-size: auto 80%;
+        background-position: 100% 100%;
     }
-    to  {
-        background-size: auto 60%;
+
+    15% {
+        background-position: 100% -200%;
+    }
+
+    99% {
+        background-position: 100% -200%;
+    }
+
+    to {
+        background-position: 100% 100%;
     }
 }

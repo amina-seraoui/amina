@@ -1,52 +1,7 @@
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import { useState, useRef, useEffect } from 'react'
 
 const AnimatedStars = () => {
-    const [speed, setSpeed] = useState(1)
-
-    const fast = () => {
-        setSpeed(10)
-    }
-
-    const low = () => {
-        setSpeed(1)
-    }
-
-    const float = [
-        {
-            backgroundSize: 'auto 80%',
-            backgroundPosition: 'right 100%'
-        },
-        {
-            backgroundSize: 'auto 79%',
-            backgroundPosition: 'right 99%'
-        },
-        {
-            backgroundSize: 'auto 80%',
-            backgroundPosition: 'right 100%'
-        }
-    ]
-
-
-    useEffect(() => {
-        const hero = document.getElementById('hero')
-        // const c = document.querySelector('.animated-stars').children[0]
-        // c.animate(float, {
-        //     duration: 10000,
-        //     iterations: Infinity,
-        //     easing: 'ease-out'
-        // })
-
-        hero.addEventListener('mouseover', fast)
-        hero.addEventListener('mouseout', low)
-
-        return () => {
-            hero.removeEventListener('mouseover', fast)
-            hero.removeEventListener('mouseout', fast)
-        }
-    }, [fast])
-
     const particlesInit = async (main) => {
         // console.log(main)
         await loadFull(main)
@@ -62,12 +17,6 @@ const AnimatedStars = () => {
         className="animated-stars"
         options={{
             "position": "absolute",
-            "background": {
-                "image": "url('/assets/img/header-moon.png')",
-                "position": "right 100%",
-                "repeat": "no-repeat",
-                "size": "auto 80%"
-            },
             "fullScreen": {
                 "zIndex": 1
             },
@@ -139,7 +88,7 @@ const AnimatedStars = () => {
                         "top": "out"
                     },
                     "random": true,
-                    "speed": speed
+                    "speed": 4
                 },
                 "number": {
                     "density": {

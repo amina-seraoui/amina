@@ -34,15 +34,15 @@ const About = ({ age }) => {
                         },
                         {
                             label: 'Phone',
-                            value: <a href="tel:+33667306435">(+33) 6 67 30 64 35</a>
+                            value: <a className="link" href="tel:+33667306435">(+33) 6 67 30 64 35</a>
                         },
                         {
                             label: 'E-mail',
-                            value: <a href="mailto:amina.seraoui@outlook.fr">amina.seraoui@outlook.fr</a>
+                            value: <a className="link" href="mailto:amina.seraoui@outlook.fr">amina.seraoui@outlook.fr</a>
                         },
                         {
                             label: 'Github',
-                            value: <a href="github.com/amina-seraoui">github.com/amina-seraoui</a>
+                            value: <a className="link" href="github.com/amina-seraoui">github.com/amina-seraoui</a>
                         }
                     ]}
                 </CardInfo>

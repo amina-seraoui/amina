@@ -14,7 +14,7 @@ const Header = () => {
                     />
                 </a>
             </Link>
-            <Link href="tel:+33667306435">(+33) 6 67 30 64 35</Link>
+            <a className="link" href="tel:+33667306435">(+33) 6 67 30 64 35</a>
         </nav>
     </header>
 }

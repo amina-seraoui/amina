@@ -44,15 +44,17 @@
 
     &:hover {
         .socials {
-            gap: ratio-space(1px);
+            gap: ratio-space(1.5px);
             bottom: calc(#{$socials-bottom} + #{ratio-space(1px)});
 
-                li a {
-                    color: $white;
-                }
+            li a {
+                color: $white;
+            }
         }
         .subtitle {
-            bottom: calc(#{$socials-bottom} + 2em + #{$socials-height} + #{ratio-space(4px)} + 40px + (#{ratio-space(.5px)} * 5));
+            bottom: calc(#{$socials-bottom} + 2em + #{$socials-height} + #{ratio-space(4px)} + 40px + (#{ratio-space(.75px)} * 5));
+            letter-spacing: ratio-space(1px);
+            color: $white;
         }
     }
 
