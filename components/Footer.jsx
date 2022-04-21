@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import SectionTitle from './SectionTitle'
 const Footer = () => {
-    return <footer>
+    return <footer data-scroll-section="">
         <div className="container">
-            <div className="title">
-                <h2><span className="strong">Thank</span> you</h2>
-                <h3>Thank you for your visit</h3>
-            </div>
+            <SectionTitle
+                h2={'<span class="strong">Thank</span> you'}
+                h3={'Thank you for your visit'}
+            />
             <div className="content">
                 <div className="jetbrains">
                     <p>

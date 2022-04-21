@@ -7,3 +7,21 @@
         opacity: 1;
     }
 }
+
+@keyframes lineup {
+    from {
+        background-position: 100% 100%;
+    }
+
+    15% {
+        background-position: 100% -125%;
+    }
+
+    99.9% {
+        background-position: 100% -125%;
+    }
+
+    to {
+        background-position: 100% 125%;
+    }
+}
