@@ -14,7 +14,7 @@ import useAge from '../hooks/useAge'
 
 const Home = () => {
     let age = useAge('11/22/1997')
-    useScroll()
+    // useScroll()
     return <>
         <Head>
             <title>Amina Seraoui</title>
