@@ -1,16 +1,15 @@
 import CardInfo from '../CardInfo'
 import Socials from '../Socials'
 import Frame from '../Frame'
-import SectionTitle from '../SectionTitle'
 
 const Contact = () => {
     return <section id="contact" data-scroll-section="">
         <div className="container">
             <div>
-                <SectionTitle
-                    h2={'<span class="strong">Contact</span> me'}
-                    h3={'Leave me a message'}
-                />
+                <div className="title">
+                    <h2><span className="strong">Contact</span> me</h2>
+                    <h3>Leave me a message</h3>
+                </div>
                 <div className="content">
                     <form action="https://formspree.io/f/mqkgrlwd" method="POST">
                         <div className="field">
@@ -33,10 +32,9 @@ const Contact = () => {
                 </div>
             </div>
             <div>
-                <SectionTitle
-                    h2={''}
-                    h3={'You can also find me here'}
-                />
+                <div className="title">
+                    <h3>You can also find me here</h3>
+                </div>
                 <div className="content">
                     <CardInfo>
                         {

@@ -1,14 +1,13 @@
 import Frame from '../Frame'
 import CardInfo from '../CardInfo'
-import SectionTitle from '../SectionTitle'
 
 const About = ({ age }) => {
     return <section id="about" data-scroll-section="">
         <div className="container">
-            <SectionTitle
-                h2={'<span class="strong">About</span> me'}
-                h3={'In few words'}
-            />
+            <div className="title">
+                <h2><span className="strong">About</span> me</h2>
+                <h3>In few words</h3>
+            </div>
             <div className="content">
                 <Frame img="about.jpg" />
                 <CardInfo>
