@@ -1,23 +1,23 @@
 import Head from 'next/head'
-import SocialsBar from '../components/Home/SocialsBar'
-import Header from '../components/Header'
-import Hero from '../components/Home/Hero'
-import TypingText from '../components/TypingText'
-import About from '../components/Home/About'
-import Skills from '../components/Home/Skills'
-import Works from '../components/Home/Works'
-import Contact from '../components/Home/Contact'
-import Footer from '../components/Footer'
-import AnimatedStars from '../components/AnimatedStars'
-import useScroll from '../hooks/useScroll'
-import useAge from '../hooks/useAge'
+import SocialsBar from '../js/components/Home/SocialsBar'
+import Header from '../js/components/Header'
+import Hero from '../js/components/Home/Hero'
+import TypingText from '../js/components/TypingText'
+import About from '../js/components/Home/About'
+import Skills from '../js/components/Home/Skills'
+import Works from '../js/components/Home/Works'
+import Contact from '../js/components/Home/Contact'
+import Footer from '../js/components/Footer'
+import AnimatedStars from '../js/components/AnimatedStars'
+import useScroll from '../js/hooks/useScroll'
+import useAge from '../js/hooks/useAge'
 
 const Home = () => {
     let age = useAge('11/22/1997')
     // useScroll()
     return <>
         <Head>
-            <title>Amina Seraoui</title>
+            <title>Amina Seraoui | Home</title>
             <meta name="description" content="Portfolio d'Amina Seraoui"/>
             <link rel="shortcut icon" href="/assets/img/dark-logo.svg" type="image/x-icon"/>
         </Head>

@@ -1,11 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: false,
-  i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'en'
-  },
-  env: {
+import { initializeApp, getApps, getApp } from 'firebase/app'
+import { getFirestore } from 'firebase/firestore/lite'
+
+const credentials = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     projectId: process.env.FIREBASE_PROJECT_ID,
@@ -13,7 +9,9 @@ const nextConfig = {
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.FIREBASE_APP_ID,
     measurementId: process.env.FIREBASE_MEASUREMENT_ID
-  }
 }
 
-module.exports = nextConfig
+const app = !getApps.length ? initializeApp(credentials) : getApp()
+const firestore = getFirestore(app)
+
+export default firestore
