@@ -10,10 +10,10 @@ import Contact from '../js/components/Home/Contact'
 import Footer from '../js/components/Footer'
 import AnimatedStars from '../js/components/AnimatedStars'
 import useScroll from '../js/hooks/useScroll'
-import useAge from '../js/hooks/useAge'
+import useGetAge from '../js/hooks/useGetAge'
 
 const Home = () => {
-    let age = useAge('11/22/1997')
+    let age = useGetAge('11/22/1997')
     // useScroll()
     return <>
         <Head>
