@@ -1,0 +1,199 @@
+{
+  "works": [
+     {
+      "name": "Sushi Place",
+      "slug": "sushi-place",
+      "img": "SushiPlace.min.jpg",
+      "min": "SushiPlace.min.jpg",
+      "tabs": [
+        "front"
+      ],
+      "role": "Intégrateur, designer",
+      "stack": [
+        "HTML", "CSS", "Bootstrap", "Inkscape"
+      ],
+      "files": [
+        "result.pdf", "template.zip"
+      ],
+      "url": "mon-site.com",
+      "visual_identity": {
+        "logos": ["logo.svg"],
+        "fonts": [
+          {"name": "Montserrat", "path": "path"}
+        ],
+        "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
+        "gallery": ["image.jpg", "image2.jpg"]
+      }
+    },
+     {
+      "name": "Laxar",
+      "slug": "laxar",
+      "img": "Laxar.min.jpg",
+      "min": "Laxar.min.jpg",
+      "tabs": [
+        "front",
+        "back"
+      ],
+      "role": "Intégrateur, designer",
+      "stack": [
+        "HTML", "CSS", "Bootstrap", "Inkscape"
+      ],
+      "files": [
+        "result.pdf", "template.zip"
+      ],
+      "url": "mon-site.com",
+      "visual_identity": {
+        "logos": ["logo.svg"],
+        "fonts": [
+          {"name": "Montserrat", "path": "path"}
+        ],
+        "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
+        "gallery": ["image.jpg", "image2.jpg"]
+      }
+    },
+     {
+      "name": "Liberty",
+      "slug": "liberty",
+      "img": "Liberty.min.jpg",
+      "min": "Liberty.min.jpg",
+      "tabs": [
+        "front"
+      ],
+      "role": "Intégrateur, designer",
+      "stack": [
+        "HTML", "CSS", "Bootstrap", "Inkscape"
+      ],
+      "files": [
+        "result.pdf", "template.zip"
+      ],
+      "url": "mon-site.com",
+      "visual_identity": {
+        "logos": ["logo.svg"],
+        "fonts": [
+          {"name": "Montserrat", "path": "path"}
+        ],
+        "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
+        "gallery": ["image.jpg", "image2.jpg"]
+      }
+    },
+     {
+      "name": "Banana Design",
+      "slug": "banana-design",
+      "img": "Banana.min.jpg",
+      "min": "Banana.min.jpg",
+      "tabs": [
+        "front",
+        "wordpress"
+      ],
+      "role": "Intégrateur, designer",
+      "stack": [
+        "HTML", "CSS", "Bootstrap", "Inkscape"
+      ],
+      "files": [
+        "result.pdf", "template.zip"
+      ],
+      "url": "mon-site.com",
+      "visual_identity": {
+        "logos": ["logo.svg"],
+        "fonts": [
+          {"name": "Montserrat", "path": "path"}
+        ],
+        "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
+        "gallery": ["image.jpg", "image2.jpg"]
+      }
+    },
+     {
+      "name": "Mes démarches en 1 clic",
+      "slug": "md1c",
+      "img": "MD1C.min.jpg",
+      "min": "MD1C.min.jpg",
+      "tabs": [
+        "front",
+        "back"
+      ],
+      "role": "Intégrateur, designer",
+      "stack": [
+        "HTML", "CSS", "Bootstrap", "Inkscape"
+      ],
+      "files": [
+        "result.pdf", "template.zip"
+      ],
+      "url": "mon-site.com",
+      "visual_identity": {
+        "logos": ["logo.svg"],
+        "fonts": [
+          {"name": "Montserrat", "path": "path"}
+        ],
+        "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
+        "gallery": ["image.jpg", "image2.jpg"]
+      }
+    },
+     {
+      "name": "Qovery",
+      "slug": "qovery",
+      "img": "Qovery.min.jpg",
+      "min": "Qovery.min.jpg",
+      "tabs": [
+        "front"
+      ],
+      "role": "Intégrateur, designer",
+      "stack": [
+        "HTML", "CSS", "Bootstrap", "Inkscape"
+      ],
+      "files": [
+        "result.pdf", "template.zip"
+      ],
+      "url": "mon-site.com",
+      "visual_identity": {
+        "logos": ["logo.svg"],
+        "fonts": [
+          {"name": "Montserrat", "path": "path"}
+        ],
+        "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
+        "gallery": ["image.jpg", "image2.jpg"]
+      }
+    },
+     {
+      "name": "Saaspik",
+      "slug": "saaspik",
+      "img": "Saaspik.min.jpg",
+      "min": "Saaspik.min.jpg",
+      "tabs": [
+        "front"
+      ],
+      "role": "Intégrateur, designer",
+      "stack": [
+        "HTML", "CSS", "Bootstrap", "Inkscape"
+      ],
+      "files": [
+        "result.pdf", "template.zip"
+      ],
+      "url": "mon-site.com",
+      "visual_identity": {
+        "logos": ["logo.svg"],
+        "fonts": [
+          {"name": "Montserrat", "path": "path"}
+        ],
+        "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
+        "gallery": ["image.jpg", "image2.jpg"]
+      }
+    }
+  ],
+  "tabs": {
+    "1": {
+      "name": "front"
+    },
+    "2": {
+      "name": "back"
+    },
+    "3": {
+      "name": "design"
+    },
+    "4": {
+      "name": "games"
+    },
+    "5": {
+      "name": "c++"
+    }
+  }
+}

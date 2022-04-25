@@ -1,5 +1,5 @@
 import { initializeApp, getApps, getApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore/lite'
+import { getFirestore, setDoc, doc } from 'firebase/firestore/lite'
 
 const credentials = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -15,3 +15,14 @@ const app = !getApps.length ? initializeApp(credentials) : getApp()
 const firestore = getFirestore(app)
 
 export default firestore
+
+
+// // EXPORT
+//
+// const data = require('../../../db/backup.json')
+//
+// data.works.forEach(async work => {
+//     console.log(work)
+//     await setDoc(doc(firestore, 'works', work.slug), work)
+// })
+//
