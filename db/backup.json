@@ -12,14 +12,24 @@
       "stack": [
         "HTML", "CSS", "Bootstrap", "Inkscape"
       ],
+     "year": 2019,
       "files": [
-        "result.pdf", "template.zip"
+        {
+          "label": "Résultat",
+          "link": "result.pdf",
+          "format": "pdf"
+        },
+        {
+          "label": "Template",
+          "link": "template.png",
+          "format": "image"
+        }
       ],
-      "url": "mon-site.com",
-      "visual_identity": {
+      "link": "mon-site.com",
+      "brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
-          {"name": "Montserrat", "path": "path"}
+          {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
         ],
         "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
         "gallery": ["image.jpg", "image2.jpg"]
@@ -34,18 +44,28 @@
         "front",
         "back"
       ],
+       "year": 2019,
       "role": "Intégrateur, designer",
       "stack": [
         "HTML", "CSS", "Bootstrap", "Inkscape"
       ],
       "files": [
-        "result.pdf", "template.zip"
+        {
+          "label": "Résultat",
+          "link": "result.pdf",
+          "format": "pdf"
+        },
+        {
+          "label": "Template",
+          "link": "template.png",
+          "format": "image"
+        }
       ],
-      "url": "mon-site.com",
-      "visual_identity": {
+      "link": "mon-site.com",
+      "brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
-          {"name": "Montserrat", "path": "path"}
+          {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
         ],
         "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
         "gallery": ["image.jpg", "image2.jpg"]
@@ -59,18 +79,28 @@
       "tabs": [
         "front"
       ],
+       "year": 2019,
       "role": "Intégrateur, designer",
       "stack": [
         "HTML", "CSS", "Bootstrap", "Inkscape"
       ],
       "files": [
-        "result.pdf", "template.zip"
+        {
+          "label": "Résultat",
+          "link": "result.pdf",
+          "format": "pdf"
+        },
+        {
+          "label": "Template",
+          "link": "template.png",
+          "format": "image"
+        }
       ],
-      "url": "mon-site.com",
-      "visual_identity": {
+      "link": "mon-site.com",
+      "brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
-          {"name": "Montserrat", "path": "path"}
+          {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
         ],
         "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
         "gallery": ["image.jpg", "image2.jpg"]
@@ -85,18 +115,28 @@
         "front",
         "wordpress"
       ],
+       "year": 2019,
       "role": "Intégrateur, designer",
       "stack": [
         "HTML", "CSS", "Bootstrap", "Inkscape"
       ],
       "files": [
-        "result.pdf", "template.zip"
+        {
+          "label": "Résultat",
+          "link": "result.pdf",
+          "format": "pdf"
+        },
+        {
+          "label": "Template",
+          "link": "template.png",
+          "format": "image"
+        }
       ],
-      "url": "mon-site.com",
-      "visual_identity": {
+      "link": "mon-site.com",
+      "brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
-          {"name": "Montserrat", "path": "path"}
+          {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
         ],
         "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
         "gallery": ["image.jpg", "image2.jpg"]
@@ -111,18 +151,28 @@
         "front",
         "back"
       ],
+       "year": 2019,
       "role": "Intégrateur, designer",
       "stack": [
         "HTML", "CSS", "Bootstrap", "Inkscape"
       ],
       "files": [
-        "result.pdf", "template.zip"
+        {
+          "label": "Résultat",
+          "link": "result.pdf",
+          "format": "pdf"
+        },
+        {
+          "label": "Template",
+          "link": "template.png",
+          "format": "image"
+        }
       ],
-      "url": "mon-site.com",
-      "visual_identity": {
+      "link": "mon-site.com",
+      "brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
-          {"name": "Montserrat", "path": "path"}
+          {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
         ],
         "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
         "gallery": ["image.jpg", "image2.jpg"]
@@ -136,18 +186,28 @@
       "tabs": [
         "front"
       ],
+       "year": 2019,
       "role": "Intégrateur, designer",
       "stack": [
         "HTML", "CSS", "Bootstrap", "Inkscape"
       ],
       "files": [
-        "result.pdf", "template.zip"
+        {
+          "label": "Résultat",
+          "link": "result.pdf",
+          "format": "pdf"
+        },
+        {
+          "label": "Template",
+          "link": "template.png",
+          "format": "image"
+        }
       ],
-      "url": "mon-site.com",
-      "visual_identity": {
+      "link": "mon-site.com",
+      "brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
-          {"name": "Montserrat", "path": "path"}
+          {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
         ],
         "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
         "gallery": ["image.jpg", "image2.jpg"]
@@ -161,18 +221,28 @@
       "tabs": [
         "front"
       ],
+       "year": 2019,
       "role": "Intégrateur, designer",
       "stack": [
         "HTML", "CSS", "Bootstrap", "Inkscape"
       ],
       "files": [
-        "result.pdf", "template.zip"
+        {
+          "label": "Résultat",
+          "link": "result.pdf",
+          "format": "pdf"
+        },
+        {
+          "label": "Template",
+          "link": "template.png",
+          "format": "image"
+        }
       ],
-      "url": "mon-site.com",
-      "visual_identity": {
+      "link": "mon-site.com",
+      "brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
-          {"name": "Montserrat", "path": "path"}
+          {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
         ],
         "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"],
         "gallery": ["image.jpg", "image2.jpg"]

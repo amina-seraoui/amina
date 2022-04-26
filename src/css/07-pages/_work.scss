@@ -1,0 +1,52 @@
+#work {
+    #hero {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background: red;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background: linear-gradient(180deg, rgba($grey, .5) 0, $grey 95%);
+            backdrop-filter: blur(4px);
+        }
+
+        .container {
+            margin: 0;
+            padding: 5%;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .title {
+                align-self: flex-start;
+                p {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+    section {
+        .content {
+            @extend %flex;
+            gap: calc(#{ratio-space(2px)} + 30px);
+            align-items: center;
+
+            .card-info, .frame {
+                width: calc(50% - (#{ratio-space(1px)} + 15px));
+
+                li:nth-child(3) {
+                    width: 100%;
+                }
+            }
+
+            @media #{$media-down-lg} {
+                flex-direction: column;
+                .card-info, .frame {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

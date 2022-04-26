@@ -1,0 +1,102 @@
+#brandboard {
+    background: $grey;
+    padding: ratio-space(2px);
+    @extend %flex;
+    justify-content: center;
+    gap: ratio-space(2px);
+
+    .section {
+        padding: ratio-space(4px) ratio-space(2px);
+
+        &:nth-child(1), &:nth-child(2) {
+            width: calc(50% - ratio-space(1px));
+        }
+
+        &:nth-child(2) {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                border-left: $light-grey solid 1px;
+                height: 50%;
+                top: 25%;
+                left: ratio-space(-1px);
+            }
+        }
+
+        &:nth-child(3) {
+            width: 100%;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                border-top: $light-grey solid 1px;
+                width: 50%;
+                top: ratio-space(-1px);
+                left: 25%;
+            }
+        }
+
+        h5 {
+            margin-bottom: ratio-space(1px);
+        }
+
+        .items {
+            @extend %flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+
+            .item {
+                width: calc(50% - ratio-space(1px));
+
+                &.logo {
+                    background: $medium-grey;
+                    width: 96px;
+                    height: 96px;
+                    border-radius: 50%;
+                    @extend %flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &.font {
+                    span {
+                        display: block;
+                        margin-top: ratio-space(4px);
+                    }
+                }
+
+                &.color {
+                    @extend %flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: ratio-space(1px);
+                    width: auto;
+                    i {
+                        display: block;
+                        mask: center / contain url('/assets/img/color-paint.svg') no-repeat;
+                        height: 64px;
+                        width: 90px;
+                    }
+                }
+            }
+        }
+
+        @media #{$media-down-lg} {
+            &:nth-child(1), &:nth-child(2) {
+                width: 100%;
+            }
+            &:nth-child(2) {
+                &::before {
+                    border: none;
+                    border-top: $light-grey solid 1px;
+                    width: 50%;
+                    top: ratio-space(-1px);
+                    left: 25%;
+                }
+            }
+
+        }
+    }
+}

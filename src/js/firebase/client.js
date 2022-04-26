@@ -17,12 +17,12 @@ const firestore = getFirestore(app)
 export default firestore
 
 
-// // EXPORT
-//
+// EXPORT
+
 // const data = require('../../../db/backup.json')
 //
 // data.works.forEach(async work => {
 //     console.log(work)
 //     await setDoc(doc(firestore, 'works', work.slug), work)
 // })
-//
+

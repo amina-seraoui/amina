@@ -3,8 +3,8 @@ const CardInfo = ({ children }) => {
         {
             children.map((info, i) => {
                 return <li key={i}>
-                    <h3 className="label">{info.label}</h3>
-                    <span className="value">{info.value}</span>
+                    <h4 className="label">{info.label}</h4>
+                    <div className="value">{info.value}</div>
                 </li>
             })
         }

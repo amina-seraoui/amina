@@ -40,11 +40,6 @@ const Contact = () => {
                         {
                             [
                                 {
-                                    label: 'Address',
-                                    value: '5 rue du Rhône\n' +
-                                        '74100 Annemasse, France'
-                                },
-                                {
                                     label: 'Phone',
                                     value: <a className="link" href="tel:+33667306435">(+33) 6 67 30 64 35</a>
                                 },
