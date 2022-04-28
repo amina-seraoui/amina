@@ -69,7 +69,7 @@
         @media #{$media-down-lg} {
             .content {
                 flex-direction: column;
-                > .frame, ul {
+                > .frame, .card-info {
                     width: 100%;
                 }
             }
@@ -91,11 +91,44 @@
         .content {
             @extend %flex;
             justify-content: space-between;
+            align-items: center;
 
-            .skill-bar {
-                width: calc(50% - #{ratio-space(6px)});
+            .scene, .skills {
+                position: relative;
+                width: calc(50% - #{ratio-space(1px)});
 
-                @media #{$media-down-md} {
+                border: solid 1px red;
+
+                .labels {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    li {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        cursor: grab;
+
+                        font-size: large;
+                        user-select: none;   /* don't let the text get selected */
+                        text-shadow:         /* create a black outline */
+                                -1px -1px 0 #000,
+                                0   -1px 0 #000,
+                                1px -1px 0 #000,
+                                1px  0   0 #000,
+                                1px  1px 0 #000,
+                                0    1px 0 #000,
+                                -1px  1px 0 #000,
+                                -1px  0   0 #000;
+
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+
+                @media #{$media-down-lg} {
                     width: 100%;
                 }
             }

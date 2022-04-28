@@ -68,35 +68,15 @@ const Home = () => {
                 {
                     [
                         {
-                            label: 'HTML5',
-                            value: 100
-                        },
-                        {
-                            label: 'Css3',
-                            value: 100
-                        },
-                        {
-                            label: 'Javascript',
+                            label: 'SCSS',
                             value: 85
                         },
                         {
-                            label: 'React',
-                            value: 75
-                        },
-                        {
-                            label: 'Figma',
-                            value: 60
-                        },
-                        {
-                            label: 'Photoshop',
-                            value: 50
-                        },
-                        {
-                            label: 'php',
-                            value: 95
-                        },
-                        {
                             label: 'Symfony',
+                            value: 70
+                        },
+                        {
+                            label: 'React JS',
                             value: 75
                         }
                     ]
