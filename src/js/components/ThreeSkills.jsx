@@ -6,10 +6,12 @@ import {OrbitControls} from 'three/examples/jsm/controls/experimental/CameraCont
 const ThreeSkills = ({skills}) => {
     const ref = useRef()
 
-    const init = (renderer, scene, camera, parent, controls) => {
+    const init = (renderer, scene, parent) => {
+        const camera = new THREE.PerspectiveCamera(80, 50, .1, 1000)
         camera.position.x = 0
         camera.position.y = 0
         camera.position.z = 4.5
+        let controls
 
         const getTextureText = (text) => {
             const textCanvas = document.createElement('canvas')
@@ -68,7 +70,6 @@ const ThreeSkills = ({skills}) => {
                 // reinit index if is the last
                 index = index > skills.length - 1 ? 0 : index
 
-                // const geometry = new THREE.BoxGeometry()
                 const material = new THREE.SpriteMaterial(
                     {
                         color: 0xFFFFFF,
@@ -94,6 +95,7 @@ const ThreeSkills = ({skills}) => {
                 new THREE.MeshNormalMaterial() // Matériel de debug
             ))
             // axes helper
+            textsGroup.add(new THREE.AxesHelper())
             scene.add(new THREE.AxesHelper())
             // scene grid helper
             scene.add(new THREE.GridHelper(2, 9))
@@ -104,8 +106,8 @@ const ThreeSkills = ({skills}) => {
         scene.add(camera, textsGroup)
         // displayHelpers()
 
-        let ratioY = -0.002
-        let ratioX = 0.002
+        let ratioY = -.002
+        let ratioX = .002
 
         parent.addEventListener('mousemove', e => {
             ratioY = (e.clientX / parent.offsetWidth - .95) * 0.005
@@ -134,29 +136,23 @@ const ThreeSkills = ({skills}) => {
 
     useEffect(() => {
         const parent = ref.current
-        const w = parent.offsetWidth
-        const h = parent.offsetHeight
         const scene = new THREE.Scene()
         const renderer = new THREE.WebGLRenderer({
             alpha: true,
             antialias: true // retire la pixelisation mais à un coût sur la performance
         })
-        const camera = new THREE.PerspectiveCamera(80, w/h, .1, 1000)
-        let controls
-        // controls = new OrbitControls(camera, renderer.domElement)
 
         parent.appendChild(renderer.domElement)
         renderer.setClearColor(0, 0)
-        renderer.setSize(w, h)
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-        init(renderer, scene, camera, parent)
+        init(renderer, scene, parent)
 
         return () => {
             parent.removeChild(renderer.domElement)
             parent.onmousemove = null
         }
-    }, [])
+    })
 
     return <div className="scene" ref={ref} />
 }
