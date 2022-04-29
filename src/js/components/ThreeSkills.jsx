@@ -5,16 +5,15 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import {useEffect, useRef} from 'react'
 import {Geometry} from 'three/examples/jsm/deprecated/Geometry'
+import {Vector3} from 'three'
 
 const ThreeSkills = ({skills}) => {
     const ref = useRef()
     const h = 500
-    const textsArray = []
-
-    const init = (renderer, scene, camera, parent, controls) => {
+    const init = (renderer, scene, camera, parent) => {
         camera.position.x = 0
         camera.position.y = 0
-        camera.position.z = 4
+        camera.position.z = 4.5
 
         const createTextTexture = (text) => {
             const textCanvas = document.createElement('canvas')
@@ -33,7 +32,7 @@ const ThreeSkills = ({skills}) => {
         }
 
         const createTexts = () => {
-            const r = 1.8
+            const r = 2.5
             const shape = new THREE.SphereGeometry(r, 6, 4)
             const pts = shape.getAttribute('position').array
 
@@ -57,8 +56,7 @@ const ThreeSkills = ({skills}) => {
                 const zDist = vector[2] - vectors[i + 1][2]
 
                 const globalDist = (Math.abs(xDist) + Math.abs(yDist) + Math.abs(zDist))
-                console.log(globalDist)
-                return globalDist > r
+                return globalDist > r + .2
             })
 
             // reshuffle
@@ -71,8 +69,8 @@ const ThreeSkills = ({skills}) => {
                     // reinit index if is the last
                     index = index > skills.length - 1 ? 0 : index
 
-                    const geometry = new THREE.BoxGeometry()
-                    const material = new THREE.MeshPhongMaterial(
+                    // const geometry = new THREE.BoxGeometry()
+                    const material = new THREE.SpriteMaterial(
                         {
                             color: 0xFFFFFF,
                             map: createTextTexture(skills[index]),
@@ -81,10 +79,9 @@ const ThreeSkills = ({skills}) => {
                         }
                     )
 
-                    const point = new THREE.Mesh(geometry, material)
+                    const point = new THREE.Sprite(material)
                     point.position.set(...v)
                     textsGroup.add(point)
-                    textsArray.push(point)
                     index++
                 })
             })
@@ -126,8 +123,8 @@ const ThreeSkills = ({skills}) => {
         let ratioX = 0.002
 
         window.addEventListener('mousemove', e => {
-            ratioY = -(e.clientX / parent.offsetWidth - .5) * .01
-            ratioX = (e.clientY / h - 1) * .01
+            ratioY = -(e.clientX / window.innerWidth - .5) * .01
+            ratioX = -(e.clientY / h - 1) * .01
         })
         window.addEventListener('mouseout', e => {
             ratioY = 0.0002
@@ -141,17 +138,12 @@ const ThreeSkills = ({skills}) => {
             textsGroup.rotation.y += ratioY * Math.PI
             textsGroup.rotation.x += ratioX * Math.PI
 
-            textsArray.forEach(t => {
-                t.lookAt(camera.position)
-            })
-            // texts.lookAt(camera.position)
-
             camera.aspect = w / h
             camera.updateProjectionMatrix()
             renderer.setSize(w, h)
             renderer.render(scene, camera)
 
-            controls.update()
+            // controls.update()
             requestAnimationFrame(render)
         }
 
@@ -167,14 +159,14 @@ const ThreeSkills = ({skills}) => {
             antialias: true // retire la pixelisation mais à un coût de performance
         })
         const camera = new THREE.PerspectiveCamera(80, w/h, .1, 1000)
-        const controls = new OrbitControls(camera, renderer.domElement)
+        // const controls = new OrbitControls(camera, renderer.domElement)
 
         parent.appendChild(renderer.domElement)
         renderer.setClearColor(0, 0)
         renderer.setSize(w, h)
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-        init(renderer, scene, camera, parent, controls)
+        init(renderer, scene, camera, parent)
 
         return () => {
             parent.removeChild(renderer.domElement)

@@ -9,7 +9,7 @@ const Skills = ({ children }) => {
         <div className="container">
             <div className="title">
                 <h2>My <span className="strong">skills</span></h2>
-                <h3>What I'm good at</h3>
+                <h3>My favourite stack</h3>
             </div>
             <div className="content">
                 <ThreeSkills skills={
