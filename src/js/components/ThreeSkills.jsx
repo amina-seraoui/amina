@@ -1,21 +1,17 @@
-import React, {useState} from 'react'
+import React from 'react'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import {useEffect, useRef} from 'react'
-import {Geometry} from 'three/examples/jsm/deprecated/Geometry'
-import {Vector3} from 'three'
+import {OrbitControls} from 'three/examples/jsm/controls/experimental/CameraControls'
 
 const ThreeSkills = ({skills}) => {
     const ref = useRef()
-    const h = 500
-    const init = (renderer, scene, camera, parent) => {
+
+    const init = (renderer, scene, camera, parent, controls) => {
         camera.position.x = 0
         camera.position.y = 0
         camera.position.z = 4.5
 
-        const createTextTexture = (text) => {
+        const getTextureText = (text) => {
             const textCanvas = document.createElement('canvas')
             const ctx = textCanvas.getContext('2d')
             textCanvas.width = 100
@@ -31,13 +27,10 @@ const ThreeSkills = ({skills}) => {
             return texture
         }
 
-        const createTexts = () => {
+        const getVectors = () => {
             const r = 2.5
             const shape = new THREE.SphereGeometry(r, 6, 4)
             const pts = shape.getAttribute('position').array
-
-            const loader = new FontLoader()
-            const textsGroup = new THREE.Group()
 
             let vectors = []
             // create vectors
@@ -62,78 +55,66 @@ const ThreeSkills = ({skills}) => {
             // reshuffle
             vectors.sort(() => Math.random() * .5)
 
-            loader.load( '/assets/fonts/Gilroy/Gilroy-MediumRegular.json', ( font ) => {
-                let index = 0
-                // loop on each vectors
-                vectors.forEach(v => {
-                    // reinit index if is the last
-                    index = index > skills.length - 1 ? 0 : index
+            return vectors
+        }
 
-                    // const geometry = new THREE.BoxGeometry()
-                    const material = new THREE.SpriteMaterial(
-                        {
-                            color: 0xFFFFFF,
-                            map: createTextTexture(skills[index]),
-                            transparent: true,
-                            alphaTest: .5,
-                        }
-                    )
+        const createTexts = () => {
+            const textsGroup = new THREE.Group()
+            const vectors = getVectors()
+            let index = 0
 
-                    const point = new THREE.Sprite(material)
-                    point.position.set(...v)
-                    textsGroup.add(point)
-                    index++
-                })
+            // loop on each vectors
+            vectors.forEach(v => {
+                // reinit index if is the last
+                index = index > skills.length - 1 ? 0 : index
+
+                // const geometry = new THREE.BoxGeometry()
+                const material = new THREE.SpriteMaterial(
+                    {
+                        color: 0xFFFFFF,
+                        map: getTextureText(skills[index]),
+                        transparent: true,
+                        alphaTest: .5,
+                    }
+                )
+
+                const point = new THREE.Sprite(material)
+                point.position.set(...v)
+                textsGroup.add(point)
+                index++
             })
 
             return textsGroup
         }
 
-        const createLight = () => {
-            const light = new THREE.PointLight(0xffffff, 1, 8);
-            light.position.z = 3
-            light.position.y = 0
-            light.position.x = 0
-
-            return light
-        }
-
-        const addHelpers = () => {
-            // light helper
-            scene.add(new THREE.PointLightHelper(light, 1, '#FF0'))
+        const displayHelpers = () => {
             // units helper
-            // scene.add(new THREE.Mesh(
-            //     new THREE.BoxBufferGeometry(1, 1, 1),
-            //     new THREE.MeshNormalMaterial() // Matériel de debug
-            // ))
+            scene.add(new THREE.Mesh(
+                new THREE.BoxBufferGeometry(1, 1, 1),
+                new THREE.MeshNormalMaterial() // Matériel de debug
+            ))
             // axes helper
             scene.add(new THREE.AxesHelper())
             // scene grid helper
             scene.add(new THREE.GridHelper(2, 9))
         }
 
-        const light = createLight()
         const textsGroup = createTexts()
 
-        scene.add(camera, light, textsGroup)
-        // addHelpers()
+        scene.add(camera, textsGroup)
+        // displayHelpers()
 
-        const clock = new THREE.Clock()
-        let ratioY = 0.0002
+        let ratioY = -0.002
         let ratioX = 0.002
 
-        window.addEventListener('mousemove', e => {
-            ratioY = -(e.clientX / window.innerWidth - .5) * .01
-            ratioX = -(e.clientY / h - 1) * .01
-        })
-        window.addEventListener('mouseout', e => {
-            ratioY = 0.0002
-            ratioX = 0.002
+        parent.addEventListener('mousemove', e => {
+            ratioY = (e.clientX / parent.offsetWidth - .95) * 0.005
+            ratioX = (e.clientY / parent.offsetHeight - 1.35) * 0.005
         })
 
         const render = () => {
-            const time = clock.getElapsedTime()
             const w = parent.offsetWidth
+            const h = parent.offsetHeight
 
             textsGroup.rotation.y += ratioY * Math.PI
             textsGroup.rotation.x += ratioX * Math.PI
@@ -143,7 +124,8 @@ const ThreeSkills = ({skills}) => {
             renderer.setSize(w, h)
             renderer.render(scene, camera)
 
-            // controls.update()
+            if (controls) controls.update()
+
             requestAnimationFrame(render)
         }
 
@@ -153,13 +135,15 @@ const ThreeSkills = ({skills}) => {
     useEffect(() => {
         const parent = ref.current
         const w = parent.offsetWidth
+        const h = parent.offsetHeight
         const scene = new THREE.Scene()
         const renderer = new THREE.WebGLRenderer({
             alpha: true,
-            antialias: true // retire la pixelisation mais à un coût de performance
+            antialias: true // retire la pixelisation mais à un coût sur la performance
         })
         const camera = new THREE.PerspectiveCamera(80, w/h, .1, 1000)
-        // const controls = new OrbitControls(camera, renderer.domElement)
+        let controls
+        // controls = new OrbitControls(camera, renderer.domElement)
 
         parent.appendChild(renderer.domElement)
         renderer.setClearColor(0, 0)
@@ -174,10 +158,7 @@ const ThreeSkills = ({skills}) => {
         }
     }, [])
 
-    return <div className="scene" ref={ref}>
-        <ul className="labels">
-        </ul>
-    </div>
+    return <div className="scene" ref={ref} />
 }
 
 export default ThreeSkills

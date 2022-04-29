@@ -90,25 +90,73 @@
     #skills {
         .content {
             @extend %flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
+            column-gap: ratio-space(4px);
 
-            .scene {
-                width: calc(65% - #{ratio-space(1px)});
-                background: linear-gradient(45deg, $grey 0, $medium-grey 100%);
-                border-radius: 50%;
-            }
-            .skills {
-                width: calc(35% - #{ratio-space(1px)});
-            }
+            //.scene {
+            //    width: 100%;
+            //    max-width: calc(500px - #{ratio-space(2px)});
+            //    height: 500px;
+            //    background: linear-gradient(45deg, $grey 0, $medium-grey 100%);
+            //    border-radius: 50%;
+            //
+            //    canvas {
+            //        position: absolute;
+            //        top: 0;
+            //        left: 0;
+            //    }
+            //
+            //    @media #{$media-down-md} {
+            //        & {
+            //            height: 200px;
+            //            width: 200px;
+            //        }
+            //    }
+            //}
+            //.skills {
+            //    width: calc(100% - #{ratio-space(2px)} - 500px);
+            //}
 
             .scene, .skills {
                 position: relative;
 
-                @media #{$media-down-lg} {
+                &.scene {
                     width: 100%;
+                    max-width: calc(500px - #{ratio-space(2px)});
+                    height: 500px;
+                    background: radial-gradient($grey 25%, $medium-grey 75%);
+                    border-radius: 50%;
+
+                    canvas {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+
+                &.skills {
+                    width: calc(100% - #{ratio-space(2px)} - 500px);
+                }
+
+                @media #{$media-down-xl} {
+                    &.scene, &.skills {
+                        width: 100%;
+                    }
+
+                    &.scene {
+                        @media #{$media-down-md} {
+                            height: 350px;
+                            width: 350px;
+                        }
+                        @media #{$media-down-sm} {
+                            height: 250px;
+                            width: 250px;
+                        }
+                    }
                 }
             }
+
         }
     }
 
