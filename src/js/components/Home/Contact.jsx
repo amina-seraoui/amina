@@ -1,6 +1,7 @@
 import CardInfo from '../CardInfo'
 import Socials from '../Socials'
 import Frame from '../Frame'
+import ContactForm from '../ContactForm'
 
 const Contact = () => {
     return <section id="contact" data-scroll-section="">
@@ -11,23 +12,7 @@ const Contact = () => {
                     <h3>Leave me a message</h3>
                 </div>
                 <div className="content">
-                    <form action="https://formspree.io/f/mqkgrlwd" method="POST">
-                        <div className="field">
-                            <label htmlFor="name">Your name :</label>
-                            <input id="name" type="text" name="name" placeholder="Jane Doe" required />
-                        </div>
-                        <div className="field">
-                            <label htmlFor="mail">Your e-mail :</label>
-                            <input id="mail" type="email" name="mail" placeholder="jane.doe@example.com" required />
-                        </div>
-
-                        <div className="field">
-                            <label htmlFor="message">Your message :</label>
-                            <textarea name="message" id="message" placeholder="Hello, ..." required />
-                        </div>
-
-                        <button className="btn primary" type="submit">Send</button>
-                    </form>
+                    <ContactForm />
                     <p className="small">Think to indicate your phone number or your e-mail to be contacted back.</p>
                 </div>
             </div>
