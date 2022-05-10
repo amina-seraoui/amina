@@ -42,7 +42,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const work = await getBy('works', 'slug', params.slug)
-    console.log('found :', work)
     return {
         props: {work}
     }

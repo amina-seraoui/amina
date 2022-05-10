@@ -1,0 +1,60 @@
+.alerts {
+    position: fixed;
+    width: 100%;
+    top: 5%;
+    left: 0;
+    z-index: 10;
+
+    .alert {
+        width: 80%;
+        margin: 0 auto;
+        background: $grey;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        border-width: 0;
+        transition: all .5s, color 0s;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: transparent;
+
+        &.active {
+            padding: ratio-space(2px) ratio-space(4px) ratio-space(2px) ratio-space(4px);
+            height: auto;
+            border: solid 1px;
+            margin-bottom: ratio-space(1px);
+            transition: none;
+            color: $white;
+
+            i {
+                opacity: 1;
+            }
+        }
+
+        i {
+            margin-right: ratio-space(4px);
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+        }
+
+        &.success {
+            border-color: $success-color;
+           i {
+               background: $success-color;
+               mask: center / contain url('/assets/img/icons/valid.svg') no-repeat;
+           }
+        }
+
+        &.error {
+            border-color: $error-color;
+           i {
+               background: $error-color;
+               mask: center / contain url('/assets/img/icons/error.svg') no-repeat;
+           }
+        }
+    }
+}

@@ -4,6 +4,7 @@
 
 .link {
     position: relative;
+    display: inline-block;
 
     &::before {
         position: absolute;

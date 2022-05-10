@@ -152,7 +152,7 @@ const ThreeSkills = ({skills}) => {
             parent.removeChild(renderer.domElement)
             parent.onmousemove = null
         }
-    })
+    }, [])
 
     return <div className="scene" ref={ref} />
 }

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {useEffect} from 'react'
 
 const LightBox = ({ original, min, label, active, setActive, next, prev, link }) => {
@@ -26,10 +27,10 @@ const LightBox = ({ original, min, label, active, setActive, next, prev, link })
                     <div className="content" title="">
                         {
                             link ?
-                                <Link href={link}>
+                                <Link href={link} passHref>
                                     <img src={original} alt={label} title="See more"/>
                                 </Link> :
-                                <img src={original} alt={label}/>
+                                <Image src={original} alt={label}/>
                         }
                         <p className="footer">
                             <span className="label">{label}</span>
@@ -39,6 +40,7 @@ const LightBox = ({ original, min, label, active, setActive, next, prev, link })
                 null
         }
         <div className="light-box min" onClick={setActive}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={min} width={450} height={250} alt={label}/>
             <span className="label">{label}</span>
         </div>

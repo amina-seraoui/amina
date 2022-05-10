@@ -4,8 +4,12 @@ $red: #CE000F;
 $grey: #111;
 $medium-grey: #202020;
 $light-grey: darken($white, 50);
+$green: #58D96D;
 
 $primary-color: $red;
 $secondary-color: $black;
 $tertiary-color: $medium-grey;
 //$quaternary-color: $light-grey;
+
+$error-color: $red;
+$success-color: $green;

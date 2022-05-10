@@ -5,7 +5,7 @@ export default function handler(req, res) {
     if (req.method === 'POST') {
         create('messages', req.body)
             .then(doc => {
-                sendMail()
+                sendMail({...req.body})
                 res.status(200).json({success: true})
             })
             .catch(err => {
@@ -15,7 +15,7 @@ export default function handler(req, res) {
     } else res.status(403).send('bad request')
 }
 
-const sendMail = () => {
+const sendMail = ({name, msg}) => {
     const config = {
         service: 'gmail',
         auth: {
@@ -27,8 +27,8 @@ const sendMail = () => {
     const mail = {
         from: process.env.MAIL_FROM,
         to: process.env.MAIL_FROM,
-        subject: 'Nuovo Messaggio',
-        text: 'Buongiorno | Buondi'
+        subject: 'Nuovo Messaggio di ' + name,
+        text: 'Buongiorno | Buondi, hai ricevuto un nuovo messaggio : ' + msg
     }
 
     const transporter = nodemailer.createTransport(config)

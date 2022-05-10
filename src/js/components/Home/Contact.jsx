@@ -3,7 +3,7 @@ import Socials from '../Socials'
 import Frame from '../Frame'
 import ContactForm from '../ContactForm'
 
-const Contact = () => {
+const Contact = ({ createAlert }) => {
     return <section id="contact" data-scroll-section="">
         <div className="container">
             <div>
@@ -12,7 +12,7 @@ const Contact = () => {
                     <h3>Leave me a message</h3>
                 </div>
                 <div className="content">
-                    <ContactForm />
+                    <ContactForm createAlert={createAlert} />
                     <p className="small">Think to indicate your phone number or your e-mail to be contacted back.</p>
                 </div>
             </div>
