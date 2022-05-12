@@ -25,7 +25,7 @@ const Alerts = ({ setCreateAlert }) => {
         setAlerts(alerts => {
             const clone = [...alerts]
             const icon = type === 'success' ? 'valid.svg' : 'error.svg'
-            const i = clone.unshift({type, text, state: 1, icon})
+            const i = clone.push({type, text, state: 1, icon})
 
             setTimeout(() => {
                 closeAlert(0)

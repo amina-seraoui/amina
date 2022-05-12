@@ -45,6 +45,7 @@
 
     &.tertiary {
         background-color: transparent;
+        padding: ratio-space(1px) ratio-space(4px);
 
         &::before {
             background-color: lighten($tertiary-color, 15);

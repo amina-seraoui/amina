@@ -8,24 +8,24 @@ const ContactForm = ({ createAlert }) => {
     const handleSubmit = async e => {
         e.preventDefault()
         createAlert('info', 'Sending...')
-        // const data = {name, mail, msg, timestamp: new Date().getTime().toString()}
-        // fetch('/api/msg', {
-        //     method: 'POST',
-        //     headers: {'Content-Type': 'application/json'},
-        //     body: JSON.stringify(data)
-        // })
-        //     .then(res => res.json())
-        //     .then(res => {
-        //         console.log(res)
-        //         createAlert('success', 'Message successfully sent !')
-        //         setName('')
-        //         setMail('')
-        //         setMsg('')
-        //     })
-        //     .catch(err => {
-        //         console.error(err)
-        //         createAlert('error', 'An error occured. Please verify all the fields or retry later.')
-        //     })
+        const data = {name, mail, msg, timestamp: new Date().getTime().toString()}
+        fetch('/api/msg', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(res => {
+                console.log(res)
+                createAlert('success', 'Message successfully sent !')
+                setName('')
+                setMail('')
+                setMsg('')
+            })
+            .catch(err => {
+                console.error(err)
+                createAlert('error', 'An error occured. Please verify all the fields or retry later.')
+            })
     }
 
     return <form method="POST" onSubmit={handleSubmit}>
