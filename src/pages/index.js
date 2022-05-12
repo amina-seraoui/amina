@@ -9,10 +9,11 @@ import Works from '../js/components/Home/Works'
 import Contact from '../js/components/Home/Contact'
 import Footer from '../js/components/Footer'
 import AnimatedStars from '../js/components/AnimatedStars'
-import useScroll from '../js/hooks/useScroll'
+// import useScroll from '../js/hooks/useScroll'
 import useGetAge from '../js/hooks/useGetAge'
 import {useState} from 'react'
 import Alerts from '../js/components/Alerts'
+import Link from 'next/link'
 
 const Home = () => {
     let age = useGetAge('11/22/1997')
@@ -63,7 +64,9 @@ const Home = () => {
                                 ]}
                             />
                         </h1>
-                        <a href="#contact" className="btn secondary">Contact me</a>
+                        <Link href="#contact" passHref>
+                            <button className="btn secondary">Contact me</button>
+                        </Link>
                     </div>
                 </Hero>
                 {/* deuxième section */}

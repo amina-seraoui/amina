@@ -1,9 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Footer = () => {
+const Footer = ({next, prev}) => {
     return <footer data-scroll-section="">
         <div className="container">
+            {
+                (next && prev) ?
+                    <div className="pagination">
+                        <a href={prev.slug} className="btn tertiary">Prev</a>
+                        <a href={next.slug} className="btn tertiary">Next</a>
+                    </div> : null
+            }
+
             <div className="title">
                 <h2><span className="strong">Thank</span> you</h2>
                 <h3>Thank you for your visit</h3>

@@ -27,7 +27,9 @@ const Skills = ({ children }) => {
                         'Webpack',
                         'MySQL',
                         'MariaDB',
-                        'Git'
+                        'Git',
+                        'Wordpress',
+                        'p5.js'
                     ]
                 } />
                 <InView triggerOnce={true} as="div" className="skills" onChange={setIsVisible}>

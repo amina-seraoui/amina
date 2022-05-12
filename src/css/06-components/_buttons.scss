@@ -43,6 +43,14 @@
         }
     }
 
+    &.tertiary {
+        background-color: transparent;
+
+        &::before {
+            background-color: lighten($tertiary-color, 15);
+        }
+    }
+
     &.rounded {
         min-width: auto;
         border-radius: 50%;

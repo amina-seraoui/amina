@@ -10,10 +10,10 @@ const Works = () => {
         fetch('/api/works?limit=' + limit)
             .then(res => res.json())
             .then(res => {
-                setTabs(['all', ...res.tabs])
+                setTabs(res.tabs)
                 setWorks(res.works)
             })
-            .catch(err => error.log(err))
+            .catch(err => console.error(err))
     }, [])
 
     return <section id="works" data-scroll-section="">

@@ -5,7 +5,7 @@ ul.card-info {
     text-align: left;
     background: $tertiary-color;
     padding: ratio-space(2px);
-    word-break: break-all;
+    word-break: break-word;
     height: fit-content;
     > li {
         display: block;
@@ -13,6 +13,14 @@ ul.card-info {
 
         .label {
             user-select: none;
+        }
+
+        &:last-child:not(:nth-child(even)) {
+            width: 100%;
+        }
+
+        @media #{$media-down-md} {
+            width: 100%;
         }
     }
 }
@@ -37,11 +45,12 @@ ul.list {
 
 ul.files {
     @extend %flex;
+    gap: ratio-space(4px);
     .file {
-        width: calc(50% - ratio-space(1px));
         a {
             @extend %flex;
             align-items: center;
+            gap: ratio-space(1px);
             i {
                 font-size: 2em;
             }

@@ -1,7 +1,7 @@
 import Frame from '../Frame'
 import CardInfo from '../CardInfo'
 
-const Stack = ({work}) => {
+const Stack = ({work, prev, next}) => {
     const {role, stack, img, files} = work
     return <section>
         <div className="container">

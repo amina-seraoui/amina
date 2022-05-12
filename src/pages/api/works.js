@@ -1,14 +1,33 @@
-import {getAll} from '../../js/model'
+import {getAll, getBy, withLimit} from '../../js/model'
 
-// const w = await getAll('works') // <<<< replace with that
-const works = require('../../../db/works.json')
-const tabs = require('../../../db/tabs.json')
+const getTabs = async () => {
+    return getAll('tabs')
+}
+const getWorks = async () => {
+    return getAll('works')
+}
+const getBySlug = async (slug) => {
+    return getBy('works', 'slug', slug)
+}
+const getLimited = async (limit) => {
+    return withLimit('works', limit)
+}
 
 export default async function handler(req, res) {
-    const w = await getAll('works')
-    const {slug} = req.query
-    if (slug) {
-        const work = works.filter(work => work.slug === slug)
-        // console.log(work)
-    } else res.status(200).json({tabs, works})
+    const rep = {}
+
+    if (Object.keys(req.query).includes('slug')) {
+        rep.work = await getBySlug(req.query.slug)
+    }
+
+    else {
+        rep.tabs = ['all', ...await getTabs()]
+        if (req.query.limit) {
+            rep.works = await getLimited(req.query.limit)
+        } else rep.works = await getWorks()
+    }
+
+    console.log(Object.keys(req.query))
+
+    res.status(200).json(rep)
 }

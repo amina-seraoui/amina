@@ -25,6 +25,14 @@
                     font-style: italic;
                 }
             }
+
+            .links {
+                @extend %flex;
+                flex-direction: row-reverse;
+                width: 100%;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
         }
     }
     section {
@@ -48,5 +56,11 @@
                 }
             }
         }
+    }
+    .pagination {
+        @extend %flex;
+        @extend footer;
+        justify-content: space-between;
+        margin-bottom: ratio-space(8px);
     }
 }
