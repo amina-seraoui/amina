@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: false,
   i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'en'
+    locales: ['fr', 'en', 'ar', 'default'],
+    defaultLocale: 'default'
   },
   env: {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -13,6 +13,9 @@ const nextConfig = {
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.FIREBASE_APP_ID,
     measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  },
+  images: {
+    domains: ['flagicons.lipis.dev']
   }
 }
 

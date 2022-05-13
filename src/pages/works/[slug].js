@@ -7,6 +7,7 @@ import BrandBoard from '../../js/components/Work/BrandBoard'
 import {useEffect} from 'react'
 import Footer from '../../js/components/Footer'
 import Link from 'next/link'
+import {useRouter} from 'next/router'
 
 const Work = ({ work, next, prev }) => {
     return <>
@@ -38,15 +39,22 @@ export default Work
 
 export async function getStaticPaths() {
     const works = await getAll('works')
-    return {
-        paths: works.map((work, i) => {
-            return {
+    const locales = ['fr', 'en', 'ar']
+    const paths = []
+
+    works.forEach((work, i) => {
+        locales.forEach(locale => {console.log(locale)
+            paths.push({
                 params: {
                     slug: work.slug
                 },
-                locale: 'fr'
-            }
-        }),
+                locale
+            })
+        })
+    })
+
+    return {
+        paths,
         fallback: false
     }
 }

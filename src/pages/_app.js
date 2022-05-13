@@ -8,8 +8,14 @@ import fr from '../lang/fr.json'
 const messages = {fr}
 
 export default function App({ Component, pageProps }) {
-  const {locale} = useRouter()
-    return <IntlProvider locale={locale} messages={messages[locale]}>
+    const {locale} = useRouter()
+
+    return <IntlProvider
+        locale={locale === 'default' ? 'en': locale}
+        messages={messages[locale]}
+        defaultLocale="en"
+        onError={() => {}}
+    >
         <Component {...pageProps} />
     </IntlProvider>
 }

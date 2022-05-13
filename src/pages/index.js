@@ -14,12 +14,20 @@ import useGetAge from '../js/hooks/useGetAge'
 import {useState} from 'react'
 import Alerts from '../js/components/Alerts'
 import Link from 'next/link'
-import {FormattedMessage} from 'react-intl'
+import {FormattedMessage, useIntl} from 'react-intl'
 
 const Home = (props) => {
     let age = useGetAge('11/22/1997')
     // useScroll()
     const [createAlert, setCreateAlert] = useState(() => {})
+    const intl = useIntl()
+
+    const heroTexts = [
+        intl.formatMessage({ id: 'hero.hello', defaultMessage: 'Hello !' }),
+        intl.formatMessage({ id: 'hero.whoami', defaultMessage: 'I\'m Amina Seraoui' }),
+        intl.formatMessage({ id: 'hero.about', defaultMessage: 'I\'m a ' + age + ' years old french developer' }),
+        intl.formatMessage({ id: 'hero.enjoy', defaultMessage: 'Enjoy your visit !' }),
+    ]
 
     return <>
         <Head>
@@ -37,12 +45,7 @@ const Home = (props) => {
                     <div className="container" data-scroll="" data-scroll-speed="5">
                         <h1 data-scroll="" data-scroll-speed="-7">
                             <TypingText
-                                texts={[
-                                    'Hello !',
-                                    'I\'m Amina Seraoui',
-                                    'I\'m a ' + age + ' years old french developer',
-                                    'Enjoy your visit !'
-                                ]}
+                                texts={heroTexts}
                                 replaces={[
                                     {
                                         type: 'regex',

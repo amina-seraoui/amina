@@ -8,4 +8,9 @@ nav.navbar {
   @extend %flex;
   justify-content: space-between;
   align-items: center;
+
+  .links {
+    @extend %flex;
+    align-items: center;
+  }
 }
