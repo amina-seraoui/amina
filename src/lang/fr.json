@@ -1,4 +1,8 @@
 {
+    "hero.hello": "Salut !",
+    "hero.whoami": "Mon nom est Amina Seraoui",
+    "hero.about": "J'ai {age} ans et je suis développeuse web.",
+    "hero.enjoy": "Bonne visite !",
     "about.title": "<s>À propos</s> de moi",
-    "about.subtitle": ".."
+    "about.subtitle": "En quelques mots"
 }

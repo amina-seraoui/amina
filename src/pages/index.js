@@ -23,17 +23,19 @@ const Home = (props) => {
     const intl = useIntl()
 
     const heroTexts = [
-        intl.formatMessage({ id: 'hero.hello', defaultMessage: 'Hello !' }),
+        intl.formatMessage({ id: 'hero.hello', defaultMessage: '< Hello World ! />' }),
         intl.formatMessage({ id: 'hero.whoami', defaultMessage: 'I\'m Amina Seraoui' }),
-        intl.formatMessage({ id: 'hero.about', defaultMessage: 'I\'m a ' + age + ' years old french developer' }),
-        intl.formatMessage({ id: 'hero.enjoy', defaultMessage: 'Enjoy your visit !' }),
+        intl.formatMessage({
+            id: 'hero.about',
+            defaultMessage: "I'm a {age} years old french developer"
+        }, {age}),
+        intl.formatMessage({ id: 'hero.enjoy', defaultMessage: 'Enjoy your visit !' })
     ]
 
     return <>
         <Head>
             <title>Amina Seraoui | Home</title>
             <meta name="description" content="Portfolio d'Amina Seraoui"/>
-            <link rel="shortcut icon" href="/assets/img/dark-logo.svg" type="image/x-icon"/>
         </Head>
         <SocialsBar />
         <Alerts setCreateAlert={setCreateAlert}/>
@@ -50,7 +52,13 @@ const Home = (props) => {
                                     {
                                         type: 'regex',
                                         action: 'replace',
-                                        what: /I'?m?/,
+                                        what: /Am?i?n?a?/,
+                                        by: '<strong>{match}</strong>'
+                                    },
+                                    {
+                                        type: 'regex',
+                                        action: 'replace',
+                                        what: / d[ée]?v?e?l?o?p?((p?e?u?s?e?)(e?r?))/,
                                         by: '<strong>{match}</strong>'
                                     },
                                     {
@@ -60,11 +68,17 @@ const Home = (props) => {
                                         by: '<i class="em em-flag-cp"></i>'
                                     },
                                     {
+                                        type: 'regex',
+                                        action: 'add',
+                                        what: /visite? !/,
+                                        by: ' <i class="em em-rocket"></i>'
+                                    },
+                                    {
                                         type: 'text',
                                         action: 'add',
-                                        what: 'visit !',
-                                        by: ' <i class="em em-rocket"></i>'
-                                    }
+                                        what: heroTexts[0],
+                                        by: ' <i class="em em-wave" />'
+                                    },
                                 ]}
                             />
                         </h1>

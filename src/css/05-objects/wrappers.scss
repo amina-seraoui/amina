@@ -14,7 +14,14 @@
 
 .em { // emojis
   max-width: 100px;
-  height: 7.5rem;
+  height: 7rem;
+
+  @media #{$media-down-md} {
+    height: 5.5rem;
+  }
+  @media #{$media-down-sm} {
+    height: 4.5rem;
+  }
 }
 
 %flex-center {
