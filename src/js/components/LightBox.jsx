@@ -1,8 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {useEffect} from 'react'
+import {useIntl} from 'react-intl'
 
 const LightBox = ({ original, min, label, active, setActive, next, prev, link }) => {
+    const intl = useIntl()
+
+    const seeMore = intl.formatMessage({ id: 'see.more', defaultMessage: 'See more' })
+    const close = intl.formatMessage({ id: 'click.close', defaultMessage: 'Click to close' })
+
     const handleKey = e => {
         if (e.code === 'ArrowRight') next()
         if (e.code === 'ArrowLeft') prev()
@@ -23,12 +29,12 @@ const LightBox = ({ original, min, label, active, setActive, next, prev, link })
     return <>
         {
             active ?
-                <div className={'light-box original'} onClick={handleClick} title="Click to close">
+                <div className={'light-box original'} onClick={handleClick} title={close}>
                     <div className="content" title="">
                         {
                             link ?
                                 <Link href={link} passHref>
-                                    <img src={original} alt={label} title="See more"/>
+                                    <img src={original} alt={label} title={seeMore}/>
                                 </Link> :
                                 <Image src={original} alt={label}/>
                         }

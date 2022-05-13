@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {FormattedMessage} from 'react-intl'
 
 const ContactForm = ({ createAlert }) => {
     const [name, setName] = useState('')
@@ -30,20 +31,20 @@ const ContactForm = ({ createAlert }) => {
 
     return <form method="POST" onSubmit={handleSubmit}>
         <div className="field">
-            <label htmlFor="name">Your name :</label>
+            <label htmlFor="name"><FormattedMessage id="contact.form.name" defaultMessage="Your name :" /></label>
             <input id="name" type="text" placeholder="Jane Doe" value={name} onChange={e => setName(e.target.value)} required />
         </div>
         <div className="field">
-            <label htmlFor="mail">Your e-mail :</label>
+            <label htmlFor="mail"><FormattedMessage id="contact.form.mail" defaultMessage="Your mail :" /></label>
             <input id="mail" type="email" placeholder="jane.doe@example.com" value={mail} onChange={e => setMail(e.target.value)} required />
         </div>
 
         <div className="field">
-            <label htmlFor="message">Your message :</label>
+            <label htmlFor="message"><FormattedMessage id="contact.form.message" defaultMessage="Your message :" /></label>
             <textarea id="message" placeholder="Hello, ..." value={msg} onChange={e => setMsg(e.target.value)} required />
         </div>
 
-        <button className="btn primary" type="submit">Send</button>
+        <button className="btn primary" type="submit"><FormattedMessage id="contact.form.send" defaultMessage="Send" /></button>
     </form>
 }
 

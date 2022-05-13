@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import {FormattedMessage} from 'react-intl'
 
 const Footer = ({next, prev}) => {
     return <footer data-scroll-section="">
@@ -13,17 +14,23 @@ const Footer = ({next, prev}) => {
             }
 
             <div className="title">
-                <h2><span className="strong">Thank</span> you</h2>
-                <h3>Thank you for your visit</h3>
+                <h2>
+                    <FormattedMessage
+                        id="footer.title"
+                        values={{ s: c => <span className="strong">{c}</span> }}
+                        defaultMessage="Thank <s>you</s>"
+                    />
+                </h2>
+                <h3><FormattedMessage id="footer.subtitle" defaultMessage="Thank you for your visit"/></h3>
             </div>
             <div className="content">
                 <div className="jetbrains">
                     <p>
-                        Special thanks to <a
-                        href="https://jb.gg/OpenSource" className="link" target="_blank" rel="noreferrer"
-                    >
-                        Jetbrains
-                    </a> for their very useful Open Source license on their awesome products.
+                        <FormattedMessage
+                            id="footer.jetbrains"
+                            defaultMessage="Special thanks to <a>Jetbrains</a> for their very useful Open Source license on their awesome products."
+                            values={{ a: c => <a href="https://jb.gg/OpenSource" className="link" target="_blank" rel="noreferrer">{c}</a>}}
+                        />
                     </p>
                     <a href="https://jb.gg/OpenSource" target="_blank" rel="noreferrer">
                         <Image src="/assets/img/jetbrains.svg" alt="Jetbrains logo" width={64} height={64}/>
@@ -37,7 +44,7 @@ const Footer = ({next, prev}) => {
                 </Link>
 
                 <p className="small">
-                    Copyright © 2021 - Amina Seraoui. All Rights Reserved.
+                    Copyright © 2021 - Amina Seraoui. <FormattedMessage id="footer.rights.reserved" defaultMessage="All Rights Reserved."/>
                 </p>
             </div>
         </div>

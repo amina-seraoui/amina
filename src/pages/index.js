@@ -14,8 +14,9 @@ import useGetAge from '../js/hooks/useGetAge'
 import {useState} from 'react'
 import Alerts from '../js/components/Alerts'
 import Link from 'next/link'
+import {FormattedMessage} from 'react-intl'
 
-const Home = () => {
+const Home = (props) => {
     let age = useGetAge('11/22/1997')
     // useScroll()
     const [createAlert, setCreateAlert] = useState(() => {})
@@ -58,14 +59,16 @@ const Home = () => {
                                     {
                                         type: 'text',
                                         action: 'add',
-                                        what: 'Enjoy your visit !',
+                                        what: 'visit !',
                                         by: ' <i class="em em-rocket"></i>'
                                     }
                                 ]}
                             />
                         </h1>
                         <Link href="#contact" passHref>
-                            <button className="btn secondary">Contact me</button>
+                            <button className="btn secondary">
+                                <FormattedMessage id="contact.me" defaultMessage="Contact me" />
+                            </button>
                         </Link>
                     </div>
                 </Hero>
