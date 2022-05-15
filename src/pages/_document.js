@@ -7,7 +7,7 @@ export default function App() {
             <link rel="shortcut icon" href="/assets/img/dark-logo.svg" type="image/svg"/>
         </Head>
         <body>
-            <Main />
+            <Main/>
             <NextScript />
         </body>
     </Html>

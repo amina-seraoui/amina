@@ -1,12 +1,12 @@
 nav.navbar {
-  height: 10vh;
-  min-height: 64px;
+  min-height: max(10vh, 64px);
   border-bottom: solid 1px $light-grey;
-  padding: ratio-space(2px) ratio-space(4px);
+  padding: 0 ratio-space(4px);
   position: fixed;
   width: 100%;
-  background-color: rgba($secondary-color, .5);
+  background-color: rgba($secondary-color, 0);
   z-index: 10;
+  transition: .5s;
 
   @extend %flex;
   justify-content: space-between;
@@ -15,5 +15,26 @@ nav.navbar {
   .links {
     @extend %flex;
     align-items: center;
+
+    .flag {
+      transition: .5s;
+      width: 24px;
+      height: 24px;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  > a {
+    transition: .5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &.scroll {
+    min-height: max(5vh, 64px);
+    background-color: rgba($secondary-color, .5);
   }
 }

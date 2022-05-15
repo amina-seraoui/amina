@@ -21,7 +21,6 @@ const Home = (props) => {
     // useScroll()
     const [createAlert, setCreateAlert] = useState(() => {})
     const intl = useIntl()
-
     const heroTexts = [
         intl.formatMessage({ id: 'hero.hello', defaultMessage: 'Hello World !' }),
         intl.formatMessage({ id: 'hero.whoami', defaultMessage: 'I\'m Amina Seraoui' }),

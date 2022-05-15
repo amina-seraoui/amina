@@ -26,7 +26,7 @@
         }
       ],
       "link": "mon-site.com",
-      "brandboard": {
+      "old.brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
           {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
@@ -62,7 +62,7 @@
         }
       ],
       "link": "mon-site.com",
-      "brandboard": {
+      "old.brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
           {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
@@ -97,7 +97,7 @@
         }
       ],
       "link": "mon-site.com",
-      "brandboard": {
+      "old.brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
           {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
@@ -133,7 +133,7 @@
         }
       ],
       "link": "mon-site.com",
-      "brandboard": {
+      "old.brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
           {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
@@ -169,7 +169,7 @@
         }
       ],
       "link": "mon-site.com",
-      "brandboard": {
+      "old.brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
           {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
@@ -204,7 +204,7 @@
         }
       ],
       "link": "mon-site.com",
-      "brandboard": {
+      "old.brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
           {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
@@ -239,7 +239,7 @@
         }
       ],
       "link": "mon-site.com",
-      "brandboard": {
+      "old.brandboard": {
         "logos": ["logo.svg"],
         "fonts": [
           {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}

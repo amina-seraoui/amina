@@ -4,10 +4,8 @@ import Hero from '../../js/components/Home/Hero'
 import Header from '../../js/components/Header'
 import Stack from '../../js/components/Work/Stack'
 import BrandBoard from '../../js/components/Work/BrandBoard'
-import {useEffect} from 'react'
 import Footer from '../../js/components/Footer'
 import Link from 'next/link'
-import {useRouter} from 'next/router'
 
 const Work = ({ work, next, prev }) => {
     return <>
