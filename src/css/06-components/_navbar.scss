@@ -3,7 +3,10 @@ nav.navbar {
   min-height: 64px;
   border-bottom: solid 1px $light-grey;
   padding: ratio-space(2px) ratio-space(4px);
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: rgba($secondary-color, .5);
+  z-index: 10;
 
   @extend %flex;
   justify-content: space-between;

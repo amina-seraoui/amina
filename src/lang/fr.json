@@ -1,8 +1,42 @@
 {
     "hero.hello": "Salut !",
-    "hero.whoami": "Mon nom est Amina Seraoui",
-    "hero.about": "J'ai {age} ans et je suis développeuse web.",
+    "hero.whoami": "Je suis Amina Seraoui",
+    "hero.about": "une développeuse web de {age} ans",
     "hero.enjoy": "Bonne visite !",
+
     "about.title": "<s>À propos</s> de moi",
-    "about.subtitle": "En quelques mots"
+    "about.subtitle": "En quelques mots",
+
+    "first.name": "Prénom",
+    "last.name": "Nom",
+    "available": "Disponibilité",
+    "remote": "En distanciel",
+    "languages.list": "Français, anglais, arabe",
+    "mail": "E-mail",
+    "age": "Âge",
+    "phone": "Numéro de téléphone",
+
+    "skills.title": "Mes <s>compétences</s>",
+    "skills.subtitle": "Mes technologies préférées",
+
+    "works.title": "Mon <s>portfolio</s>",
+    "works.subtitle": "Quelques projets dont je suis fière",
+
+    "contact.title": "<s>Me</s> contacter",
+    "contact.subtitle": "Laisse moi un message",
+    "contact.form.name": "Votre nom",
+    "contact.form.mail": "Votre e-mail",
+    "contact.form.message": "Votre message",
+    "contact.form.send": "Envoyer",
+    "contact.indication": "Pensez à indiquer votre numéro de téléphone ou votre e-mail pour être recontacté.",
+    "contact.findme": "Vous pouvez aussi me retrouver ici",
+
+    "footer.title": "<s>Merci</s> !",
+    "footer.subtitle": "Je vous remercie pour votre visite",
+    "footer.jetbrains": "Merci spécialement à <a>Jetbrains</a> pour leur très utile license Open Source sur leurs excellents produits.",
+    "footer.rightsreserved": "Tous droits réservés.",
+
+    "socials": "Réseaux sociaux",
+    "contact.me": "Contactez-moi",
+    "check.portfolio": "Voir mon portfolio"
 }

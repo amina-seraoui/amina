@@ -27,7 +27,7 @@ const Works = () => {
                         values={{ s: c => <span className="strong">{c}</span> }}
                     />
                 </h2>
-                <h3><FormattedMessage id="work.subtitle" defaultMessage="Some projects I'm proud of"/></h3>
+                <h3><FormattedMessage id="works.subtitle" defaultMessage="Some projects I'm proud of"/></h3>
             </div>
             <Gallery className="content" tabs={tabs} images={works}/>
         </div>

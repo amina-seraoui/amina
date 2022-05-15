@@ -23,7 +23,7 @@ const Home = (props) => {
     const intl = useIntl()
 
     const heroTexts = [
-        intl.formatMessage({ id: 'hero.hello', defaultMessage: '< Hello World ! />' }),
+        intl.formatMessage({ id: 'hero.hello', defaultMessage: 'Hello World !' }),
         intl.formatMessage({ id: 'hero.whoami', defaultMessage: 'I\'m Amina Seraoui' }),
         intl.formatMessage({
             id: 'hero.about',

@@ -31,19 +31,17 @@ const ContactForm = ({ createAlert }) => {
 
     return <form method="POST" onSubmit={handleSubmit}>
         <div className="field">
-            <label htmlFor="name"><FormattedMessage id="contact.form.name" defaultMessage="Your name :" /></label>
+            <label htmlFor="name"><FormattedMessage id="contact.form.name" defaultMessage="Your name" /> :</label>
             <input id="name" type="text" placeholder="Jane Doe" value={name} onChange={e => setName(e.target.value)} required />
         </div>
         <div className="field">
-            <label htmlFor="mail"><FormattedMessage id="contact.form.mail" defaultMessage="Your mail :" /></label>
+            <label htmlFor="mail"><FormattedMessage id="contact.form.mail" defaultMessage="Your mail" /> :</label>
             <input id="mail" type="email" placeholder="jane.doe@example.com" value={mail} onChange={e => setMail(e.target.value)} required />
         </div>
-
         <div className="field">
-            <label htmlFor="message"><FormattedMessage id="contact.form.message" defaultMessage="Your message :" /></label>
+            <label htmlFor="message"><FormattedMessage id="contact.form.message" defaultMessage="Your message" /> :</label>
             <textarea id="message" placeholder="Hello, ..." value={msg} onChange={e => setMsg(e.target.value)} required />
         </div>
-
         <button className="btn primary" type="submit"><FormattedMessage id="contact.form.send" defaultMessage="Send" /></button>
     </form>
 }

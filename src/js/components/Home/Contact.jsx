@@ -28,7 +28,7 @@ const Contact = ({ createAlert }) => {
             <div>
                 <div className="title">
                     <h3>
-                        <FormattedMessage id="contact.find.me" defaultMessage="You can also find me here"/>
+                        <FormattedMessage id="contact.findme" defaultMessage="You can also find me here"/>
                     </h3>
                 </div>
                 <div className="content">

@@ -3,6 +3,8 @@
     min-height: 70vh;
     .container {
         @extend %flex;
-        height: calc(70vh - 10vh);
+        height: 70vh;
     }
+
+    z-index: 10;
 }

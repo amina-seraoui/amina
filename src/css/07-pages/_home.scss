@@ -33,7 +33,7 @@
         .container {
             user-select: none;
             position: relative;
-            height: calc(100vh - max(10vh, 64px));
+            height: 100vh;
             margin: 0 min(17vw, 17vh);
 
             justify-content: center;
@@ -41,7 +41,7 @@
             flex-direction: column;
 
             h1 {
-                min-height: 50vh;
+                min-height: 55vh;
             }
 
             @media #{$media-down-sm} {
@@ -93,30 +93,6 @@
             justify-content: space-evenly;
             align-items: center;
             column-gap: ratio-space(4px);
-
-            //.scene {
-            //    width: 100%;
-            //    max-width: calc(500px - #{ratio-space(2px)});
-            //    height: 500px;
-            //    background: linear-gradient(45deg, $grey 0, $medium-grey 100%);
-            //    border-radius: 50%;
-            //
-            //    canvas {
-            //        position: absolute;
-            //        top: 0;
-            //        left: 0;
-            //    }
-            //
-            //    @media #{$media-down-md} {
-            //        & {
-            //            height: 200px;
-            //            width: 200px;
-            //        }
-            //    }
-            //}
-            //.skills {
-            //    width: calc(100% - #{ratio-space(2px)} - 500px);
-            //}
 
             .scene, .skills {
                 position: relative;
