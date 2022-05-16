@@ -41,7 +41,7 @@
             gap: calc(#{ratio-space(2px)} + 30px);
             align-items: center;
 
-            .card-info, .frame {
+            .card-info, .gallery {
                 width: calc(50% - (#{ratio-space(1px)} + 15px));
 
                 li:nth-child(3) {
@@ -51,7 +51,7 @@
 
             @media #{$media-down-lg} {
                 flex-direction: column;
-                .card-info, .frame {
+                .card-info, .gallery {
                     width: 100%;
                 }
             }

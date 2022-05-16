@@ -1,0 +1,42 @@
+{
+    "hero.hello": "السلام عليكم ورحمة الله وبركاته",
+    "hero.whoami": "أنا أمينة صراوي",
+    "hero.about": "أنا مطورة ويب فرنسية",
+    "hero.enjoy": "مرحبا بكم",
+
+    "_about.title": "<s>À propos</s> de moi",
+    "_about.subtitle": "En quelques mots",
+
+    "_first.name": "Prénom",
+    "_last.name": "Nom",
+    "_available": "Disponibilité",
+    "_remote": "En distanciel",
+    "_languages.list": "Français, anglais, arabe",
+    "_mail": "E-mail",
+    "_age": "Âge",
+    "_phone": "Numéro de téléphone",
+
+    "_skills.title": "Mes <s>compétences</s>",
+    "_skills.subtitle": "Mes technologies préférées",
+
+    "_works.title": "Mon <s>portfolio</s>",
+    "_works.subtitle": "Quelques projets dont je suis fière",
+
+    "_contact.title": "<s>Me</s> contacter",
+    "_contact.subtitle": "Laisse moi un message",
+    "_contact.form.name": "Votre nom",
+    "_contact.form.mail": "Votre e-mail",
+    "_contact.form.message": "Votre message",
+    "_contact.form.send": "Envoyer",
+    "_contact.indication": "Pensez à indiquer votre numéro de téléphone ou votre e-mail pour être recontacté.",
+    "_contact.findme": "Vous pouvez aussi me retrouver ici",
+
+    "_footer.title": "<s>Merci</s> !",
+    "_footer.subtitle": "Je vous remercie pour votre visite",
+    "_footer.jetbrains": "Merci spécialement à <a>Jetbrains</a> pour leur très utile license Open Source sur leurs excellents produits.",
+    "_footer.rightsreserved": "Tous droits réservés.",
+
+    "_socials": "Réseaux sociaux",
+    "_contact.me": "Contactez-moi",
+    "_check.portfolio": "Voir mon portfolio"
+}

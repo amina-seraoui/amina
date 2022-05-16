@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import Tabs from '../Tabs'
-import LightBox from '../LightBox'
+import LightBox from './LightBox'
 
 const Gallery = ({ tabs, images }) => {
     const [activeTab, setActiveTab] = useState('all')

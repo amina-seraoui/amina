@@ -6,8 +6,13 @@ import Stack from '../../js/components/Work/Stack'
 import BrandBoard from '../../js/components/Work/BrandBoard'
 import Footer from '../../js/components/Footer'
 import Link from 'next/link'
+import {useState} from 'react'
+import LightBox from '../../js/components/LightBox'
+import Carousel from '../../js/components/Carousel'
 
 const Work = ({ work, next, prev }) => {
+    const [isOpen, setIsOpen] = useState(false)
+
     return <>
         <Head>
             <title>Amina Seraoui | {work.name}</title>
@@ -26,10 +31,15 @@ const Work = ({ work, next, prev }) => {
                     </div>
                 </div>
             </Hero>
-            <Stack work={work}/>
+            <Stack work={work} setIsOpen={setIsOpen}/>
             {work.brandboard && <BrandBoard brandboard={work.brandboard} name={work.name}/>}
             <Footer next={next} prev={prev}/>
         </main>
+        {
+            (work.gallery && work.gallery.length) && <LightBox isOpen={isOpen} setIsOpen={setIsOpen}>
+                <Carousel gallery={work.gallery} name={work.name} />
+            </LightBox>
+        }
     </>
 }
 

@@ -17,14 +17,13 @@ const Header = () => {
         document.addEventListener('scroll', handleScroll)
         return () => document.removeEventListener('scroll', handleScroll)
     }, [])
-    
 
     return <header>
         <nav className={'navbar' + (scroll ? ' scroll' : '')}>
             {/* eslint-disable-next-line @next/next/link-passhref */}
             <Link href="/" passHref>
                 <a>
-                    <img
+                    <Image
                         src="/assets/img/logo.svg"
                         alt="Logo Amina Seraoui"
                         width={42}

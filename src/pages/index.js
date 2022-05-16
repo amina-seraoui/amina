@@ -16,7 +16,7 @@ import Alerts from '../js/components/Alerts'
 import Link from 'next/link'
 import {FormattedMessage, useIntl} from 'react-intl'
 
-const Home = (props) => {
+const Home = ({ dir }) => {
     let age = useGetAge('11/22/1997')
     // useScroll()
     const [createAlert, setCreateAlert] = useState(() => {})
@@ -43,8 +43,8 @@ const Home = (props) => {
                 <Hero image="header-moon.png">
                     <AnimatedStars />
                     <Header />
-                    <div className="container" data-scroll="" data-scroll-speed="5">
-                        <h1 data-scroll="" data-scroll-speed="-7">
+                    <div className="container" data-scroll="" data-scroll-speed="5" style={{alignItems: dir === 'rtl' ? 'flex-end' : 'flex-start'}}>
+                        <h1 data-scroll="" data-scroll-speed="-7" dir={dir}>
                             <TypingText
                                 texts={heroTexts}
                                 replaces={[
