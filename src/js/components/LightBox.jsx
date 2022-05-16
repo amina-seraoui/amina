@@ -1,5 +1,10 @@
 const LightBox = ({ children, isOpen, setIsOpen }) => {
-    return <div className={'lightbox' + (isOpen ? ' active' : '')} onClick={e => setIsOpen(false)}>
+    const handleClick = e => {
+        if (e.target.classList.contains('light-box')) {
+            setIsOpen(false)
+        }
+    }
+    return <div className={'light-box' + (isOpen ? ' active' : '')} onClick={handleClick}>
         {children}
     </div>
 }

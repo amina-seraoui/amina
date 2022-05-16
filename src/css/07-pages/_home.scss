@@ -138,11 +138,6 @@
 
     #works {
         min-height: 80vh;
-        .gallery .tab {
-            @extend %flex;
-            gap: ratio-space(3px);
-            justify-content: center;
-        }
     }
 
     #contact {

@@ -37,7 +37,7 @@ const Work = ({ work, next, prev }) => {
         </main>
         {
             (work.gallery && work.gallery.length) && <LightBox isOpen={isOpen} setIsOpen={setIsOpen}>
-                <Carousel gallery={work.gallery} name={work.name} />
+                <Carousel gallery={work.gallery} names={work.name} index={0} />
             </LightBox>
         }
     </>

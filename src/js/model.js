@@ -13,8 +13,8 @@ export const getBy = async (table, field, value) => {
     return snapshot.docs.map(doc => doc.data())[0]
 }
 
-export const withLimit = async (table, value) => {
-    const q = query(collection(firestore, table), limit(value))
+export const withLimit = async (table, l) => {
+    const q = query(collection(firestore, table), limit(l))
     const snapshot = await getDocs(q)
     return snapshot.docs.map(doc => doc.data())
 }
