@@ -1,7 +1,7 @@
 {
-    "hero.hello": "Salut !",
-    "hero.whoami": "Je suis Amina Seraoui",
-    "hero.about": "une développeuse web de {age} ans",
+    "hero.hello": " Salut !",
+    "hero.whoami": "Mon nom est Amina Seraoui",
+    "hero.about": "Je suis une développeuse web de {age} ans",
     "hero.enjoy": "Bonne visite !",
 
     "about.title": "<s>À propos</s> de moi",
@@ -20,7 +20,7 @@
     "skills.subtitle": "Mes technologies préférées",
 
     "works.title": "Mon <s>portfolio</s>",
-    "works.subtitle": "Quelques projets dont je suis fière",
+    "works.subtitle": "Quelques projets réalisés",
 
     "contact.title": "<s>Me</s> contacter",
     "contact.subtitle": "Laisse moi un message",

@@ -5,7 +5,7 @@ const Flag = ({ locale }) => {
     const {asPath} = useRouter()
 
     const flag = () => {
-        if (locale === 'en') return 'us'
+        if (locale === 'en') return 'gb'
         if (locale === 'ar') return 'dz'
         return locale
     }

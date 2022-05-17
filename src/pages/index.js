@@ -17,7 +17,6 @@ import Link from 'next/link'
 import {FormattedMessage, useIntl} from 'react-intl'
 import LightBox from '../js/components/LightBox'
 import Carousel from '../js/components/Carousel'
-import {getAll, withLimit} from '../js/model'
 
 const Home = ({ dir }) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +25,7 @@ const Home = ({ dir }) => {
     const [createAlert, setCreateAlert] = useState(() => {})
     const intl = useIntl()
     const heroTexts = [
-        intl.formatMessage({ id: 'hero.hello', defaultMessage: 'Hello World !' }),
+        intl.formatMessage({ id: 'hero.hello', defaultMessage: ' Hello World !' }),
         intl.formatMessage({ id: 'hero.whoami', defaultMessage: 'I\'m Amina Seraoui' }),
         intl.formatMessage({
             id: 'hero.about',
@@ -56,6 +55,11 @@ const Home = ({ dir }) => {
             .catch(err => console.error(err))
     }, [])
 
+    // Reinit index on close
+    useEffect(() => {
+        isOpen === false ? setIndex(-1) : null
+    }, [isOpen])
+
 
     return <>
         <Head>
@@ -83,6 +87,36 @@ const Home = ({ dir }) => {
                                 {
                                     type: 'regex',
                                     action: 'replace',
+                                    what: /السلام/,
+                                    by: '<strong>{match}</strong>'
+                                },
+                                {
+                                    type: 'regex',
+                                    action: 'replace',
+                                    what: /الله/,
+                                    by: '<strong>{match}</strong>'
+                                },
+                                {
+                                    type: 'regex',
+                                    action: 'replace',
+                                    what: /أمينة/,
+                                    by: '<strong>{match}</strong>'
+                                },
+                                {
+                                    type: 'regex',
+                                    action: 'replace',
+                                    what: /مطورة/,
+                                    by: '<strong>{match}</strong>'
+                                },
+                                {
+                                    type: 'regex',
+                                    action: 'replace',
+                                    what: /ويب/,
+                                    by: '<strong>{match}</strong>'
+                                },
+                                {
+                                    type: 'regex',
+                                    action: 'replace',
                                     what: / d[ée]?v?e?l?o?p?((p?e?u?s?e?)(e?r?))/,
                                     by: '<strong>{match}</strong>'
                                 },
@@ -93,9 +127,9 @@ const Home = ({ dir }) => {
                                     by: '<i class="em em-flag-cp"></i>'
                                 },
                                 {
-                                    type: 'regex',
+                                    type: 'text',
                                     action: 'add',
-                                    what: /visite? !/,
+                                    what: heroTexts[3],
                                     by: ' <i class="em em-rocket"></i>'
                                 },
                                 {

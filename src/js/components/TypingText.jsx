@@ -5,12 +5,19 @@ const TypingText = ({ texts, replaces }) => {
     const len = texts.length
     const skipDelay = 20
     const [textIndex, setTextIndex] = useState(0)
-
     const [letterIndex, setLetterIndex] = useState(0)
     const [words, setWords] = useState('')
     const [forward, setForward] = useState(true)
     const [skipCount, setSkipCount] = useState(0)
     const [display, setDisplay] = useState('')
+
+    // When change language
+    useEffect(() => {
+        setTextIndex(0)
+        setForward(false)
+        setSkipCount(0)
+        setLetterIndex(0)
+    }, [texts])
 
     useEffect(() => {
         const interval = setTimeout(() => {

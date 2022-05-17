@@ -41,10 +41,6 @@
             gap: calc(#{ratio-space(2px)} + 30px);
             align-items: center;
 
-            .gallery {
-                cursor: pointer;
-            }
-
             .card-info, .gallery {
                 width: calc(50% - (#{ratio-space(1px)} + 15px));
 

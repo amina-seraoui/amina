@@ -12,6 +12,7 @@ import Carousel from '../../js/components/Carousel'
 
 const Work = ({ work, next, prev }) => {
     const [isOpen, setIsOpen] = useState(false)
+    const clickable = Boolean(work.gallery && work.gallery.length)
 
     return <>
         <Head>
@@ -31,12 +32,12 @@ const Work = ({ work, next, prev }) => {
                     </div>
                 </div>
             </Hero>
-            <Stack work={work} setIsOpen={setIsOpen}/>
+            <Stack work={work} setIsOpen={setIsOpen} clickable={clickable}/>
             {work.brandboard && <BrandBoard brandboard={work.brandboard} name={work.name}/>}
             <Footer next={next} prev={prev}/>
         </main>
         {
-            (work.gallery && work.gallery.length) && <LightBox isOpen={isOpen} setIsOpen={setIsOpen}>
+            clickable && <LightBox isOpen={isOpen} setIsOpen={setIsOpen}>
                 <Carousel gallery={work.gallery} names={work.name} index={0} />
             </LightBox>
         }

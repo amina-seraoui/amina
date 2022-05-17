@@ -2,7 +2,7 @@ import Frame from '../Frame'
 import CardInfo from '../CardInfo'
 import Gallery from './Gallery'
 
-const Stack = ({work, setIsOpen}) => {
+const Stack = ({work, setIsOpen, clickable}) => {
     const {role, stack, img, files} = work
     return <section>
         <div className="container">
@@ -11,7 +11,7 @@ const Stack = ({work, setIsOpen}) => {
                 <h3 className="subtitle">Technologies utilisées</h3>
             </div>
             <div className="content">
-                <Gallery img={img} setIsOpen={setIsOpen}/>
+                <Gallery img={img} setIsOpen={setIsOpen} clickable={clickable}/>
                 <CardInfo>
                     {
                         [

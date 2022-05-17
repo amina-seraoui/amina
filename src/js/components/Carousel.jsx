@@ -5,8 +5,6 @@ const Carousel = ({ gallery, names, index, links }) => {
     const [active, setActive] = useState(index)
     const length = gallery.length - 1
 
-    console.log(links, index, gallery)
-
     const handleKey = (e) => {
         if (e.code === 'ArrowRight') {
             setActive(a => {
@@ -31,35 +29,34 @@ const Carousel = ({ gallery, names, index, links }) => {
         setActive(index)
     }, [index])
 
-    return <div className="carousel">
-        {
-            gallery.map((img, i) => {
-                const image = <img
-                    src={'/assets/img/works/' + img}
-                    alt={typeof names === 'string' ? names : (names[i] ? names[i] : null)}
-                    style={{left: active === i ? '50%' : (active > i ? '-50%' : '150%'), cursor: links ? 'pointer' : null}}
-                />
+    const content = () => {
+        const img = gallery.map((img, i) => {
+            const image = <img key={i}
+                               src={'/assets/img/works/' + img}
+                               alt={typeof names === 'string' ? names : (names[i] ? names[i] : null)}
+                               style={{left: active === i ? '50%' : (active > i ? '-50%' : '150%'), cursor: links ? 'pointer' : null}}
+            />
 
-                return <>
-                    {
-                        links ?
-                            <Link key={i} href={links[i]} passHref>
-                                {image}
-                            </Link>
-                            : image
-                    }
-                    {
-                        names && <p
-                            key={i}
-                            className="footer"
-                            style={{left: active === i ? '50%' : (active > i ? '-50%' : '150%')}}
-                        >
-                            {(typeof names === 'string') ? names : (names[i] ? names[i] : null)}
-                        </p>
-                    }
-                </>
-            })
-        }
+            return links ? <Link key={i} href={links[i]} passHref>
+                {image}
+            </Link> : image
+        })
+
+        const footer = gallery.map((img, i) => {
+            return (names && <p
+                key={'p' + i}
+                className="footer"
+                style={{left: active === i ? '50%' : (active > i ? '-50%' : '150%')}}
+            >
+                {(typeof names === 'string') ? names : (names[i] ? names[i] : null)}
+            </p>)
+        })
+
+        return [img, footer]
+    }
+
+    return <div className="carousel">
+        {content()}
     </div>
 }
 
