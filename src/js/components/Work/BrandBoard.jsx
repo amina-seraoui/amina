@@ -18,7 +18,7 @@ const BrandBoard = ({brandboard, name}) => {
                             {
                                 brandboard.logos.map((logo, i) => {
                                     return <figure key={i} className="item logo">
-                                        <Image src={'/assets/img/' + logo} alt={name + ' logo_' + i} width={64} height={64}/>
+                                        <img src={logo} alt={name + ' logo_' + i} width={64} height={64}/>
                                     </figure>
                                 })
                             }

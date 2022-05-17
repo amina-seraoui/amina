@@ -20,7 +20,7 @@ const Work = ({ work, next, prev }) => {
             <title>Amina Seraoui | {work.name}</title>
         </Head>
         <main id="work">
-            <Hero image={'works/' + work.img}>
+            <Hero image={work.img}>
                 <Header />
                 <div className="container">
                     <div className="title">

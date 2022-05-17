@@ -16,7 +16,7 @@ const About = ({ age }) => {
                 <h3><FormattedMessage id="about.subtitle" defaultMessage="In few words"/></h3>
             </div>
             <div className="content">
-                <Frame img="about.jpg" />
+                <Frame img="/assets/img/about.jpg" />
                 <CardInfo>
                     {[
                         {

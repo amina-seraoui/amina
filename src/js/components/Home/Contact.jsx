@@ -50,7 +50,7 @@ const Contact = ({ createAlert }) => {
                             ]
                         }
                     </CardInfo>
-                    <Frame img="contact.jpg" />
+                    <Frame img="/assets/img/contact.jpg" />
                 </div>
             </div>
         </div>

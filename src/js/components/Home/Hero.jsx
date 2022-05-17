@@ -1,7 +1,7 @@
 const Hero = ({ children, image }) => {
     return <section
         id="hero"
-        style={{backgroundImage: 'url(/assets/img/' + image + ')'}}
+        style={{backgroundImage: 'url(' + image + ')'}}
         data-scroll-section=""
     >
         {/*{to-do: add image background}*/}

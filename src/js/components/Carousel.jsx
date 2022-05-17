@@ -32,7 +32,7 @@ const Carousel = ({ gallery, names, index, links }) => {
     const content = () => {
         const img = gallery.map((img, i) => {
             const image = <img key={i}
-                               src={'/assets/img/works/' + img}
+                               src={img}
                                alt={typeof names === 'string' ? names : (names[i] ? names[i] : null)}
                                style={{left: active === i ? '50%' : (active > i ? '-50%' : '150%'), cursor: links ? 'pointer' : null}}
             />

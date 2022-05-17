@@ -1,7 +1,7 @@
 import {getAll, getBy, withLimit} from '../../js/model'
 
 const getTabs = async () => {
-    return getAll('tabs')
+    return (await getAll('tabs')).map(tab => tab.name)
 }
 const getWorks = async () => {
     return getAll('works')

@@ -70,7 +70,7 @@ const Home = ({ dir }) => {
         <Alerts setCreateAlert={setCreateAlert}/>
         <main id="home" data-scroll-container="">
             {/* première section */}
-            <Hero image="header-moon.png">
+            <Hero image="/assets/img/header-moon.png">
                 <AnimatedStars />
                 <Header />
                 <div className="container" data-scroll="" data-scroll-speed="5" style={{alignItems: dir === 'rtl' ? 'flex-end' : 'flex-start'}}>
