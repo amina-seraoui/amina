@@ -9,6 +9,7 @@ import Link from 'next/link'
 import {useState} from 'react'
 import LightBox from '../../js/components/LightBox'
 import Carousel from '../../js/components/Carousel'
+import {FormattedMessage} from 'react-intl'
 
 const Work = ({ work, next, prev }) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -27,8 +28,12 @@ const Work = ({ work, next, prev }) => {
                         <p>{work.year}</p>
                     </div>
                     <div className="links">
-                        <a href={work.link} className="btn secondary" target="_blank" rel="noreferrer">Aperçu</a>
-                        <Link href="/" passHref><a className="link">Retour</a></Link>
+                        <a href={work.link} className="btn secondary" target="_blank" rel="noreferrer">
+                            <FormattedMessage id="btn.preview" defaultMessage="Preview" />
+                        </a>
+                        <Link href="/" passHref><a className="link">
+                            <FormattedMessage id="btn.back" defaultMessage="Back" />
+                        </a></Link>
                     </div>
                 </div>
             </Hero>

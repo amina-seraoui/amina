@@ -57,11 +57,11 @@ const About = ({ age }) => {
             <div className="buttons" data-scroll="">
                 <a data-scroll="" data-scroll-speed=".15" data-scroll-direction="vertical"
                    href="#contact" className="btn primary">
-                    <FormattedMessage id="contact.me" defaultMessage="Contact me" />
+                    <FormattedMessage id="btn.contact" defaultMessage="Contact me" />
                 </a>
                 <a data-scroll="" data-scroll-speed="-.15" data-scroll-direction="vertical"
                    href="#works" className="btn secondary">
-                    <FormattedMessage id="check.portfolio" defaultMessage="Check my portfolio" />
+                    <FormattedMessage id="btn.works" defaultMessage="Check my portfolio" />
                 </a>
             </div>
         </div>

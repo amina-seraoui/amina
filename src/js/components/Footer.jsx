@@ -8,8 +8,8 @@ const Footer = ({next, prev}) => {
             {
                 (next && prev) ?
                     <div className="pagination">
-                        <a href={prev.slug} className="btn tertiary">Prev</a>
-                        <a href={next.slug} className="btn tertiary">Next</a>
+                        <a href={prev.slug} className="btn tertiary"><FormattedMessage id="btn.prev" defaultMessage="Prev"/></a>
+                        <a href={next.slug} className="btn tertiary"><FormattedMessage id="btn.next" defaultMessage="Next"/></a>
                     </div> : null
             }
 

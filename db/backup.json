@@ -15,7 +15,10 @@
             "year": 2019,
             "files": [
                 {
-                    "label": "Résultat",
+                    "label": {
+                        "fr": "Résultat",
+                        "en": "Result"
+                    },
                     "link": "result.pdf",
                     "format": "pdf"
                 },
@@ -50,7 +53,10 @@
             "year": 2019,
             "files": [
                 {
-                    "label": "Résultat",
+                    "label": {
+                        "fr": "Résultat",
+                        "en": "Result"
+                    },
                     "link": "result.pdf",
                     "format": "pdf"
                 },
@@ -85,7 +91,10 @@
             "year": 2019,
             "files": [
                 {
-                    "label": "Résultat",
+                    "label": {
+                        "fr": "Résultat",
+                        "en": "Result"
+                    },
                     "link": "result.pdf",
                     "format": "pdf"
                 },
@@ -120,7 +129,10 @@
             "year": 2019,
             "files": [
                 {
-                    "label": "Résultat",
+                    "label": {
+                        "fr": "Résultat",
+                        "en": "Result"
+                    },
                     "link": "result.pdf",
                     "format": "pdf"
                 },
@@ -155,7 +167,10 @@
             "year": 2019,
             "files": [
                 {
-                    "label": "Résultat",
+                    "label": {
+                        "fr": "Résultat",
+                        "en": "Result"
+                    },
                     "link": "result.pdf",
                     "format": "pdf"
                 },
@@ -190,7 +205,10 @@
             "year": 2019,
             "files": [
                 {
-                    "label": "Résultat",
+                    "label": {
+                        "fr": "Résultat",
+                        "en": "Result"
+                    },
                     "link": "result.pdf",
                     "format": "pdf"
                 },
@@ -225,7 +243,10 @@
             "year": 2019,
             "files": [
                 {
-                    "label": "Résultat",
+                    "label": {
+                        "fr": "Résultat",
+                        "en": "Result"
+                    },
                     "link": "result.pdf",
                     "format": "pdf"
                 },

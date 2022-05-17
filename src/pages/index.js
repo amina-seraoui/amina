@@ -143,7 +143,7 @@ const Home = ({ dir }) => {
                     </h1>
                     <Link href="#contact" passHref>
                         <button className="btn secondary">
-                            <FormattedMessage id="contact.me" defaultMessage="Contact me" />
+                            <FormattedMessage id="btn.contact" defaultMessage="Contact me" />
                         </button>
                     </Link>
                 </div>

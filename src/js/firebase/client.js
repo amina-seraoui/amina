@@ -19,10 +19,12 @@ export default firestore
 
 // EXPORT
 
-// const data = require('../../../db/backup.json')
-//
+const data = require('../../../db/backup.json')
+console.log(data)
 // data.works.forEach(async work => {
-//     console.log(work)
 //     await setDoc(doc(firestore, 'works', work.slug), work)
 // })
-
+//
+// data.tabs.forEach(async tab => {
+//     await setDoc(doc(firestore, 'tabs', tab), tab)
+// })
