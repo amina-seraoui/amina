@@ -31,6 +31,9 @@
     "contact.indication": "Pensez à indiquer votre numéro de téléphone ou votre e-mail pour être recontacté.",
     "contact.findme": "Vous pouvez aussi me retrouver ici",
 
+    "brandboard.title": "Identité <s>visuelle</s>",
+    "brandboard.subtitle": "Éléments graphiques du projet",
+
     "footer.title": "Merci !",
     "footer.subtitle": "Merci pour votre visite",
     "footer.jetbrains": "& merci spécialement à <a>Jetbrains</a> pour leur très utile license Open Source sur leurs excellents produits.",
@@ -49,5 +52,7 @@
     "stack.subtitle": "Technologies utilisées",
     "stack.role": "Rôle",
     "stack.techno": "Technologies",
-    "stack.files": "Fichiers"
+    "stack.files": "Fichiers",
+
+    "words.fonts": "Polices"
 }

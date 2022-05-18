@@ -57,7 +57,7 @@ export async function getStaticPaths() {
     const paths = []
 
     works.forEach((work, i) => {
-        locales.forEach(locale => {console.log(locale)
+        locales.forEach(locale => {
             paths.push({
                 params: {
                     slug: work.slug

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import {FormattedMessage} from 'react-intl'
 
 const BrandBoard = ({brandboard, name}) => {
     const style = brandboard.fonts.map(font => font.import)
@@ -8,8 +9,16 @@ const BrandBoard = ({brandboard, name}) => {
             <style jsx>{style}</style>
             <div className="container">
                 <div className="title">
-                    <h2>Identité <span className="strong">visuelle</span></h2>
-                    <h3>Éléments graphiques du projet</h3>
+                    <h2>
+                        <FormattedMessage
+                            id="brandboard.title"
+                            values={{ s: a => <span className="strong">{a}</span> }}
+                            defaultMessage="<s>Brand</s> board"
+                        />
+                    </h2>
+                    <h3>
+                        <FormattedMessage id="brandboard.subtitle" defaultMessage="Graphical elements of the project"/>
+                    </h3>
                 </div>
                 <article id="brandboard">
                     <div className="section logos">
@@ -25,7 +34,7 @@ const BrandBoard = ({brandboard, name}) => {
                         </div>
                     </div>
                     <div className="section fonts">
-                        <h4>Fonts</h4>
+                        <h4><FormattedMessage id="words.fonts" defaultMessage="Fonts"/></h4>
                         <div className="items">
                             {
                                 brandboard.fonts.map((font, i) => {
