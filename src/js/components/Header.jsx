@@ -32,9 +32,11 @@ const Header = () => {
                 </a>
             </Link>
             <div className="links">
-                {
-                    locales.map(l => <Flag key={l} locale={l} />)
-                }
+                <div className="flags">
+                    {
+                        locales.map(l => <Flag key={l} locale={l} />)
+                    }
+                </div>
                 <a className="link" href="tel:+33667306435">(+33) 6 67 30 64 35</a>
             </div>
         </nav>

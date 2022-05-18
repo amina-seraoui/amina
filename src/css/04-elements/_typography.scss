@@ -21,14 +21,35 @@
 //@include font-face(Gilroy, BlackItalic, 900, italic, eot ttf woff);
 
 h1, h1 * {
-  font-size: 6.5rem;
   font-weight: 600;
+  font-size: 8rem;
+  .em {
+    height: 8rem;
+  }
 
+  @media #{$media-down-xl} {
+    font-size: 6.5rem;
+    .em  {
+      height: 6.5rem;
+    }
+  }
+  @media #{$media-down-lg} {
+    font-size: 5rem;
+    .em  {
+      height: 5rem;
+    }
+  }
   @media #{$media-down-md} {
-    font-size: 6rem;
+    font-size: 3.8rem;
+    .em  {
+      height: 3.8rem;
+    }
   }
   @media #{$media-down-sm} {
-    font-size: 5rem;
+    font-size: 2.6rem;
+    .em {
+      height: 2.6rem;
+    }
   }
 }
 
