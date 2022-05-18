@@ -18,7 +18,7 @@ const Stack = ({work, setIsOpen, clickable}) => {
                         defaultMessage="Technical <s>stack</s>"
                     />
                 </h2>
-                <h3 className="subtitle"><FormattedMessage id="stack.subtitle" defaultMessage="Technologies used"/></h3>
+                <h3 className="subtitle"><FormattedMessage id="stack.subtitle" defaultMessage="Generals informations"/></h3>
             </div>
             <div className="content">
                 <Gallery img={img} setIsOpen={setIsOpen} clickable={clickable}/>
