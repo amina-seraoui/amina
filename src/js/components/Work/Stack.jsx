@@ -18,7 +18,7 @@ const Stack = ({work, setIsOpen, clickable}) => {
                         defaultMessage="Technical <s>stack</s>"
                     />
                 </h2>
-                <h3 className="subtitle"><FormattedMessage id="stack.subtitle" defaultMessage="Generals informations"/></h3>
+                <h3 className="subtitle"><FormattedMessage id="stack.subtitle" defaultMessage="General information"/></h3>
             </div>
             <div className="content">
                 <Gallery img={img} setIsOpen={setIsOpen} clickable={clickable}/>
@@ -41,7 +41,7 @@ const Stack = ({work, setIsOpen, clickable}) => {
                                 label: <FormattedMessage id="stack.files" defaultMessage="Files"/>,
                                 value: <ul className="files">
                                     {
-                                        files.map((file, i) => {
+                                        files?.map((file, i) => {
                                             return <li key={i} className="file">
                                                 <a
                                                     className="link"

@@ -42,40 +42,16 @@
         {
             "name": "Laxar",
             "slug": "laxar",
-            "img": "/works/Laxar.min.jpg",
-            "min": "/works/Laxar.min.jpg",
-            "tabs": [
-                "front"
-            ],
+            "img": "/works/laxar/min.jpg",
+            "min": "/works/laxar/min.jpg",
+            "tabs": ["front"],
             "role": "Intégrateur, designer",
             "stack": [
                 "HTML", "CSS", "Bootstrap", "Inkscape"
             ],
             "year": 2019,
-            "files": [
-                {
-                    "label": {
-                        "fr": "Résultat",
-                        "en": "Result"
-                    },
-                    "link": "result.pdf",
-                    "format": "pdf"
-                },
-                {
-                    "label": "Template",
-                    "link": "template.png",
-                    "format": "image"
-                }
-            ],
             "link": "404",
-            "old.brandboard": {
-                "logos": ["logo.svg"],
-                "fonts": [
-                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
-                ],
-                "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"]
-            },
-            "gallery": ["image.jpg", "image2.jpg"]
+            "gallery": ["/works/laxar/min.jpg"]
         },
         {
             "name": "Liberty",
@@ -119,8 +95,8 @@
         {
             "name": "Banana Design",
             "slug": "banana-design",
-            "img": "/works/Banana.min.jpg",
-            "min": "/works/Banana.min.jpg",
+            "img": "/works/banana/min.jpg",
+            "min": "/works/banana/min.jpg",
             "tabs": [
                 "front"
             ],
@@ -129,106 +105,24 @@
                 "HTML", "CSS", "Bootstrap", "Inkscape"
             ],
             "year": 2019,
-            "files": [
-                {
-                    "label": {
-                        "fr": "Résultat",
-                        "en": "Result"
-                    },
-                    "link": "result.pdf",
-                    "format": "pdf"
-                },
-                {
-                    "label": "Template",
-                    "link": "template.png",
-                    "format": "image"
-                }
-            ],
+            "files": [],
             "link": "404",
-            "old.brandboard": {
-                "logos": ["logo.svg"],
-                "fonts": [
-                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
-                ],
-                "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"]
-            },
-            "gallery": ["Banana.min.jpg", "Laxar.min.jpg", "Liberty.min.jpg", "MD1C.min.jpg"]
+            "gallery": ["/works/banana/min.jpg"]
         },
         {
             "name": "Mes démarches en 1 clic",
             "slug": "md1c",
-            "img": "/works/MD1C.min.jpg",
-            "min": "/works/MD1C.min.jpg",
-            "tabs": [
-                "front"
-            ],
+            "img": "/works/MD1C/min.jpg",
+            "min": "/works/MD1C/min.jpg",
+            "tabs": ["front", "back", "design"],
             "role": "Intégrateur, designer",
             "stack": [
                 "HTML", "CSS", "Bootstrap", "Inkscape"
             ],
             "year": 2019,
-            "files": [
-                {
-                    "label": {
-                        "fr": "Résultat",
-                        "en": "Result"
-                    },
-                    "link": "result.pdf",
-                    "format": "pdf"
-                },
-                {
-                    "label": "Template",
-                    "link": "template.png",
-                    "format": "image"
-                }
-            ],
+            "files": [],
             "link": "404",
-            "old.brandboard": {
-                "logos": ["logo.svg"],
-                "fonts": [
-                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
-                ],
-                "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"]
-            },
-            "gallery": ["image.jpg", "image2.jpg"]
-        },
-        {
-            "name": "Qovery",
-            "slug": "qovery",
-            "img": "/works/Qovery.min.jpg",
-            "min": "/works/Qovery.min.jpg",
-            "tabs": [
-                "front"
-            ],
-            "role": "Intégrateur, designer",
-            "stack": [
-                "HTML", "CSS", "Bootstrap", "Inkscape"
-            ],
-            "year": 2019,
-            "files": [
-                {
-                    "label": {
-                        "fr": "Résultat",
-                        "en": "Result"
-                    },
-                    "link": "result.pdf",
-                    "format": "pdf"
-                },
-                {
-                    "label": "Template",
-                    "link": "template.png",
-                    "format": "image"
-                }
-            ],
-            "link": "mon-site.com",
-            "old.brandboard": {
-                "logos": ["logo.svg"],
-                "fonts": [
-                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
-                ],
-                "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"]
-            },
-            "gallery": ["image.jpg", "image2.jpg"]
+            "gallery": ["/works/MD1C/min.jpg"]
         },
         {
             "name": "Saaspik",
@@ -267,7 +161,72 @@
                 "colors": ["#2B2350", "#FFFFFF", "#FA8D70", "#797687", "#FA7070"]
             },
             "gallery": ["/works/saaspik/min.jpg", "/works/saaspik/screen-1.jpg", "/works/saaspik/screen-2.jpg", "/works/saaspik/screen-3.jpg"]
+        },
+        {
+            "name": "Squizz Game",
+            "slug": "squizz-game",
+            "img": "/works/squizz-game/min.jpg",
+            "min": "/works/squizz-game/min.jpg",
+            "tabs": [
+                "back", "design", "games"
+            ],
+            "role": "Développeur backend, Designer",
+            "stack": [
+                "Node JS", "Express", "Sass"
+            ],
+            "year": 2022,
+            "files": [],
+            "link": "https://api.as.promo-105.codeur.online/",
+            "gallery": ["/works/squizz-game/min.jpg", "/works/squizz-game/screen-1.jpg", "/works/squizz-game/screen-2.jpg", "/works/squizz-game/screen-3.jpg"]
+        },
+        {
+            "name": "Contact Form",
+            "slug": "contact-form",
+            "img": "/works/contact-form/result.png",
+            "min": "/works/contact-form/result.png",
+            "tabs": ["front", "design"],
+            "role": "Designer",
+            "stack": ["Sass", "Figma", "Regex"],
+            "year": 2022,
+            "files": [
+                {
+                    "label": {"fr": "Dossier de conception", "en": "Conception folder"},
+                    "link": "/works/contact-form/conception-folder.pdf",
+                    "format": "pdf"
+                },
+                {
+                    "label": {"fr": "Charte graphique", "en": "Graphic charter"},
+                    "link": "/works/contact-form/graphic-charter.png",
+                    "format": "image"
+                }
+            ],
+            "link": "https://aminas.promo-105.codeur.online/ecf-contact_form/",
+            "gallery": [
+                "/works/contact-form/result.png",
+                "/works/contact-form/mobile.png",
+                "/works/contact-form/tablet.png",
+                "/works/contact-form/template.png",
+                "/works/contact-form/wireframe.png",
+                "/works/contact-form/template-errors.png",
+                "/works/contact-form/template-success.png"
+            ]
+        },
+        {
+            "name": "Portfolio (this)",
+            "slug": "this",
+            "img": "/works/portfolio/screen-1.png",
+            "min": "/works/portfolio/screen-1.png",
+            "tabs": ["front"],
+            "role": "Designer",
+            "stack": ["Next JS", "Vercel", "Sass", "firestore", "Three JS"],
+            "year": 2021,
+            "link": "/",
+            "gallery": [
+                "/works/portfolio/screen-1.png",
+                "/works/portfolio/screen-2.png",
+                "/works/portfolio/screen-3.png"
+            ]
         }
     ],
-    "tabs": ["front", "back", "design", "games", "c++"]
+    "tabs": ["front", "back", "design", "games"]
 }
