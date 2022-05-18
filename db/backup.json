@@ -3,8 +3,8 @@
         {
             "name": "Sushi Place",
             "slug": "sushi-place",
-            "img": "/works/SushiPlace.min.jpg",
-            "min": "/works/SushiPlace.min.jpg",
+            "img": "/works/sushi-place/min.jpg",
+            "min": "/works/sushi-place/min.jpg",
             "tabs": [
                 "front"
             ],
@@ -19,24 +19,25 @@
                         "fr": "Résultat",
                         "en": "Result"
                     },
-                    "link": "result.pdf",
+                    "link": "/works/sushi-place/result.pdf",
                     "format": "pdf"
                 },
                 {
                     "label": "Template",
-                    "link": "template.png",
-                    "format": "image"
+                    "link": "/works/sushi-place/template.zip",
+                    "format": "zipper"
                 }
             ],
-            "link": "mon-site.com",
-            "old.brandboard": {
-                "logos": ["logo.svg"],
+            "link": "404",
+            "brandboard": {
+                "logos": ["/works/sushi-place/logo.svg", "/works/sushi-place/logo-2.svg"],
                 "fonts": [
-                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
+                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"},
+                    {"name": "Gooddog", "import": "@font-face{font-family: Gooddog; src: url('/works/sushi-place/gooddog.otf');};"}
                 ],
-                "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"]
+                "colors": ["#AFC67B", "#FFFFFF", "#202020", "#383A30"]
             },
-            "gallery": ["image.jpg", "image2.jpg"]
+            "gallery": ["/works/sushi-place/min.jpg","/works/sushi-place/screen-1.jpg", "/works/sushi-place/screen-2.jpg", "/works/sushi-place/screen-3.jpg"]
         },
         {
             "name": "Laxar",
@@ -66,7 +67,7 @@
                     "format": "image"
                 }
             ],
-            "link": "mon-site.com",
+            "link": "404",
             "old.brandboard": {
                 "logos": ["logo.svg"],
                 "fonts": [
@@ -79,14 +80,14 @@
         {
             "name": "Liberty",
             "slug": "liberty",
-            "img": "/works/Liberty.min.jpg",
-            "min": "/works/Liberty.min.jpg",
+            "img": "/works/liberty/min.jpg",
+            "min": "/works/liberty/min.jpg",
             "tabs": [
                 "front"
             ],
-            "role": "Intégrateur, designer",
+            "role": "Intégrateur",
             "stack": [
-                "HTML", "CSS", "Bootstrap", "Inkscape"
+                "Sass", "Webpack"
             ],
             "year": 2019,
             "files": [
@@ -95,24 +96,25 @@
                         "fr": "Résultat",
                         "en": "Result"
                     },
-                    "link": "result.pdf",
+                    "link": "/works/liberty/result.pdf",
                     "format": "pdf"
                 },
                 {
                     "label": "Template",
-                    "link": "template.png",
-                    "format": "image"
+                    "link": "/works/liberty/template.zip",
+                    "format": "zipper"
                 }
             ],
-            "link": "mon-site.com",
-            "old.brandboard": {
-                "logos": ["logo.svg"],
+            "link": "404",
+            "brandboard": {
+                "logos": ["/works/liberty/logo.png"],
                 "fonts": [
-                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"}
+                    {"name": "Roboto", "import": "@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');"},
+                    {"name": "Thinoo", "import": "@font-face {font-family: Thinoo;src: url('/works/liberty/Thinoo-Thin.otf');};"}
                 ],
-                "colors": ["#AFC67B", "#AFC67B", "#AFC67B", "#AFC67B"]
+                "colors": ["#FFFFFF", "#1E2A370", "#E85546", "#999999", "#3498DB"]
             },
-            "gallery": ["image.jpg", "image2.jpg"]
+            "gallery": ["/works/liberty/min.jpg", "/works/liberty/screen-1.jpg", "/works/liberty/screen-2.jpg", "/works/liberty/screen-3.jpg"]
         },
         {
             "name": "Banana Design",
@@ -142,7 +144,7 @@
                     "format": "image"
                 }
             ],
-            "link": "mon-site.com",
+            "link": "404",
             "old.brandboard": {
                 "logos": ["logo.svg"],
                 "fonts": [
@@ -180,7 +182,7 @@
                     "format": "image"
                 }
             ],
-            "link": "mon-site.com",
+            "link": "404",
             "old.brandboard": {
                 "logos": ["logo.svg"],
                 "fonts": [
