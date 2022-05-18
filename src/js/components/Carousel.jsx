@@ -55,7 +55,7 @@ const Carousel = ({ gallery, names, index, links }) => {
         return [img, footer]
     }
 
-    return <div className="carousel">
+    return <div className="carousel" title="">
         {content()}
     </div>
 }

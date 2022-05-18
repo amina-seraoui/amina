@@ -43,6 +43,7 @@
     "btn.back": "Retour",
     "btn.prev": "Précédent",
     "btn.next": "Suivant",
+    "clicktoclose": "Clic pour fermer",
 
     "stack.title": "<s>Stack</s> technique",
     "stack.subtitle": "Technologies utilisées",
