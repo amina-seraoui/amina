@@ -19,7 +19,6 @@ import LightBox from '../js/components/LightBox'
 import Carousel from '../js/components/Carousel'
 
 const Home = ({ dir }) => {
-    const [isOpen, setIsOpen] = useState(false)
     let age = useGetAge('11/22/1997')
     // useScroll()
     const [createAlert, setCreateAlert] = useState(() => {})
@@ -36,11 +35,7 @@ const Home = ({ dir }) => {
 
     const [tabs, setTabs] = useState([])
     const [works, setWorks] = useState([])
-    const [gallery, setGallery] = useState([])
-    const [names, setNames] = useState([])
-    const [links, setLinks] = useState(null)
     const limit = 6
-    const [index, setIndex] = useState(0)
 
     useEffect(() => {
         fetch('/api/works?limit=' + limit)
@@ -48,20 +43,9 @@ const Home = ({ dir }) => {
             .then(res => {
                 setTabs(res.tabs)
                 setWorks(res.works)
-
-                const works = res.works.filter(tab => (tab.tab === 'all')).flatMap(tab => tab.works)
-                setGallery(works.map(w => w.img))
-                setNames(works.map(w => w.name))
-                setLinks(works.map(w => 'works/' + w.slug))
             })
             .catch(err => console.error(err))
     }, [])
-
-    // Reinit index on close
-    useEffect(() => {
-        isOpen === false ? setIndex(-1) : null
-    }, [isOpen])
-
 
     return <>
         <Head>
@@ -172,15 +156,12 @@ const Home = ({ dir }) => {
                 }
             </Skills>
             {/* quatrième section */}
-            <Works setIsOpen={setIsOpen} tabs={tabs} works={works} setIndex={setIndex} setGallery={setGallery} setLinks={setLinks} setNames={setNames}/>
+            <Works tabs={tabs} works={works}/>
             {/* cinquième section */}
             <Contact createAlert={createAlert} />
             {/* sixième section */}
             <Footer />
         </main>
-        <LightBox isOpen={isOpen} setIsOpen={setIsOpen}>
-            <Carousel gallery={gallery} names={names} index={index} links={links}/>
-        </LightBox>
     </>
 }
 

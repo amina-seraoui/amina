@@ -1,24 +1,24 @@
 import {useEffect, useState} from 'react'
 import Tabs from '../Tabs'
+import Link from 'next/link'
 
-const Gallery = ({ setIsOpen, tabs, images, setIndex, setGallery, setNames, setLinks }) => {
+const Gallery = ({ tabs, images }) => {
     const [activeTab, setActiveTab] = useState('all')
     const [fade, setFade] = useState(false)
+    const [links, setLinks] = useState(null)
 
     useEffect(() => {
         setFade(false)
         const timeout = setTimeout(() => setFade(true), 50)
         // filtre les tabs pour retourner les images actuelles
         const works = images.filter(tab => (tab.tab === activeTab)).flatMap(tab => tab.works)
-        setGallery(works.map(w => w.img))
-        setNames(works.map(w => w.name))
         setLinks(works.map(w => 'works/' + w.slug))
         return () => clearTimeout(timeout)
-    }, [activeTab])
+    }, [activeTab, images])
 
-    const handleClick = i => {
-        setIsOpen(true)
-        setIndex(i)
+    const handleClick = e => {
+        e.preventDefault()
+        console.log('hello')
     }
 
     return <>
@@ -28,11 +28,13 @@ const Gallery = ({ setIsOpen, tabs, images, setIndex, setGallery, setNames, setL
                 images.map(tab => {
                     if (tab.tab === activeTab) {
                         return tab.works.map((image, i) => {
-                            return <div className="tab-content" onClick={e => handleClick(i)} key={i}>
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src={image.min} width={450} height={250} alt={image.name}/>
-                                <span className="label">{image.name}</span>
-                            </div>
+                            return <Link key={i} href={links[i] ?? ''}>
+                                <div className="tab-content">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src={image.min} width={450} height={250} alt={image.name}/>
+                                    <span className="label">{image.name}</span>
+                                </div>
+                            </Link>
                         })
                     }
                 })
