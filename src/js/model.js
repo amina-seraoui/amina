@@ -28,3 +28,9 @@ export const count = async (table) => {
     const snapshot = await getDocs(cols)
     return snapshot.size
 }
+
+export const inWithLimit =  async (table, field, value, l) => {
+    const q = query(collection(firestore, table), where(field, 'array-contains', value), limit(l))
+    const snapshot = await getDocs(q)
+    return snapshot.docs.map(doc => doc.data())
+}

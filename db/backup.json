@@ -165,8 +165,8 @@
         {
             "name": "Squizz Game",
             "slug": "squizz-game",
-            "img": "/works/squizz-game/min.jpg",
-            "min": "/works/squizz-game/min.jpg",
+            "img": "/works/squizz-game/img.png",
+            "min": "/works/squizz-game/img.png",
             "tabs": [
                 "back", "design", "games"
             ],
@@ -177,7 +177,7 @@
             "year": 2022,
             "files": [],
             "link": "https://api.as.promo-105.codeur.online/",
-            "gallery": ["/works/squizz-game/min.jpg", "/works/squizz-game/screen-1.jpg", "/works/squizz-game/screen-2.jpg", "/works/squizz-game/screen-3.jpg"]
+            "gallery": ["/works/squizz-game/img.png", "/works/squizz-game/screen-1.png", "/works/squizz-game/screen-2.png", "/works/squizz-game/screen-3.png"]
         },
         {
             "name": "Contact Form",

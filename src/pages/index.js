@@ -34,7 +34,7 @@ const Home = ({ dir }) => {
         intl.formatMessage({ id: 'hero.enjoy', defaultMessage: 'Enjoy your visit !' })
     ]
 
-    const [tabs, setTabs] = useState(['all'])
+    const [tabs, setTabs] = useState([])
     const [works, setWorks] = useState([])
     const [gallery, setGallery] = useState([])
     const [names, setNames] = useState([])
@@ -48,9 +48,11 @@ const Home = ({ dir }) => {
             .then(res => {
                 setTabs(res.tabs)
                 setWorks(res.works)
-                setGallery(res.works.map(w => w.img))
-                setNames(res.works.map(w => w.name))
-                setLinks(res.works.map(w => 'works/' + w.slug))
+
+                const works = res.works.filter(tab => (tab.tab === 'all')).flatMap(tab => tab.works)
+                setGallery(works.map(w => w.img))
+                setNames(works.map(w => w.name))
+                setLinks(works.map(w => 'works/' + w.slug))
             })
             .catch(err => console.error(err))
     }, [])
@@ -170,7 +172,7 @@ const Home = ({ dir }) => {
                 }
             </Skills>
             {/* quatrième section */}
-            <Works setIsOpen={setIsOpen} tabs={tabs} works={works} setIndex={setIndex} />
+            <Works setIsOpen={setIsOpen} tabs={tabs} works={works} setIndex={setIndex} setGallery={setGallery} setLinks={setLinks} setNames={setNames}/>
             {/* cinquième section */}
             <Contact createAlert={createAlert} />
             {/* sixième section */}
