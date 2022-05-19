@@ -1,0 +1,21 @@
+* {
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        transition: .5s;
+        background: $tertiary-color;
+        border-radius: 15px;
+        border: $black 3px solid;
+        box-sizing: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: lighten($tertiary-color, 15);
+    }
+}
