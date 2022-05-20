@@ -10,7 +10,7 @@ const SkillBar = ({ skill, visible }) => {
             } else {
                 clearTimeout(timeout)
             }
-        }, 25)
+        }, 18)
 
         return () => clearTimeout(timeout)
     }, [visible, value])

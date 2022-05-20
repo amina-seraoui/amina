@@ -15,8 +15,6 @@ import {useState, useEffect} from 'react'
 import Alerts from '../js/components/Alerts'
 import Link from 'next/link'
 import {FormattedMessage, useIntl} from 'react-intl'
-import LightBox from '../js/components/LightBox'
-import Carousel from '../js/components/Carousel'
 
 const Home = ({ dir }) => {
     let age = useGetAge('11/22/1997')
