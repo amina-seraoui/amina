@@ -2,7 +2,7 @@ import Gallery from './Gallery'
 import {FormattedMessage} from 'react-intl'
 
 const Works = ({tabs, works}) => {
-    return <section id="works" data-scroll-section="">
+    return <section id="works">
         <div className="container">
             <div className="title">
                 <h2>

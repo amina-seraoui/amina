@@ -3,7 +3,7 @@ import Link from 'next/link'
 import {FormattedMessage} from 'react-intl'
 
 const Footer = ({next, prev}) => {
-    return <footer data-scroll-section="">
+    return <footer>
         <div className="container">
             {
                 (next && prev) ?

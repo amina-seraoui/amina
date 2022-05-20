@@ -5,7 +5,7 @@ import ContactForm from '../ContactForm'
 import {FormattedMessage} from 'react-intl'
 
 const Contact = ({ createAlert }) => {
-    return <section id="contact" data-scroll-section="">
+    return <section id="contact">
         <div className="container">
             <div>
                 <div className="title">

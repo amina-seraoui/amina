@@ -9,7 +9,6 @@ import Works from '../js/components/Home/Works'
 import Contact from '../js/components/Home/Contact'
 import Footer from '../js/components/Footer'
 import AnimatedStars from '../js/components/AnimatedStars'
-// import useScroll from '../js/hooks/useScroll'
 import useGetAge from '../js/hooks/useGetAge'
 import {useState, useEffect} from 'react'
 import Alerts from '../js/components/Alerts'
@@ -18,7 +17,6 @@ import {FormattedMessage, useIntl} from 'react-intl'
 
 const Home = ({ dir }) => {
     let age = useGetAge('11/22/1997')
-    // useScroll()
     const [createAlert, setCreateAlert] = useState(() => {})
     const intl = useIntl()
     const heroTexts = [
@@ -52,13 +50,13 @@ const Home = ({ dir }) => {
         </Head>
         <SocialsBar />
         <Alerts setCreateAlert={setCreateAlert}/>
-        <main id="home" data-scroll-container="">
+        <main id="home">
             {/* première section */}
             <Hero image="/assets/img/header-moon.png">
                 <AnimatedStars />
                 <Header />
-                <div className="container" data-scroll="" data-scroll-speed="5" style={{alignItems: dir === 'rtl' ? 'flex-end' : 'flex-start'}}>
-                    <h1 data-scroll="" data-scroll-speed="-7" dir={dir}>
+                <div className="container" style={{alignItems: dir === 'rtl' ? 'flex-end' : 'flex-start'}}>
+                    <h1 dir={dir}>
                         <TypingText
                             texts={heroTexts}
                             replaces={[

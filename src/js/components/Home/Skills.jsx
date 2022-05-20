@@ -6,7 +6,7 @@ import {FormattedMessage} from 'react-intl'
 
 const Skills = ({ children }) => {
     const [isVisible, setIsVisible] = useState(false)
-    return <section id="skills" data-scroll-section="">
+    return <section id="skills">
         <div className="container">
             <div className="title">
                 <h2>

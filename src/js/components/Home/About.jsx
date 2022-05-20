@@ -3,7 +3,7 @@ import CardInfo from '../CardInfo'
 import { FormattedMessage } from 'react-intl'
 
 const About = ({ age }) => {
-    return <section id="about" data-scroll-section="">
+    return <section id="about">
         <div className="container">
             <div className="title">
                 <h2>
@@ -54,13 +54,11 @@ const About = ({ age }) => {
                     ]}
                 </CardInfo>
             </div>
-            <div className="buttons" data-scroll="">
-                <a data-scroll="" data-scroll-speed=".15" data-scroll-direction="vertical"
-                   href="#contact" className="btn primary">
+            <div className="buttons">
+                <a href="#contact" className="btn primary">
                     <FormattedMessage id="btn.contact" defaultMessage="Contact me" />
                 </a>
-                <a data-scroll="" data-scroll-speed="-.15" data-scroll-direction="vertical"
-                   href="#works" className="btn secondary">
+                <a href="#works" className="btn secondary">
                     <FormattedMessage id="btn.works" defaultMessage="Check my portfolio" />
                 </a>
             </div>
