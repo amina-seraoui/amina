@@ -13,6 +13,7 @@ const TypingText = ({ texts, replaces }) => {
 
     // When change language
     useEffect(() => {
+        setWords('')
         setTextIndex(0)
         setForward(false)
         setSkipCount(0)

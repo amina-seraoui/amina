@@ -10,7 +10,9 @@ const SkillBar = ({ skill, visible }) => {
             } else {
                 clearTimeout(timeout)
             }
-        }, 5)
+        }, 25)
+
+        return () => clearTimeout(timeout)
     }, [visible, value])
 
     return <div className="skill-bar">

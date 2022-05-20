@@ -129,6 +129,7 @@
 
                 &.skills {
                     width: calc(100% - #{ratio-space(2px)} - 500px);
+                    max-width: 700px;
                 }
 
                 @media #{$media-down-xl} {
