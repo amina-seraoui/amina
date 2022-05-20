@@ -18,7 +18,7 @@
     "react-intersection-observer": "^8.33.1",
     "react-intl": "^5.25.1",
     "react-tsparticles": "^2.0.6",
-    "three": "^0.139.2",
+    "three": "^0.140.2",
     "tsparticles": "^2.0.6"
   },
   "devDependencies": {

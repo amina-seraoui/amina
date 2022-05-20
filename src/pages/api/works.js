@@ -1,5 +1,4 @@
 import {withLimit, getAll, getBy, inWithLimit} from '../../js/model'
-import {log} from 'three/examples/jsm/nodes/ShaderNode'
 
 const getTabs = async () => {
     return (await getAll('tabs')).map(tab => tab.name)

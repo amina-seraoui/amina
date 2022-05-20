@@ -1,7 +1,6 @@
 import React from 'react'
 import * as THREE from 'three'
 import {useEffect, useRef} from 'react'
-import {OrbitControls} from 'three/examples/jsm/controls/experimental/CameraControls'
 
 const ThreeSkills = ({skills}) => {
     const ref = useRef()
