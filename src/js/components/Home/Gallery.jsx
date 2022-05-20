@@ -6,6 +6,7 @@ const Gallery = ({ tabs, images }) => {
     const [activeTab, setActiveTab] = useState('all')
     const [fade, setFade] = useState(false)
     const [links, setLinks] = useState(null)
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         setFade(false)
@@ -17,19 +18,18 @@ const Gallery = ({ tabs, images }) => {
     }, [activeTab, images])
 
     const handleClick = e => {
-        e.preventDefault()
-        console.log('hello')
+        setLoading(true)
     }
 
     return <>
         <Tabs tabs={tabs} active={activeTab} setActive={setActiveTab}/>
-        <div className={'tab' + (fade ? ' visible' : '')}>
+        <div className={'tab' + (fade ? ' visible' : '') + (loading ? ' loading' : '')}>
              {
                 images.map(tab => {
                     if (tab.tab === activeTab) {
                         return tab.works.map((image, i) => {
                             return <Link key={i} href={links[i] ?? ''}>
-                                <div className="tab-content">
+                                <div className="tab-content" onClick={handleClick}>
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img src={image.min} width={450} height={250} alt={image.name}/>
                                     <span className="label">{image.name}</span>
@@ -39,6 +39,7 @@ const Gallery = ({ tabs, images }) => {
                     }
                 })
             }
+            <div className="spinner" visibility={loading}/>
         </div>
     </>
 }

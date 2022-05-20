@@ -61,11 +61,15 @@ ul.tabs {
         &:hover {
             img {
                 filter: brightness(.3);
+            }
 
-                &:nth-child(even) {
+            &:nth-child(even) {
+                img {
                     transform: scale(1.5) rotate(15deg);
                 }
-                &:nth-child(odd) {
+            }
+            &:nth-child(odd) {
+                img {
                     transform: scale(1.5) rotate(-15deg);
                 }
             }
@@ -82,5 +86,14 @@ ul.tabs {
 
     &.visible {
         opacity: 1;
+    }
+
+    &.loading {
+        position: relative;
+        pointer-events: none;
+        .tab-content {
+            transition: .5s;
+            filter: grayscale(90%) blur(2px);
+        }
     }
 }
