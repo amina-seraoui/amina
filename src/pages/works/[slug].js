@@ -7,8 +7,8 @@ import BrandBoard from '../../js/components/Work/BrandBoard'
 import Footer from '../../js/components/Footer'
 import Link from 'next/link'
 import {useState} from 'react'
-import LightBox from '../../js/components/LightBox'
-import Carousel from '../../js/components/Carousel'
+import LightBox from '../../js/components/LightBox/LightBox'
+import Carousel from '../../js/components/LightBox/Carousel'
 import {FormattedMessage} from 'react-intl'
 
 const Work = ({ work, next, prev }) => {
@@ -28,7 +28,12 @@ const Work = ({ work, next, prev }) => {
                         <p>{work.year}</p>
                     </div>
                     <div className="links">
-                        <a href={work.link} className="btn secondary" target="_blank" rel="noreferrer">
+                        <a href={work.link}
+                           className={'btn' + (work.link ? ' secondary' : ' disabled')}
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-disabled={!work.link}
+                        >
                             <FormattedMessage id="btn.preview" defaultMessage="Preview" />
                         </a>
                         <Link href="/" passHref><a className="link">
@@ -43,7 +48,7 @@ const Work = ({ work, next, prev }) => {
         </main>
         {
             clickable && <LightBox isOpen={isOpen} setIsOpen={setIsOpen}>
-                <Carousel gallery={work.gallery} names={work.name} index={0} />
+                <Carousel gallery={work.gallery} names={work.name} isOpen={isOpen} setIsOpen={setIsOpen} />
             </LightBox>
         }
     </>
