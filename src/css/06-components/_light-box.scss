@@ -42,6 +42,31 @@
                 width: 100%;
                 text-align: center;
                 padding: ratio-space(2px);
+                position: relative;
+
+                &::before {
+                    content: attr(data-current);
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    bottom: 0;
+                    left: calc(100% - 64px);
+                    border-radius: 50%;
+                    border: solid $white 2px;
+
+                    @extend %flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 600;
+                }
+
+                @media #{$media-down-md} {
+                    &::before {
+                        font-size: 12px;
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
             }
 
             &::before, &::after {

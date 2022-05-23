@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from 'react'
 import Link from 'next/link'
 
-const Carousel = ({ gallery, names, links, isOpen, setIsOpen }) => {
+const Carousel = ({ gallery, names, links, isOpen, setIsOpen, count }) => {
     const [active, setActive] = useState(0)
     const [isRight, setIsRight] = useState(false)
     const [isLeft, setIsLeft] = useState(false)
@@ -95,17 +95,21 @@ const Carousel = ({ gallery, names, links, isOpen, setIsOpen }) => {
             return (names && <p
                 key={'p' + i}
                 className="footer"
+                data-current={(i+1) + '/' + count}
             >
-                {(typeof names === 'string') ? names : (names[i] ? names[i] : null)}
+                {
+                    (typeof names === 'string') ? names :
+                        (names[i] ? names[i] : null)
+                }
             </p>)
         })
 
         return gallery.map((img, i) => {
             // eslint-disable-next-line @next/next/no-img-element
             const image = <img key={i}
-                               src={img}
-                               alt={typeof names === 'string' ? names : (names[i] ? names[i] : null)}
-                               style={{cursor: links ? 'pointer' : null}}
+                   src={img}
+                   alt={typeof names === 'string' ? names : (names[i] ? names[i] : null)}
+                   style={{cursor: links ? 'pointer' : null}}
             />
 
             return <div key={i}
