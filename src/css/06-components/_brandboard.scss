@@ -58,16 +58,25 @@
                     @extend %flex;
                     align-items: center;
                     justify-content: center;
+                    transition: .5s;
 
                     img {
                         object-fit: contain;
                     }
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
 
                 &.font {
+                    transition: .5s;
                     span {
                         display: block;
                         margin-top: ratio-space(4px);
+                    }
+                    &:hover {
+                        transform: scale(1.05);
                     }
                 }
 
@@ -77,11 +86,18 @@
                     align-items: center;
                     gap: ratio-space(1px);
                     width: auto;
+                    transition: .5s;
+
                     i {
                         display: block;
                         mask: center / contain url('/assets/img/color-paint.svg') no-repeat;
                         height: 64px;
                         width: 90px;
+                        -webkit-text-stroke: $white 1px;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
                     }
                 }
             }
