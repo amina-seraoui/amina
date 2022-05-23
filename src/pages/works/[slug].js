@@ -13,7 +13,7 @@ import {FormattedMessage} from 'react-intl'
 
 const Work = ({ work, next, prev }) => {
     const [isOpen, setIsOpen] = useState(false)
-    const clickable = Boolean(work.gallery && work.gallery.length)
+    const clickable = Boolean(work.gallery && work.gallery.length > 1)
 
     return <>
         <Head>
@@ -42,7 +42,7 @@ const Work = ({ work, next, prev }) => {
                     </div>
                 </div>
             </Hero>
-            <Stack work={work} setIsOpen={setIsOpen} clickable={clickable}/>
+            <Stack work={work} setIsOpen={setIsOpen} clickable={clickable} count={work.gallery?.length}/>
             {work.brandboard && <BrandBoard brandboard={work.brandboard} name={work.name}/>}
             <Footer next={next} prev={prev}/>
         </main>

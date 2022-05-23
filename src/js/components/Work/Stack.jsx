@@ -4,7 +4,7 @@ import Gallery from './Gallery'
 import {FormattedMessage} from 'react-intl'
 import {useRouter} from 'next/router'
 
-const Stack = ({work, setIsOpen, clickable}) => {
+const Stack = ({work, setIsOpen, clickable, count}) => {
     const {role, stack, img, files} = work
     const {locale} = useRouter()
 
@@ -21,7 +21,7 @@ const Stack = ({work, setIsOpen, clickable}) => {
                 <h3 className="subtitle"><FormattedMessage id="stack.subtitle" defaultMessage="General information"/></h3>
             </div>
             <div className="content">
-                <Gallery img={img} setIsOpen={setIsOpen} clickable={clickable}/>
+                <Gallery img={img} setIsOpen={setIsOpen} clickable={clickable} count={count}/>
                 <CardInfo>
                     {
                         [

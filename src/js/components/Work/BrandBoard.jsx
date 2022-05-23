@@ -1,8 +1,11 @@
-import Image from 'next/image'
 import {FormattedMessage} from 'react-intl'
 
 const BrandBoard = ({brandboard, name}) => {
     const style = brandboard.fonts.map(font => font.import)
+
+    const copyColor = color => {
+        navigator.clipboard.writeText(color)
+    }
 
     return <>
         <section>
@@ -54,7 +57,7 @@ const BrandBoard = ({brandboard, name}) => {
                         <div className="items">
                             {
                                 brandboard.colors.map((color, i) => {
-                                        return <div className="color item" key={i}>
+                                        return <div className="color item" key={i} onClick={e => copyColor(color)} title="copy color">
                                             <i style={{backgroundColor: color}} />
                                             <span className="small">{color}</span>
                                         </div>

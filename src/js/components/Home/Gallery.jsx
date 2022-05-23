@@ -39,7 +39,7 @@ const Gallery = ({ tabs, images }) => {
                     }
                 })
             }
-            <div className="spinner" visibility={loading}/>
+            <div className="spinner" visibility={loading.toString()}/>
         </div>
     </>
 }
