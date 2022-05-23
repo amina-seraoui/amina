@@ -28,12 +28,11 @@
                     "format": "zipper"
                 }
             ],
-            "link": "404",
             "brandboard": {
                 "logos": ["/works/sushi-place/logo.svg", "/works/sushi-place/logo-2.svg"],
                 "fonts": [
-                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"},
-                    {"name": "Gooddog", "import": "@font-face{font-family: Gooddog; src: url('/works/sushi-place/gooddog.otf');};"}
+                    {"name": "Montserrat, sans-serif", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"},
+                    {"name": "Gooddog, sans-serif", "import": "@font-face{font-family: Gooddog; src: url('/works/sushi-place/gooddog.otf');};"}
                 ],
                 "colors": ["#AFC67B", "#FFFFFF", "#202020", "#383A30"]
             },
@@ -50,7 +49,6 @@
                 "HTML", "CSS", "Bootstrap", "Inkscape"
             ],
             "year": 2019,
-            "link": "404",
             "gallery": ["/works/laxar/min.jpg"]
         },
         {
@@ -81,12 +79,11 @@
                     "format": "zipper"
                 }
             ],
-            "link": "404",
             "brandboard": {
                 "logos": ["/works/liberty/logo.png"],
                 "fonts": [
-                    {"name": "Roboto", "import": "@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');"},
-                    {"name": "Thinoo", "import": "@font-face {font-family: Thinoo;src: url('/works/liberty/Thinoo-Thin.otf');};"}
+                    {"name": "Roboto, sans-serif", "import": "@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');"},
+                    {"name": "Thinoo, sans-serif", "import": "@font-face {font-family: Thinoo; src: url('/works/liberty/Thinoo-Thin.otf');};"}
                 ],
                 "colors": ["#FFFFFF", "#1E2A370", "#E85546", "#999999", "#3498DB"]
             },
@@ -106,7 +103,6 @@
             ],
             "year": 2019,
             "files": [],
-            "link": "404",
             "gallery": ["/works/banana/min.jpg"]
         },
         {
@@ -121,7 +117,6 @@
             ],
             "year": 2019,
             "files": [],
-            "link": "404",
             "gallery": ["/works/MD1C/min.jpg"]
         },
         {
@@ -156,7 +151,7 @@
             "brandboard": {
                 "logos": ["/works/saaspik/logo.png", "/works/saaspik/logo-2.png"],
                 "fonts": [
-                    {"name": "Poppins", "import": "@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');"}
+                    {"name": "Poppins, sans-serif", "import": "@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');"}
                 ],
                 "colors": ["#2B2350", "#FFFFFF", "#FA8D70", "#797687", "#FA7070"]
             },

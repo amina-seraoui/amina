@@ -5,6 +5,11 @@ const Carousel = ({ gallery, names, links, isOpen, setIsOpen }) => {
     const [active, setActive] = useState(0)
     const [isRight, setIsRight] = useState(false)
     const [isLeft, setIsLeft] = useState(false)
+    const [start, setStart] = useState(0)
+    const [end, setEnd] = useState(0)
+    const [pos, setPos] = useState(10)
+    const [grabbing, setGrabbing] = useState(false)
+
     const length = gallery.length - 1
     const ref = useRef(null)
 
@@ -65,6 +70,26 @@ const Carousel = ({ gallery, names, links, isOpen, setIsOpen }) => {
         setIsRight(false)
     }
 
+    // Mobile Slide
+    const endMove = e => {
+        const w = 0.8 * ref.current.clientWidth * 0.15
+        end > start + w ? moveLeft() : (end + w < start ? moveRight() : null)
+        setPos(10)
+        setGrabbing(false)
+    }
+
+    const move = e => {
+        setEnd(e.changedTouches[0].clientX)
+        const x = e.changedTouches[0].clientX * 10 / start
+        setPos(x)
+    }
+
+    const startMove = e => {
+        setGrabbing(true)
+        setStart(e.changedTouches[0].clientX)
+    }
+    // End Mobile Slide
+
     const content = () => {
         const footer = gallery.map((img, i) => {
             return (names && <p
@@ -84,13 +109,23 @@ const Carousel = ({ gallery, names, links, isOpen, setIsOpen }) => {
             />
 
             return <div key={i}
-                        className={'carousel-item' + (active === i && isLeft ? ' left' : '') + (active === i && isRight ? ' right' : '')}
-                        style={{left: active === i ? '10%' : (active > i ? '-150%' : '150%')}}
-                        onClick={handleClick}
-                        onMouseMove={handleOver}
-                        onMouseLeave={handleLeave}
-                        onMouseOver={handleOver}
-                        title={isRight ? 'Move to right' : isLeft ? 'Move to left' : ''}
+                className={
+                    'carousel-item' +
+                    (active === i && isLeft ? ' left' : '') +
+                    (active === i && isRight ? ' right' : '') +
+                    (grabbing ? ' grab' : '')
+                }
+                style={{
+                        left: active === i ? (pos + '%') : (active > i ? '-150%' : '150%')
+                    }}
+                onClick={handleClick}
+                onMouseMove={handleOver}
+                onMouseLeave={handleLeave}
+                onMouseOver={handleOver}
+                title={isRight ? 'Move to right' : isLeft ? 'Move to left' : ''}
+                onTouchStart={startMove}
+                onTouchMove={move}
+                onTouchEnd={endMove}
             >
                 {
                     links ? <Link key={i} href={links[i]} passHref>

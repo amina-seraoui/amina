@@ -21,7 +21,10 @@
             height: 80%;
             top: 10%;
             left: 10%;
-            transition: .5s;
+
+            &:not(.grab) {
+                transition: .5s;
+            }
 
             @extend %flex;
             justify-content: center;
@@ -67,17 +70,13 @@
                 left: 90%;
             }
 
-            &.left {
-                &::before {
-                    //background: rgba($light-grey, .2);
-                    color: $white;
-                }
+            &.left::before, &.right::after {
+                color: $white;
             }
 
-            &.right {
-                &::after {
-                    //background: rgba($light-grey, .2);
-                    color: $white;
+            @media #{$media-down-md} {
+                &::before, &::after {
+                    content: none;
                 }
             }
         }
