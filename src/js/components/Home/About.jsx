@@ -1,5 +1,6 @@
 import Frame from '../Frame'
 import CardInfo from '../CardInfo'
+import Link from 'next/link'
 import { FormattedMessage } from 'react-intl'
 
 const About = ({ age }) => {
@@ -9,7 +10,7 @@ const About = ({ age }) => {
                 <h2>
                     <FormattedMessage
                         id="about.title"
-                        values={{ s: a => <span className="strong">{a}</span> }}
+                        values={{ s: c => <span className="strong">{c}</span> }}
                         defaultMessage="<s>About</s> me"
                     />
                 </h2>
@@ -20,36 +21,43 @@ const About = ({ age }) => {
                 <CardInfo>
                     {[
                         {
-                            label: <FormattedMessage id="first.name" defaultMessage="First name" />,
+                            label: <FormattedMessage id="label.description" defaultMessage="Description" />,
+                            value: <FormattedMessage
+                                id="value.description"
+                                defaultMessage="Passionate about computer science, I'm on web development domain since 2017.
+                                 You can find <a>my works</a> below."
+                                values={{ a: c => <Link href="#works"><a className="link">{c}</a></Link> }}
+                            />,
+                            style: {width: '100%'}
+                        },
+                        {
+                            label: <FormattedMessage id="label.first.name" defaultMessage="First name" />,
                             value: 'Amina'
                         },
                         {
-                            label: <FormattedMessage id="last.name" defaultMessage="Last name" />,
+                            label: <FormattedMessage id="label.last.name" defaultMessage="Last name" />,
                             value: 'Seraoui'
                         },
                         {
-                            label: <FormattedMessage id="available" defaultMessage="Available" />,
+                            label: <FormattedMessage id="label.available" defaultMessage="Available" />,
                             value: <FormattedMessage id="remote" defaultMessage="Remote only" />
                         },
                         {
-                            label: <FormattedMessage id="languages" defaultMessage="Languages" />,
-                            value: <FormattedMessage id="languages.list" defaultMessage="French, English, Arabic" />,
+                            label: <FormattedMessage id="label.languages" defaultMessage="Languages" />,
+                            value: <FormattedMessage id="value.languages" defaultMessage="French, English, Arabic" />,
                         },
                         {
-                            label: <FormattedMessage id="age" defaultMessage="Age" />,
+                            label: <FormattedMessage id="label.age" defaultMessage="Age" />,
                             value: age
                         },
                         {
-                            label: <FormattedMessage id="phone" defaultMessage="Phone" />,
-                            value: <a className="link" href="tel:+33667306435">(+33) 6 67 30 64 35</a>
+                            label: <FormattedMessage id="label.mail" defaultMessage="Mail" />,
+                            value: <a className="link" href="mailto:tasmim-concept@gmail.com">tasmim-concept@gmail.com</a>
                         },
                         {
-                            label: <FormattedMessage id="mail" defaultMessage="Mail" />,
-                            value: <a className="link" href="mailto:amina.seraoui@outlook.fr">amina.seraoui@outlook.fr</a>
-                        },
-                        {
-                            label: <FormattedMessage id="github" defaultMessage="Github" />,
-                            value: <a className="link" href="github.com/amina-seraoui">github.com/amina-seraoui</a>
+                            label: <FormattedMessage id="label.github" defaultMessage="Github" />,
+                            value: <a className="link" href="github.com/amina-seraoui">github.com/amina-seraoui</a>,
+                            style: {width: '100%'}
                         }
                     ]}
                 </CardInfo>

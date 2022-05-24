@@ -5,7 +5,7 @@ import {FormattedMessage} from 'react-intl'
 import {useRouter} from 'next/router'
 
 const Stack = ({work, setIsOpen, clickable, count}) => {
-    const {role, stack, img, files} = work
+    const {role, stack, img, files, description} = work
     const {locale} = useRouter()
 
     return <section>
@@ -26,6 +26,10 @@ const Stack = ({work, setIsOpen, clickable, count}) => {
                     {
                         [
                             {
+                                label: <FormattedMessage id="description" defaultMessage="Descrption"/>,
+                                value: description ?? '</No-Content>'
+                            },
+                            {
                                 label: <FormattedMessage id="stack.role" defaultMessage="Role"/>,
                                 value: role
                             },
@@ -41,7 +45,7 @@ const Stack = ({work, setIsOpen, clickable, count}) => {
                                 label: <FormattedMessage id="stack.files" defaultMessage="Files"/>,
                                 value: <ul className="files">
                                     {
-                                        files?.map((file, i) => {
+                                        files ? files.map((file, i) => {
                                             return <li key={i} className="file">
                                                 <a
                                                     className="link"
@@ -60,7 +64,7 @@ const Stack = ({work, setIsOpen, clickable, count}) => {
                                                     {/*<span>{file.label}</span>*/}
                                                 </a>
                                             </li>
-                                        })
+                                        }) : '</No-Files>'
                                     }
                                 </ul>
                             }

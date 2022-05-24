@@ -35,6 +35,8 @@
                 width: 80%;
                 height: calc(80% - ratio-space(1px));
                 object-fit: scale-down;
+
+                border: solid 10px $white;
             }
 
             .footer {

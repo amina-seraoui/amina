@@ -16,7 +16,7 @@ const Flag = ({ locale }) => {
         if (locale === 'fr') return 'Français'
     }
 
-    return (locale !== 'default') ? <Link href={asPath} locale={locale} passHref>
+    return (locale !== 'default') ? <Link href={asPath.split('#')[0]} locale={locale} passHref>
         <a>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

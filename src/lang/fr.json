@@ -7,15 +7,6 @@
     "about.title": "<s>À propos</s> de moi",
     "about.subtitle": "En quelques mots",
 
-    "first.name": "Prénom",
-    "last.name": "Nom",
-    "available": "Disponibilité",
-    "remote": "En distanciel",
-    "languages.list": "Français, anglais, arabe",
-    "mail": "E-mail",
-    "age": "Âge",
-    "phone": "Numéro de téléphone",
-
     "skills.title": "Mes <s>compétences</s>",
     "skills.subtitle": "Mes technologies préférées",
 
@@ -54,5 +45,19 @@
     "stack.techno": "Technologies",
     "stack.files": "Fichiers",
 
-    "words.fonts": "Polices"
+    "label.fonts": "Polices",
+    "label.first.name": "Prénom",
+    "label.last.name": "Nom",
+    "label.available": "Disponibilité",
+    "label.languages": "Langues",
+    "label.mail": "E-mail",
+    "label.age": "Âge",
+    "label.phone": "Numéro de téléphone",
+    "label.description": "Description",
+    "label.logos": "Logos",
+    "label.colors": "Couleurs",
+
+    "value.languages": "Français, anglais, arabe",
+    "value.description": "Passionnée d'informatique, je m'intéresse au développement web depuis 2017. Vous pourrez retrouver <a>mes projets</a> ci-dessous.",
+    "value.remote": "En distanciel"
 }

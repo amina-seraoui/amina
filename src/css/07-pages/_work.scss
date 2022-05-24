@@ -43,10 +43,6 @@
 
             .card-info, .gallery {
                 width: calc(50% - (#{ratio-space(1px)} + 15px));
-
-                li:nth-child(3) {
-                    width: 100%;
-                }
             }
 
             .gallery:not([data-count='1']) {

@@ -36,12 +36,8 @@ const Contact = ({ createAlert }) => {
                         {
                             [
                                 {
-                                    label: <FormattedMessage id="phone" defaultMessage="Phone" />,
-                                    value: <a className="link" href="tel:+33667306435">(+33) 6 67 30 64 35</a>
-                                },
-                                {
-                                    label: <FormattedMessage id="mail" defaultMessage="Mail" />,
-                                    value: <a className="link" href="mailto:amina.seraoui@outlook.fr">amina.seraoui@outlook.fr</a>
+                                    label: <FormattedMessage id="label.mail" defaultMessage="Mail" />,
+                                    value: <a className="link" href="mailto:tasmim-concept@gmail.com">tasmim-concept@gmail.com</a>
                                 },
                                 {
                                     label: <FormattedMessage id="socials" defaultMessage="Socials" />,

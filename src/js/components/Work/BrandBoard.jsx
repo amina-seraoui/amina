@@ -25,7 +25,7 @@ const BrandBoard = ({brandboard, name}) => {
                 </div>
                 <article id="brandboard">
                     <div className="section logos">
-                        <h4>Logos</h4>
+                        <h4><FormattedMessage id="label.logos" defaultMessage="Logos"/></h4>
                         <div className="items">
                             {
                                 brandboard.logos.map((logo, i) => {
@@ -37,7 +37,7 @@ const BrandBoard = ({brandboard, name}) => {
                         </div>
                     </div>
                     <div className="section fonts">
-                        <h4><FormattedMessage id="words.fonts" defaultMessage="Fonts"/></h4>
+                        <h4><FormattedMessage id="label.fonts" defaultMessage="Fonts"/></h4>
                         <div className="items">
                             {
                                 brandboard.fonts.map((font, i) => {
@@ -53,7 +53,7 @@ const BrandBoard = ({brandboard, name}) => {
                         </div>
                     </div>
                     <div className="section colors">
-                        <h4>Colors</h4>
+                        <h4><FormattedMessage id="label.colors" defaultMessage="Colors"/></h4>
                         <div className="items">
                             {
                                 brandboard.colors.map((color, i) => {

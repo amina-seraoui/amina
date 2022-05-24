@@ -31,8 +31,8 @@
             "brandboard": {
                 "logos": ["/works/sushi-place/logo.svg", "/works/sushi-place/logo-2.svg"],
                 "fonts": [
-                    {"name": "Montserrat, sans-serif", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"},
-                    {"name": "Gooddog, sans-serif", "import": "@font-face{font-family: Gooddog; src: url('/works/sushi-place/gooddog.otf');};"}
+                    {"name": "Montserrat", "import": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');"},
+                    {"name": "Gooddog", "import": "@font-face{font-family: Gooddog; src: url('/works/sushi-place/gooddog.otf');};"}
                 ],
                 "colors": ["#AFC67B", "#FFFFFF", "#202020", "#383A30"]
             },
@@ -82,8 +82,8 @@
             "brandboard": {
                 "logos": ["/works/liberty/logo.png"],
                 "fonts": [
-                    {"name": "Roboto, sans-serif", "import": "@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');"},
-                    {"name": "Thinoo, sans-serif", "import": "@font-face {font-family: Thinoo; src: url('/works/liberty/Thinoo-Thin.otf');};"}
+                    {"name": "Roboto", "import": "@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');"},
+                    {"name": "Thinoo", "import": "@font-face {font-family: Thinoo; src: url('/works/liberty/Thinoo-Thin.otf');};"}
                 ],
                 "colors": ["#FFFFFF", "#1E2A370", "#E85546", "#999999", "#3498DB"]
             },
@@ -102,7 +102,6 @@
                 "HTML", "CSS", "Bootstrap", "Inkscape"
             ],
             "year": 2019,
-            "files": [],
             "gallery": ["/works/banana/min.jpg"]
         },
         {
@@ -116,7 +115,6 @@
                 "HTML", "CSS", "Bootstrap", "Inkscape"
             ],
             "year": 2019,
-            "files": [],
             "gallery": ["/works/MD1C/min.jpg"]
         },
         {
@@ -151,7 +149,7 @@
             "brandboard": {
                 "logos": ["/works/saaspik/logo.png", "/works/saaspik/logo-2.png"],
                 "fonts": [
-                    {"name": "Poppins, sans-serif", "import": "@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');"}
+                    {"name": "Poppins", "import": "@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');"}
                 ],
                 "colors": ["#2B2350", "#FFFFFF", "#FA8D70", "#797687", "#FA7070"]
             },
@@ -170,7 +168,6 @@
                 "Node JS", "Express", "Sass"
             ],
             "year": 2022,
-            "files": [],
             "link": "https://api.as.promo-105.codeur.online/",
             "gallery": ["/works/squizz-game/img.png", "/works/squizz-game/screen-1.png", "/works/squizz-game/screen-2.png", "/works/squizz-game/screen-3.png"]
         },

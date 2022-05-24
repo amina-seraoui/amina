@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {useRouter} from 'next/router'
 import Flag from './Flag'
 import {useEffect, useState} from 'react'
+import {FormattedMessage} from 'react-intl'
 
 const Header = () => {
     const {locales} = useRouter()
@@ -37,7 +38,9 @@ const Header = () => {
                         locales.map(l => <Flag key={l} locale={l} />)
                     }
                 </div>
-                <a className="link" href="tel:+33667306435">(+33) 6 67 30 64 35</a>
+                <Link href="/#contact"><a className="link">
+                    <FormattedMessage id="btn.contact" defaultMessage="Contact me" />
+                </a></Link>
             </div>
         </nav>
     </header>

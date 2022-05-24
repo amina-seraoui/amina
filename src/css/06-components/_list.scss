@@ -15,7 +15,7 @@ ul.card-info {
             user-select: none;
         }
 
-        &:last-child:not(:nth-child(even)) {
+        &:first-child, &:last-child:not(:nth-child(odd)) {
             width: 100%;
         }
 
