@@ -19,7 +19,7 @@ const Work = ({ work, next, prev }) => {
         <Head>
             <title>Amina Seraoui | {work.name}</title>
         </Head>
-        <main id="work">
+        <main id="work" style={{filter: isOpen ? 'blur(5px)' : null}}>
             <Hero image={work.img}>
                 <Header />
                 <div className="container">
