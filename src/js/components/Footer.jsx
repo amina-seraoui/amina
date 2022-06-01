@@ -44,7 +44,7 @@ const Footer = ({next, prev}) => {
                 </Link>
 
                 <p className="small">
-                    Copyright © 2021 - Amina Seraoui. <FormattedMessage id="footer.rightsreserved" defaultMessage="All Rights Reserved."/> Avec la participation de Lo Yasso & Warrengers.
+                    Copyright © 2021 - Amina Seraoui. <FormattedMessage id="footer.rightsreserved" defaultMessage="All Rights Reserved. With participation of Lo Yasso & Warrengers."/>
 
                 </p>
             </div>

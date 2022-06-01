@@ -14,7 +14,7 @@
     "works.subtitle": "Quelques projets réalisés",
 
     "contact.title": "<s>Me</s> contacter",
-    "contact.subtitle": "Laisse moi un message",
+    "contact.subtitle": "Laissez moi un message",
     "contact.form.name": "Votre nom",
     "contact.form.mail": "Votre e-mail",
     "contact.form.message": "Votre message",
@@ -27,8 +27,8 @@
 
     "footer.title": "Merci !",
     "footer.subtitle": "Merci pour votre visite",
-    "footer.jetbrains": "& merci spécialement à <a>Jetbrains</a> pour leur très utile license Open Source sur leurs excellents produits.",
-    "footer.rightsreserved": "Tous droits réservés.",
+    "footer.jetbrains": "& merci spécialement à <a>Jetbrains</a> pour la très utile license Open Source sur leurs excellents produits.",
+    "footer.rightsreserved": "Tous droits réservés. Avec la participation de Lo Yasso & Warrengers.",
 
     "socials": "Réseaux sociaux",
     "btn.contact": "Contactez-moi",

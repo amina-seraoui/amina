@@ -23,6 +23,7 @@
             left: 10%;
             background: rgba($grey, 1);
             border: solid 1px $white;
+            padding: ratio-space(1px);
 
             &:not(.grab) {
                 transition: .5s;
