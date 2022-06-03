@@ -35,7 +35,7 @@ const ContactForm = ({ createAlert }) => {
             <input id="name" type="text" placeholder="Jane Doe" value={name} onChange={e => setName(e.target.value)} required />
         </div>
         <div className="field">
-            <label htmlFor="mail"><FormattedMessage id="contact.form.mail" defaultMessage="Your mail" /> :</label>
+            <label htmlFor="mail"><FormattedMessage id="contact.form.mail" defaultMessage="Your e-mail" /> :</label>
             <input id="mail" type="email" placeholder="jane.doe@example.com" value={mail} onChange={e => setMail(e.target.value)} required />
         </div>
         <div className="field">

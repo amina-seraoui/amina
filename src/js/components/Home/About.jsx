@@ -14,7 +14,7 @@ const About = ({ age }) => {
                         defaultMessage="<s>About</s> me"
                     />
                 </h2>
-                <h3><FormattedMessage id="about.subtitle" defaultMessage="In few words"/></h3>
+                <h3><FormattedMessage id="about.subtitle" defaultMessage="In a few words"/></h3>
             </div>
             <div className="content">
                 <Frame img="/assets/img/about.jpg" />
@@ -24,8 +24,9 @@ const About = ({ age }) => {
                             label: <FormattedMessage id="label.description" defaultMessage="Description" />,
                             value: <FormattedMessage
                                 id="value.description"
-                                defaultMessage="Passionate about computer science, I'm on web development domain since 2017.
-                                 You can find <a>my works</a> below."
+                                defaultMessage="Passionate about computer science,
+                                    I've been on the web development field since 2017.
+                                    You can find <a>my works</a> below."
                                 values={{ a: c => <Link href="#works"><a className="link">{c}</a></Link> }}
                             />,
                             style: {width: '100%'}
@@ -56,7 +57,7 @@ const About = ({ age }) => {
                         },
                         {
                             label: <FormattedMessage id="label.github" defaultMessage="Github" />,
-                            value: <a className="link" href="github.com/amina-seraoui">github.com/amina-seraoui</a>,
+                            value: <a className="link" href="https://github.com/amina-seraoui">github.com/amina-seraoui</a>,
                             style: {width: '100%'}
                         }
                     ]}

@@ -21,7 +21,7 @@ const Contact = ({ createAlert }) => {
                 <div className="content">
                     <ContactForm createAlert={createAlert} />
                     <p className="small">
-                        <FormattedMessage id="contact.indication" defaultMessage="Think to indicate your phone number or your e-mail to be contacted back."/>
+                        <FormattedMessage id="contact.indication" defaultMessage="Think to indicate your phone number or your e-mail to be recontacted."/>
                     </p>
                 </div>
             </div>
@@ -36,7 +36,7 @@ const Contact = ({ createAlert }) => {
                         {
                             [
                                 {
-                                    label: <FormattedMessage id="label.mail" defaultMessage="Mail" />,
+                                    label: <FormattedMessage id="label.mail" defaultMessage="E-mail" />,
                                     value: <a className="link" href="mailto:tasmim-concept@gmail.com">tasmim-concept@gmail.com</a>
                                 },
                                 {

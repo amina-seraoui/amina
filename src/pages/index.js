@@ -24,7 +24,7 @@ const Home = ({ dir }) => {
         intl.formatMessage({ id: 'hero.whoami', defaultMessage: 'I\'m Amina Seraoui' }),
         intl.formatMessage({
             id: 'hero.about',
-            defaultMessage: "I'm a {age} years old french developer"
+            defaultMessage: "I'm a {age} year old french developer"
         }, {age}),
         intl.formatMessage({ id: 'hero.enjoy', defaultMessage: 'Enjoy your visit !' })
     ]
@@ -106,19 +106,19 @@ const Home = ({ dir }) => {
                                     type: 'text',
                                     action: 'replace',
                                     what: 'french',
-                                    by: '<i class="em em-flag-cp"></i>'
+                                    by: '<i class="em-svg em-flag-cp"></i>'
                                 },
                                 {
                                     type: 'text',
                                     action: 'add',
                                     what: heroTexts[3],
-                                    by: ' <i class="em em-rocket"></i>'
+                                    by: ' <i class="em-svg em-rocket"></i>'
                                 },
                                 {
                                     type: 'text',
                                     action: 'add',
                                     what: heroTexts[0],
-                                    by: ' <i class="em em-wave" />'
+                                    by: ' <i class="em-svg em-wave" />'
                                 },
                             ]}
                         />

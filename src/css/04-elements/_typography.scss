@@ -23,31 +23,35 @@
 h1, h1 * {
   font-weight: 600;
   font-size: 8rem;
-  .em {
+  .em-svg {
     height: 8rem;
+    width: 8rem;
   }
 
   @media #{$media-down-xl} {
     font-size: 6.5rem;
-    .em  {
+    .em-svg  {
       height: 6.5rem;
+      width: 6.5rem;
     }
   }
   @media #{$media-down-lg} {
     font-size: 5rem;
-    .em  {
+    .em-svg  {
       height: 5rem;
+      width: 5rem;
     }
   }
   @media #{$media-down-md} {
     font-size: 3.8rem;
-    .em  {
+    .em-svg  {
       height: 3.8rem;
+      width: 3.8rem;
     }
   }
   @media #{$media-down-sm} {
     font-size: 2.6rem;
-    .em {
+    .em-svg {
       height: 2.6rem;
     }
   }
