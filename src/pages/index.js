@@ -14,6 +14,7 @@ import {useState, useEffect} from 'react'
 import Alerts from '../js/components/Alerts'
 import Link from 'next/link'
 import {FormattedMessage, useIntl} from 'react-intl'
+import ScrollDown from '../js/components/ScrollDown'
 
 const Home = ({ dir }) => {
     let age = useGetAge('11/22/1997')
@@ -129,6 +130,7 @@ const Home = ({ dir }) => {
                         </button>
                     </Link>
                 </div>
+                <ScrollDown />
             </Hero>
             {/* deuxième section */}
             <About age={age}/>

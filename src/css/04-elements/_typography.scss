@@ -25,28 +25,24 @@ h1, h1 * {
   font-size: 8rem;
   .em-svg {
     height: 8rem;
-    width: 8rem;
   }
 
   @media #{$media-down-xl} {
     font-size: 6.5rem;
     .em-svg  {
       height: 6.5rem;
-      width: 6.5rem;
     }
   }
   @media #{$media-down-lg} {
     font-size: 5rem;
     .em-svg  {
       height: 5rem;
-      width: 5rem;
     }
   }
   @media #{$media-down-md} {
     font-size: 3.8rem;
     .em-svg  {
       height: 3.8rem;
-      width: 3.8rem;
     }
   }
   @media #{$media-down-sm} {
@@ -95,4 +91,8 @@ p.small, span.small {
   font-size: $font-size - 2px;
   font-style: italic;
   color: $light-grey;
+}
+
+.em-svg {
+  background-repeat: no-repeat !important;
 }

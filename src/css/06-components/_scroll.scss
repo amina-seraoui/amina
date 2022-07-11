@@ -1,0 +1,11 @@
+.scroll-img {
+    position: absolute;
+    bottom: ratio-space(4px);
+    left: 50%;
+    opacity: 0;
+    animation: fade-in ease 1.5s 10s forwards;
+
+    svg #wheel {
+        animation: wheel ease 1.5s infinite;
+    }
+}
