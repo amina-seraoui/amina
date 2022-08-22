@@ -1,4 +1,4 @@
-import {withLimit, getAll, getBy, inWithLimit} from '../../js/model'
+import {withLimit, getAll, getBy, inWithLimit} from '../../js/firebase/model'
 
 const getTabs = async () => {
     return (await getAll('tabs')).map(tab => tab.name)

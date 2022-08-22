@@ -1,41 +1,14 @@
-import { create } from '../../js/model'
-const nodemailer = require('nodemailer')
+import '../../js/firebase/firebase-app'
+import { getDatabase } from 'firebase-admin/database'
+const database = getDatabase()
 
 export default function handler(req, res) {
+    console.log(req.body)
     if (req.method === 'POST') {
-        create('messages', req.body)
-            .then(doc => {
-                sendMail({...req.body})
-                res.status(200).json({success: true})
+        database.ref('messages/' + req.body.timestamp).set({...req.body, read: false})
+            .then(r => {
+                res.status(200).json({'success': true})
             })
-            .catch(err => {
-                console.log(err)
-                res.status(500)
-            })
+            .catch(err => console.log(err))
     } else res.status(403).send('bad request')
-}
-
-const sendMail = ({name, msg}) => {
-    const config = {
-        service: 'gmail',
-        auth: {
-            user: process.env.MAIL_AUTH_USER,
-            pass: process.env.MAIL_AUTH_PASS
-        }
-    }
-
-    const mail = {
-        from: process.env.MAIL_FROM,
-        to: process.env.MAIL_FROM,
-        subject: 'Nuovo Messaggio di ' + name,
-        text: 'Buongiorno | Buondi, hai ricevuto un nuovo messaggio : ' + msg
-    }
-
-    const transporter = nodemailer.createTransport(config)
-
-    transporter.sendMail(mail, (err, info) => {
-        if (err) throw err
-        console.log('Email sent !')
-        console.log(info)
-    })
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {getAll} from '../../js/model'
+import {getAll} from '../../js/firebase/model'
 import Hero from '../../js/components/Home/Hero'
 import Header from '../../js/components/Header'
 import Stack from '../../js/components/Work/Stack'
