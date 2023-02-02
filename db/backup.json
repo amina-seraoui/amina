@@ -110,9 +110,9 @@
             "img": "/works/MD1C/min.jpg",
             "min": "/works/MD1C/min.jpg",
             "tabs": ["front", "back", "design"],
-            "role": "Intégrateur, designer",
+            "role": "Développeur fullstack, Designer",
             "stack": [
-                "HTML", "CSS", "Bootstrap", "Inkscape"
+                "Symfony", "React", "Webpack Encore", "Sass"
             ],
             "year": 2019,
             "gallery": ["/works/MD1C/min.jpg"]
